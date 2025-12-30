@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How It Works | Free 3D Design Process | Yard Guard Mississauga</title>
+  <meta name="description" content="Our 3-step artificial turf installation process: Free consultation, 3D design visualization, and professional installation in 2-5 days. See your yard before we build.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* ========================================
+       CSS RESET & BASE
+       ======================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #212121;
+      background: #FFFFFF;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ========================================
+       CSS VARIABLES
+       ======================================== */
+    :root {
+      --primary-green: #2E7D32;
+      --primary-green-hover: #1B5E20;
+      --dark-green: #1A3C1A;
+      --light-green: #E8F5E9;
+      --white: #FFFFFF;
+      --off-white: #FAFAFA;
+      --dark-text: #212121;
+      --medium-text: #616161;
+      --light-text: #9E9E9E;
+      --border: #E0E0E0;
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      --shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    /* ========================================
+       TYPOGRAPHY
+       ======================================== */
+    h1, h2, h3, h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    h1 { font-size: 48px; }
+    h2 { font-size: 42px; font-weight: 600; }
+    h3 { font-size: 32px; font-weight: 600; }
+    h4 { font-size: 24px; font-weight: 600; }
+
+    @media (max-width: 767px) {
+      h1 { font-size: 32px; }
+      h2 { font-size: 28px; }
+      h3 { font-size: 24px; }
+      h4 { font-size: 20px; }
+    }
+
+    /* ========================================
+       BUTTONS
+       ======================================== */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: var(--primary-green);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+      padding: 16px 32px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(46, 125, 50, 0.25);
+      min-height: 54px;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-green-hover);
+      box-shadow: 0 6px 12px rgba(46, 125, 50, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: transparent;
+      color: var(--primary-green);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      padding: 14px 30px;
+      border: 2px solid var(--primary-green);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--light-green);
+      border-color: var(--primary-green-hover);
+    }
+
+    /* ========================================
+       HEADER
+       ======================================== */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: var(--white);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      z-index: 1000;
+    }
+
+    .header__container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header__logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .header__logo img {
+      height: 50px;
+      width: auto;
+    }
+
+    .header__nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-link {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--dark-text);
+      padding: 8px 16px;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    .nav-link:hover {
+      color: var(--primary-green);
+    }
+
+    .nav-link.active {
+      color: var(--primary-green);
+    }
+
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 16px;
+      right: 16px;
+      height: 3px;
+      background: var(--primary-green);
+      border-radius: 2px;
+    }
+
+    .header__cta {
+      padding: 12px 24px;
+      font-size: 14px;
+      min-height: auto;
+    }
+
+    @media (max-width: 1023px) {
+      .header__nav {
+        display: none;
+      }
+    }
+
+    /* ========================================
+       HERO BANNER
+       ======================================== */
+    .hiw-hero {
+      position: relative;
+      height: 350px;
+      margin-top: 80px;
+      background: linear-gradient(135deg, rgba(46, 125, 50, 0.9) 0%, rgba(27, 94, 32, 0.95) 100%),
+                  url('https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1920&q=80') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hiw-hero__content {
+      max-width: 800px;
+      padding: 0 24px;
+      color: var(--white);
+    }
+
+    .hiw-hero__breadcrumb {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 24px;
+    }
+
+    .hiw-hero__breadcrumb a {
+      color: rgba(255, 255, 255, 0.7);
+      transition: color 0.3s ease;
+    }
+
+    .hiw-hero__breadcrumb a:hover {
+      color: var(--white);
+      text-decoration: underline;
+    }
+
+    .hiw-hero__title {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+
+    .hiw-hero__subtitle {
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    @media (max-width: 767px) {
+      .hiw-hero {
+        height: 280px;
+      }
+      .hiw-hero__title {
+        font-size: 32px;
+      }
+      .hiw-hero__subtitle {
+        font-size: 16px;
+      }
+    }
+
+    /* ========================================
+       PROCESS OVERVIEW
+       ======================================== */
+    .process-overview {
+      background: var(--white);
+      padding: 80px 24px;
+    }
+
+    .process-overview__header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 64px;
+    }
+
+    .process-overview__title {
+      margin-bottom: 16px;
+    }
+
+    .process-overview__description {
+      font-size: 18px;
+      color: var(--medium-text);
+      line-height: 1.7;
+    }
+
+    .process-timeline {
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .process-timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(to bottom, var(--primary-green), var(--light-green), var(--primary-green));
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+
+    @media (max-width: 767px) {
+      .process-timeline::before {
+        left: 24px;
+      }
+    }
+
+    /* ========================================
+       STEP CARDS
+       ======================================== */
+    .step-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 48px;
+      margin-bottom: 80px;
+      position: relative;
+    }
+
+    .step-card:last-child {
+      margin-bottom: 0;
+    }
+
+    .step-card:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .step-card__content {
+      flex: 1;
+      background: var(--white);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .step-card:nth-child(even) .step-card__content {
+      text-align: right;
+    }
+
+    .step-card__visual {
+      flex: 1;
+      height: 300px;
+      background: linear-gradient(135deg, #81C784 0%, #4CAF50 100%);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 64px;
+      color: white;
+    }
+
+    .step-card__number-badge {
+      position: absolute;
+      left: 50%;
+      top: 40px;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-hover) 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
+      z-index: 10;
+    }
+
+    .step-card__eyebrow {
+      display: inline-block;
+      background: var(--light-green);
+      color: var(--primary-green);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+      padding: 6px 12px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+
+    .step-card__eyebrow--free {
+      background: #FFF3E0;
+      color: #E65100;
+    }
+
+    .step-card__title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+      color: var(--dark-text);
+      margin-bottom: 16px;
+    }
+
+    .step-card__description {
+      font-size: 16px;
+      color: var(--medium-text);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .step-card__list {
+      list-style: none;
+      margin-bottom: 24px;
+    }
+
+    .step-card__list-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 15px;
+      color: var(--dark-text);
+      padding: 8px 0;
+    }
+
+    .step-card:nth-child(even) .step-card__list-item {
+      flex-direction: row-reverse;
+    }
+
+    .step-card__list-item .icon {
+      color: var(--primary-green);
+      flex-shrink: 0;
+    }
+
+    .step-card__meta {
+      display: flex;
+      gap: 24px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .step-card:nth-child(even) .step-card__meta {
+      justify-content: flex-end;
+    }
+
+    .step-card__meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: var(--medium-text);
+    }
+
+    .step-card__meta-item .icon {
+      color: var(--primary-green);
+    }
+
+    .step-card__meta-item--highlight {
+      color: var(--primary-green);
+      font-weight: 600;
+    }
+
+    @media (max-width: 767px) {
+      .process-overview {
+        padding: 48px 16px;
+      }
+      .step-card {
+        flex-direction: column !important;
+        gap: 24px;
+        margin-bottom: 48px;
+        padding-left: 48px;
+      }
+      .step-card__content {
+        text-align: left !important;
+        padding: 24px;
+      }
+      .step-card__visual {
+        height: 200px;
+        font-size: 48px;
+      }
+      .step-card__number-badge {
+        left: 24px;
+        top: 0;
+        transform: none;
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+      }
+      .step-card__list-item {
+        flex-direction: row !important;
+      }
+      .step-card__meta {
+        flex-direction: column;
+        gap: 8px;
+        justify-content: flex-start !important;
+      }
+    }
+
+    /* ========================================
+       WHAT TO EXPECT
+       ======================================== */
+    .what-to-expect {
+      background: var(--off-white);
+      padding: 80px 24px;
+    }
+
+    .what-to-expect__header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .what-to-expect__title {
+      margin-bottom: 16px;
+    }
+
+    .what-to-expect__subtitle {
+      font-size: 18px;
+      color: var(--medium-text);
+    }
+
+    .expectation-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .expectation-card {
+      background: var(--white);
+      padding: 32px 24px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .expectation-card__icon {
+      width: 64px;
+      height: 64px;
+      background: var(--light-green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      color: var(--primary-green);
+    }
+
+    .expectation-card__title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      color: var(--dark-text);
+      margin-bottom: 12px;
+    }
+
+    .expectation-card__description {
+      font-size: 14px;
+      color: var(--medium-text);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 1023px) {
+      .expectation-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 767px) {
+      .what-to-expect {
+        padding: 48px 16px;
+      }
+      .expectation-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+
+    /* ========================================
+       FAQ PREVIEW
+       ======================================== */
+    .faq-preview {
+      background: var(--white);
+      padding: 80px 24px;
+    }
+
+    .faq-preview__header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .faq-preview__title {
+      margin-bottom: 16px;
+    }
+
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 24px 0;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-item__question {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      color: var(--dark-text);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .faq-item__question .icon {
+      color: var(--primary-green);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .faq-item__answer {
+      font-size: 16px;
+      color: var(--medium-text);
+      line-height: 1.7;
+      padding-left: 36px;
+    }
+
+    .faq-preview__cta {
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    @media (max-width: 767px) {
+      .faq-preview {
+        padding: 48px 16px;
+      }
+      .faq-item__question {
+        font-size: 16px;
+      }
+      .faq-item__answer {
+        font-size: 15px;
+        padding-left: 0;
+      }
+    }
+
+    /* ========================================
+       GUARANTEE SECTION
+       ======================================== */
+    .guarantee-section {
+      background: var(--light-green);
+      padding: 60px 24px;
+    }
+
+    .guarantee-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .guarantee-badge {
+      width: 150px;
+      height: 150px;
+      background: var(--white);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      flex-shrink: 0;
+    }
+
+    .guarantee-badge__years {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 48px;
+      color: var(--primary-green);
+      line-height: 1;
+    }
+
+    .guarantee-badge__label {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--dark-text);
+    }
+
+    .guarantee-text {
+      flex-grow: 1;
+    }
+
+    .guarantee-text__title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 24px;
+      color: var(--dark-text);
+      margin-bottom: 12px;
+    }
+
+    .guarantee-text__description {
+      font-size: 16px;
+      color: var(--medium-text);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 767px) {
+      .guarantee-section {
+        padding: 40px 16px;
+      }
+      .guarantee-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      .guarantee-badge {
+        width: 120px;
+        height: 120px;
+      }
+      .guarantee-badge__years {
+        font-size: 36px;
+      }
+    }
+
+    /* ========================================
+       FINAL CTA
+       ======================================== */
+    .hiw-final-cta {
+      background: linear-gradient(135deg, var(--primary-green-hover) 0%, var(--primary-green) 100%);
+      padding: 80px 24px;
+      text-align: center;
+    }
+
+    .hiw-final-cta__content {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .hiw-final-cta__headline {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 36px;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .hiw-final-cta__description {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    .hiw-final-cta__button {
+      background: var(--white);
+      color: var(--primary-green);
+      margin-bottom: 20px;
+    }
+
+    .hiw-final-cta__button:hover {
+      background: var(--light-green);
+    }
+
+    .hiw-final-cta__phone {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .hiw-final-cta__phone a {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    @media (max-width: 767px) {
+      .hiw-final-cta {
+        padding: 48px 16px;
+      }
+      .hiw-final-cta__headline {
+        font-size: 28px;
+      }
+      .hiw-final-cta__description {
+        font-size: 16px;
+      }
+    }
+
+    /* ========================================
+       FOOTER
+       ======================================== */
+    .footer {
+      background: var(--dark-green);
+      padding: 80px 24px 40px;
+    }
+
+    .footer__main {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer__logo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .footer__logo img {
+      height: 60px;
+      width: auto;
+    }
+
+    .footer__tagline {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+      max-width: 250px;
+      margin-bottom: 24px;
+    }
+
+    .footer__social {
+      display: flex;
+      gap: 16px;
+    }
+
+    .footer__social-link {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      transition: all 0.3s ease;
+    }
+
+    .footer__social-link:hover {
+      background: var(--primary-green);
+    }
+
+    .footer__column-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .footer__link {
+      display: block;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      padding: 8px 0;
+      transition: color 0.3s ease;
+    }
+
+    .footer__link:hover {
+      color: var(--white);
+    }
+
+    .footer__contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 12px;
+    }
+
+    .footer__contact-item .icon {
+      color: #81C784;
+      flex-shrink: 0;
+    }
+
+    .footer__bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 48px;
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .footer__copyright {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer__legal {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer__legal-link {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer__legal-link:hover {
+      color: var(--white);
+    }
+
+    @media (max-width: 1023px) {
+      .footer__main {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .footer {
+        padding: 64px 16px 32px;
+      }
+      .footer__main {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .footer__bottom {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+      }
+    }
+
+    /* ========================================
+       MOBILE STICKY CTA
+       ======================================== */
+    .mobile-sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 70px;
+      background: var(--white);
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      padding: 12px 16px;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .mobile-sticky-cta__call {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--primary-green);
+      padding: 12px 16px;
+      border: 2px solid var(--primary-green);
+      border-radius: 8px;
+    }
+
+    .mobile-sticky-cta__quote {
+      flex-grow: 1;
+      background: var(--primary-green);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 14px 24px;
+      border: none;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    @media (max-width: 767px) {
+      .mobile-sticky-cta {
+        display: flex;
+      }
+      body {
+        padding-bottom: 70px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header__container">
+      <a href="homepage.html" class="header__logo"><img src="https://static.wixstatic.com/media/e83a48_77d3e37bf7c04f32af25998246892eb8~mv2.png" alt="Yard Guard Landscaping"></a>
+      <nav class="header__nav">
+        <a href="homepage.html" class="nav-link">Home</a>
+        <a href="packages.html" class="nav-link">Packages</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="how-it-works.html" class="nav-link active">How It Works</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+      </nav>
+      <a href="quote.html" class="btn-primary header__cta">Get a Quote</a>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hiw-hero">
+    <div class="hiw-hero__content">
+      <div class="hiw-hero__breadcrumb">
+        <a href="homepage.html">Home</a> &gt; <a href="homepage.html">Artificial Turf</a> &gt; How It Works
+      </div>
+      <h1 class="hiw-hero__title">How It Works</h1>
+      <p class="hiw-hero__subtitle">From consultation to completion in 3 simple steps</p>
+    </div>
+  </section>
+
+  <!-- Process Overview -->
+  <section class="process-overview">
+    <div class="process-overview__header">
+      <h2 class="process-overview__title">Your Transformation Journey</h2>
+      <p class="process-overview__description">
+        We've perfected a simple, stress-free process that lets you see exactly what your yard will look like before we start - no surprises, no guesswork.
+      </p>
+    </div>
+
+    <div class="process-timeline">
+      <!-- Step 1 -->
+      <div class="step-card">
+        <div class="step-card__number-badge">1</div>
+        <div class="step-card__content">
+          <span class="step-card__eyebrow step-card__eyebrow--free">Completely Free</span>
+          <h3 class="step-card__title">Free Consultation</h3>
+          <p class="step-card__description">
+            We'll visit your property to understand your vision, take precise measurements, and discuss which package best fits your needs and budget.
+          </p>
+          <ul class="step-card__list">
+            <li class="step-card__list-item">
+              <i data-lucide="check" class="icon"></i>
+              <span>In-person yard assessment</span>
+            </li>
+            <li class="step-card__list-item">
+              <i data-lucide="check" class="icon"></i>
+              <span>Precise digital measurements</span>
+            </li>
+            <li class="step-card__list-item">
+              <i data-lucide="check" class="icon"></i>
+              <span>Package recommendations tailored to your needs</span>
+            </li>
+            <li class="step-card__list-item">
+              <i data-lucide="check" class="icon"></i>
+              <span>Answer all your questions</span>
+            </li>
+          </ul>
+          <div class="step-card__meta">
+            <span class="step-card__meta-item">
+              <i data-lucide="clock" class="icon"></i>
+              30 minutes
+            </span>
+            <span class="step-card__meta-item step-card__meta-item--highlight">
+              <i data-lucide="dollar-sign" class="icon"></i>
+              FREE
+            </span>
+          </div>
+        </div>
+        <div class="step-card__visual">
+          <i data-lucide="calendar-check"></i>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step-card">
+        <div class="step-card__number-badge">2</div>
+        <div class="step-card__content">
+          <span class="step-card__eyebrow step-card__eyebrow--free">Free with Booking</span>
+          <h3 class="step-card__title">3D Design Visualization</h3>
+          <p class="step-card__description">
+            This is where the magic happens. We create a photorealistic 3D rendering of YOUR backyard - so you can see exactly what it will look like before we break ground.
+          </p>
+          <ul class="step-card__list">
+            <li class="step-card__list-item">
+              <i data-lucide="check" class="icon"></i>
+              <span>Photorealistic 3D rendering of your yard</span>
+            </li>
+            <li class="step-card__list-item">
+              <i data-lucide="check" class="icon"></i>
+              <span>Multiple angle views</span>
+            </li>
+            <li class="step-card__list-item">
+              <i data-lucide="check" class="icon"></i>
+              <span>Revisions until you're happy</span>
+            </li>
+            <li class="step-card__list-item">
+              <i data-lucide="check" class="icon"></i>
+              <span>Detailed itemized quote</span>
+            </li>
+          </ul>
+          <div class="step-card__meta">
+            <span class="step-card__meta-item">
+              <i data-lucide="clock" class="icon"></i>
+              3-5 days
+            </span>
+            <span class="step-card__meta-item step-card__meta-item--highlight">
+              <i data-lucide="dollar-sign" class="icon"></i>
+              FREE*
+            </span>
+          </div>
+        </div>
+        <div class="step-card__visual">
+          <i data-lucide="cube"></i>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step-card">
+        <div class="step-card__number-badge">3</div>
+        <div class="step-card__content">
+          <span class="step-card__eyebrow">Professional Installation</span>
+          <h3 class="step-card__title">Transform Your Yard</h3>
+          <p class="step-card__description">
+            Once you approve the design, our experienced crew gets to work. Most projects are completed in just 2-5 days, with minimal disruption to your daily life.
+          </p>
+          <ul class="step-card__list">
+            <li class="step-card__list-item">
+              <i data-lucide="check" class="icon"></i>
+              <span>Remove existing lawn and debris</span>
+            </li>
+            <li class="step-card__list-item">
+              <i data-lucide="check" class="icon"></i>
+              <span>Prepare and level the base</span>
+            </li>
+            <li class="step-card__list-item">
+              <i data-lucide="check" class="icon"></i>
+              <span>Install drainage system</span>
+            </li>
+            <li class="step-card__list-item">
+              <i data-lucide="check" class="icon"></i>
+              <span>Lay and secure premium turf</span>
+            </li>
+            <li class="step-card__list-item">
+              <i data-lucide="check" class="icon"></i>
+              <span>Final inspection and walkthrough</span>
+            </li>
+          </ul>
+          <div class="step-card__meta">
+            <span class="step-card__meta-item">
+              <i data-lucide="clock" class="icon"></i>
+              2-5 days typical
+            </span>
+            <span class="step-card__meta-item">
+              <i data-lucide="shield-check" class="icon"></i>
+              10-year warranty
+            </span>
+          </div>
+        </div>
+        <div class="step-card__visual">
+          <i data-lucide="check-circle"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What to Expect -->
+  <section class="what-to-expect">
+    <div class="what-to-expect__header">
+      <h2 class="what-to-expect__title">What to Expect</h2>
+      <p class="what-to-expect__subtitle">We make the entire process easy and transparent</p>
+    </div>
+
+    <div class="expectation-grid">
+      <div class="expectation-card">
+        <div class="expectation-card__icon">
+          <i data-lucide="message-circle"></i>
+        </div>
+        <h3 class="expectation-card__title">Clear Communication</h3>
+        <p class="expectation-card__description">
+          We keep you informed at every step. You'll always know what's happening and what comes next.
+        </p>
+      </div>
+
+      <div class="expectation-card">
+        <div class="expectation-card__icon">
+          <i data-lucide="file-text"></i>
+        </div>
+        <h3 class="expectation-card__title">No Hidden Costs</h3>
+        <p class="expectation-card__description">
+          Your quote includes everything. No surprise fees, no "oh, we forgot to mention" moments.
+        </p>
+      </div>
+
+      <div class="expectation-card">
+        <div class="expectation-card__icon">
+          <i data-lucide="hard-hat"></i>
+        </div>
+        <h3 class="expectation-card__title">Professional Crew</h3>
+        <p class="expectation-card__description">
+          Our experienced installers treat your property with respect. We clean up after ourselves every day.
+        </p>
+      </div>
+
+      <div class="expectation-card">
+        <div class="expectation-card__icon">
+          <i data-lucide="thumbs-up"></i>
+        </div>
+        <h3 class="expectation-card__title">Satisfaction Guaranteed</h3>
+        <p class="expectation-card__description">
+          We're not done until you're thrilled. Final walkthrough ensures everything meets your expectations.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Preview -->
+  <section class="faq-preview">
+    <div class="faq-preview__header">
+      <h2 class="faq-preview__title">Common Questions</h2>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3 class="faq-item__question">
+          <i data-lucide="help-circle" class="icon"></i>
+          How long does installation take?
+        </h3>
+        <p class="faq-item__answer">
+          Most residential projects are completed in 2-5 days, depending on size and complexity. Larger projects or those with significant hardscaping may take longer.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-item__question">
+          <i data-lucide="help-circle" class="icon"></i>
+          Is the 3D design really free?
+        </h3>
+        <p class="faq-item__answer">
+          Yes! The 3D design is completely free when you book with us. If you decide not to proceed, there's no charge - we want you to see exactly what you're getting before committing.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-item__question">
+          <i data-lucide="help-circle" class="icon"></i>
+          What happens to my existing lawn?
+        </h3>
+        <p class="faq-item__answer">
+          We remove all existing grass, weeds, and debris as part of the installation process. Everything is hauled away - you don't need to worry about disposal.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-item__question">
+          <i data-lucide="help-circle" class="icon"></i>
+          Do I need to be home during installation?
+        </h3>
+        <p class="faq-item__answer">
+          Not necessarily. Once we have access to the work area, our crew can complete the installation. We'll coordinate with you for the initial setup and final walkthrough.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-preview__cta">
+      <a href="faq.html" class="btn-secondary">View All FAQs</a>
+    </div>
+  </section>
+
+  <!-- Guarantee Section -->
+  <section class="guarantee-section">
+    <div class="guarantee-content">
+      <div class="guarantee-badge">
+        <span class="guarantee-badge__years">10</span>
+        <span class="guarantee-badge__label">Year Warranty</span>
+      </div>
+      <div class="guarantee-text">
+        <h3 class="guarantee-text__title">Our Quality Guarantee</h3>
+        <p class="guarantee-text__description">
+          Every installation comes with our 10-year manufacturer warranty covering materials and workmanship. We stand behind our work because we use only premium materials and proven installation techniques. If there's ever an issue, we'll make it right.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="hiw-final-cta">
+    <div class="hiw-final-cta__content">
+      <h2 class="hiw-final-cta__headline">Ready to Get Started?</h2>
+      <p class="hiw-final-cta__description">
+        Book your free consultation today and take the first step toward your low-maintenance dream yard.
+      </p>
+      <a href="quote.html" class="btn-primary hiw-final-cta__button">Schedule Free Consultation</a>
+      <p class="hiw-final-cta__phone">or call <a href="tel:+16472167787">(647) 216-7787</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="footer__brand">
+        <div class="footer__logo"><img src="https://static.wixstatic.com/media/e83a48_77d3e37bf7c04f32af25998246892eb8~mv2.png" alt="Yard Guard Landscaping"></div>
+        <p class="footer__tagline">Transform your backyard into a low-maintenance outdoor oasis.</p>
+        <div class="footer__social">
+          <a href="https://www.facebook.com/YardGuardlandscaping/" target="_blank" class="footer__social-link"><i data-lucide="facebook"></i></a>
+          <a href="https://www.instagram.com/yardguardlandscaping/" target="_blank" class="footer__social-link"><i data-lucide="instagram"></i></a>
+          <a href="https://www.yardguardlandscaping.com" target="_blank" class="footer__social-link"><i data-lucide="globe"></i></a>
+        </div>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__column-title">Services</h4>
+        <a href="packages.html" class="footer__link">Easy Lawn</a>
+        <a href="packages.html" class="footer__link">Pet Yard</a>
+        <a href="packages.html" class="footer__link">Golfer's Green</a>
+        <a href="quote.html" class="footer__link">Get a Quote</a>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__column-title">Company</h4>
+        <a href="about.html" class="footer__link">About Us</a>
+        <a href="gallery.html" class="footer__link">Gallery</a>
+        <a href="how-it-works.html" class="footer__link">How It Works</a>
+        <a href="faq.html" class="footer__link">FAQ</a>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__column-title">Contact</h4>
+        <div class="footer__contact-item">
+          <i data-lucide="phone" class="icon"></i>
+          <span>(647) 216-7787</span>
+        </div>
+        <div class="footer__contact-item">
+          <i data-lucide="mail" class="icon"></i>
+          <span>info@yardguardlandscaping.com</span>
+        </div>
+        <div class="footer__contact-item">
+          <i data-lucide="map-pin" class="icon"></i>
+          <span>Mississauga, ON<br>Serving Etobicoke & GTA</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copyright">&copy; 2025 Yard Guard Landscaping. All rights reserved.</p>
+      <div class="footer__legal">
+        <a href="privacy.html" class="footer__legal-link">Privacy Policy</a>
+        <a href="terms.html" class="footer__legal-link">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky CTA -->
+  <div class="mobile-sticky-cta">
+    <a href="tel:+16472167787" class="mobile-sticky-cta__call">
+      <i data-lucide="phone"></i> Call Now
+    </a>
+    <a href="quote.html" class="mobile-sticky-cta__quote">Get Free Quote</a>
+  </div>
+
+  <!-- Initialize Lucide Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

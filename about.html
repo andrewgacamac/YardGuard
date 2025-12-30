@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Yard Guard | 15+ Years Landscaping Experience | Mississauga</title>
+  <meta name="description" content="Meet Yard Guard Landscaping - 15+ years transforming backyards in Mississauga & GTA. Landscape Ontario member, Humber College certified. Family-owned, locally operated.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* ========================================
+       CSS RESET & BASE
+       ======================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #212121;
+      background: #FFFFFF;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ========================================
+       CSS VARIABLES
+       ======================================== */
+    :root {
+      --primary-green: #2E7D32;
+      --primary-green-hover: #1B5E20;
+      --dark-green: #1A3C1A;
+      --light-green: #E8F5E9;
+      --white: #FFFFFF;
+      --off-white: #FAFAFA;
+      --dark-text: #212121;
+      --medium-text: #616161;
+      --light-text: #9E9E9E;
+      --border: #E0E0E0;
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      --shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    /* ========================================
+       TYPOGRAPHY
+       ======================================== */
+    h1, h2, h3, h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    h1 { font-size: 48px; }
+    h2 { font-size: 42px; font-weight: 600; }
+    h3 { font-size: 32px; font-weight: 600; }
+    h4 { font-size: 24px; font-weight: 600; }
+
+    @media (max-width: 767px) {
+      h1 { font-size: 32px; }
+      h2 { font-size: 28px; }
+      h3 { font-size: 24px; }
+      h4 { font-size: 20px; }
+    }
+
+    /* ========================================
+       BUTTONS
+       ======================================== */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: var(--primary-green);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+      padding: 16px 32px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(46, 125, 50, 0.25);
+      min-height: 54px;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-green-hover);
+      box-shadow: 0 6px 12px rgba(46, 125, 50, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: transparent;
+      color: var(--primary-green);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      padding: 14px 30px;
+      border: 2px solid var(--primary-green);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--light-green);
+      border-color: var(--primary-green-hover);
+    }
+
+    /* ========================================
+       HEADER
+       ======================================== */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: var(--white);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      z-index: 1000;
+    }
+
+    .header__container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header__logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .header__logo img {
+      height: 50px;
+      width: auto;
+    }
+
+    .header__nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-link {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--dark-text);
+      padding: 8px 16px;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    .nav-link:hover {
+      color: var(--primary-green);
+    }
+
+    .header__cta {
+      padding: 12px 24px;
+      font-size: 14px;
+      min-height: auto;
+    }
+
+    @media (max-width: 1023px) {
+      .header__nav {
+        display: none;
+      }
+    }
+
+    /* ========================================
+       HERO BANNER
+       ======================================== */
+    .about-hero {
+      position: relative;
+      height: 450px;
+      margin-top: 80px;
+      background: linear-gradient(135deg, rgba(46, 125, 50, 0.9) 0%, rgba(27, 94, 32, 0.95) 100%),
+                  url('https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1920&q=80') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .about-hero__content {
+      max-width: 800px;
+      padding: 0 24px;
+      color: var(--white);
+    }
+
+    .about-hero__breadcrumb {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 24px;
+    }
+
+    .about-hero__breadcrumb a {
+      color: rgba(255, 255, 255, 0.7);
+      transition: color 0.3s ease;
+    }
+
+    .about-hero__breadcrumb a:hover {
+      color: var(--white);
+      text-decoration: underline;
+    }
+
+    .about-hero__title {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+
+    .about-hero__subtitle {
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 767px) {
+      .about-hero {
+        height: 350px;
+      }
+      .about-hero__title {
+        font-size: 32px;
+      }
+      .about-hero__subtitle {
+        font-size: 16px;
+      }
+    }
+
+    /* ========================================
+       OUR STORY
+       ======================================== */
+    .our-story {
+      padding: 100px 24px;
+      background: var(--white);
+    }
+
+    .our-story__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      max-width: 1200px;
+      margin: 0 auto;
+      align-items: center;
+    }
+
+    .our-story__image {
+      height: 500px;
+      background: linear-gradient(135deg, #81C784 0%, #4CAF50 100%);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 100px;
+    }
+
+    .our-story__content {
+    }
+
+    .our-story__eyebrow {
+      display: inline-block;
+      background: var(--light-green);
+      color: var(--primary-green);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+      padding: 6px 12px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+
+    .our-story__title {
+      font-size: 36px;
+      color: var(--dark-text);
+      margin-bottom: 24px;
+    }
+
+    .our-story__text {
+      font-size: 17px;
+      color: var(--medium-text);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .our-story__signature {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    .our-story__signature-name {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      color: var(--dark-text);
+    }
+
+    .our-story__signature-title {
+      font-size: 14px;
+      color: var(--medium-text);
+    }
+
+    @media (max-width: 1023px) {
+      .our-story {
+        padding: 64px 24px;
+      }
+      .our-story__container {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .our-story__image {
+        height: 300px;
+      }
+    }
+
+    /* ========================================
+       STATS SECTION
+       ======================================== */
+    .stats-section {
+      background: var(--dark-green);
+      padding: 60px 24px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 48px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .stat-item {
+      text-align: center;
+      color: var(--white);
+    }
+
+    .stat-item__value {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 48px;
+      margin-bottom: 8px;
+    }
+
+    .stat-item__label {
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    @media (max-width: 767px) {
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+      }
+      .stat-item__value {
+        font-size: 36px;
+      }
+    }
+
+    /* ========================================
+       VALUES SECTION
+       ======================================== */
+    .values-section {
+      padding: 100px 24px;
+      background: var(--off-white);
+    }
+
+    .values-section__header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 64px;
+    }
+
+    .values-section__title {
+      margin-bottom: 16px;
+    }
+
+    .values-section__subtitle {
+      font-size: 18px;
+      color: var(--medium-text);
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .value-card {
+      background: var(--white);
+      padding: 40px 32px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .value-card__icon {
+      width: 70px;
+      height: 70px;
+      background: var(--light-green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      color: var(--primary-green);
+    }
+
+    .value-card__title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      color: var(--dark-text);
+      margin-bottom: 16px;
+    }
+
+    .value-card__description {
+      font-size: 15px;
+      color: var(--medium-text);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 1023px) {
+      .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 767px) {
+      .values-section {
+        padding: 64px 16px;
+      }
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ========================================
+       CREDENTIALS SECTION
+       ======================================== */
+    .credentials-section {
+      padding: 80px 24px;
+      background: var(--white);
+    }
+
+    .credentials-section__header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .credentials-section__title {
+      margin-bottom: 16px;
+    }
+
+    .credentials-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .credential-item {
+      text-align: center;
+      padding: 32px 24px;
+      background: var(--off-white);
+      border-radius: 12px;
+    }
+
+    .credential-item__icon {
+      width: 60px;
+      height: 60px;
+      background: var(--primary-green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      color: white;
+    }
+
+    .credential-item__title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--dark-text);
+      margin-bottom: 8px;
+    }
+
+    .credential-item__description {
+      font-size: 14px;
+      color: var(--medium-text);
+    }
+
+    @media (max-width: 1023px) {
+      .credentials-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 767px) {
+      .credentials-section {
+        padding: 48px 16px;
+      }
+      .credentials-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+
+    /* ========================================
+       SERVICE AREA
+       ======================================== */
+    .service-area {
+      padding: 80px 24px;
+      background: var(--off-white);
+    }
+
+    .service-area__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      max-width: 1200px;
+      margin: 0 auto;
+      align-items: center;
+    }
+
+    .service-area__content {
+    }
+
+    .service-area__title {
+      font-size: 32px;
+      margin-bottom: 16px;
+      color: var(--dark-text);
+    }
+
+    .service-area__description {
+      font-size: 17px;
+      color: var(--medium-text);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .service-area__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .service-area__item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+      color: var(--dark-text);
+    }
+
+    .service-area__item .icon {
+      color: var(--primary-green);
+    }
+
+    .service-area__map {
+      height: 400px;
+      background: linear-gradient(135deg, #90CAF9 0%, #42A5F5 100%);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 64px;
+    }
+
+    @media (max-width: 1023px) {
+      .service-area__container {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .service-area__map {
+        height: 300px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .service-area {
+        padding: 48px 16px;
+      }
+      .service-area__list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ========================================
+       TEAM SECTION
+       ======================================== */
+    .team-section {
+      padding: 100px 24px;
+      background: var(--white);
+    }
+
+    .team-section__header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .team-section__title {
+      margin-bottom: 16px;
+    }
+
+    .team-section__subtitle {
+      font-size: 18px;
+      color: var(--medium-text);
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .team-member {
+      text-align: center;
+    }
+
+    .team-member__photo {
+      width: 180px;
+      height: 180px;
+      background: linear-gradient(135deg, #9E9E9E 0%, #757575 100%);
+      border-radius: 50%;
+      margin: 0 auto 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 64px;
+    }
+
+    .team-member__name {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      color: var(--dark-text);
+      margin-bottom: 8px;
+    }
+
+    .team-member__role {
+      font-size: 15px;
+      color: var(--primary-green);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .team-member__bio {
+      font-size: 14px;
+      color: var(--medium-text);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 767px) {
+      .team-section {
+        padding: 64px 16px;
+      }
+      .team-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+    }
+
+    /* ========================================
+       CTA SECTION
+       ======================================== */
+    .about-cta {
+      background: linear-gradient(135deg, var(--primary-green-hover) 0%, var(--primary-green) 100%);
+      padding: 80px 24px;
+      text-align: center;
+    }
+
+    .about-cta__content {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .about-cta__headline {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 36px;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .about-cta__description {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    .about-cta__button {
+      background: var(--white);
+      color: var(--primary-green);
+      margin-bottom: 20px;
+    }
+
+    .about-cta__button:hover {
+      background: var(--light-green);
+    }
+
+    .about-cta__phone {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .about-cta__phone a {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    @media (max-width: 767px) {
+      .about-cta {
+        padding: 48px 16px;
+      }
+      .about-cta__headline {
+        font-size: 28px;
+      }
+      .about-cta__description {
+        font-size: 16px;
+      }
+    }
+
+    /* ========================================
+       FOOTER
+       ======================================== */
+    .footer {
+      background: var(--dark-green);
+      padding: 80px 24px 40px;
+    }
+
+    .footer__main {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer__logo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .footer__logo img {
+      height: 60px;
+      width: auto;
+    }
+
+    .footer__tagline {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+      max-width: 250px;
+      margin-bottom: 24px;
+    }
+
+    .footer__social {
+      display: flex;
+      gap: 16px;
+    }
+
+    .footer__social-link {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      transition: all 0.3s ease;
+    }
+
+    .footer__social-link:hover {
+      background: var(--primary-green);
+    }
+
+    .footer__column-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .footer__link {
+      display: block;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      padding: 8px 0;
+      transition: color 0.3s ease;
+    }
+
+    .footer__link:hover {
+      color: var(--white);
+    }
+
+    .footer__contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 12px;
+    }
+
+    .footer__contact-item .icon {
+      color: #81C784;
+      flex-shrink: 0;
+    }
+
+    .footer__bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 48px;
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .footer__copyright {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer__legal {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer__legal-link {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer__legal-link:hover {
+      color: var(--white);
+    }
+
+    @media (max-width: 1023px) {
+      .footer__main {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .footer {
+        padding: 64px 16px 32px;
+      }
+      .footer__main {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .footer__bottom {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+      }
+    }
+
+    /* ========================================
+       MOBILE STICKY CTA
+       ======================================== */
+    .mobile-sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 70px;
+      background: var(--white);
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      padding: 12px 16px;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .mobile-sticky-cta__call {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--primary-green);
+      padding: 12px 16px;
+      border: 2px solid var(--primary-green);
+      border-radius: 8px;
+    }
+
+    .mobile-sticky-cta__quote {
+      flex-grow: 1;
+      background: var(--primary-green);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 14px 24px;
+      border: none;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    @media (max-width: 767px) {
+      .mobile-sticky-cta {
+        display: flex;
+      }
+      body {
+        padding-bottom: 70px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header__container">
+      <a href="homepage.html" class="header__logo"><img src="https://static.wixstatic.com/media/e83a48_77d3e37bf7c04f32af25998246892eb8~mv2.png" alt="Yard Guard Landscaping"></a>
+      <nav class="header__nav">
+        <a href="homepage.html" class="nav-link">Home</a>
+        <a href="packages.html" class="nav-link">Packages</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="how-it-works.html" class="nav-link">How It Works</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+      </nav>
+      <a href="quote.html" class="btn-primary header__cta">Get a Quote</a>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="about-hero">
+    <div class="about-hero__content">
+      <div class="about-hero__breadcrumb">
+        <a href="homepage.html">Home</a> &gt; About Us
+      </div>
+      <h1 class="about-hero__title">About Yard Guard</h1>
+      <p class="about-hero__subtitle">15+ years of transforming backyards across the Greater Toronto Area</p>
+    </div>
+  </section>
+
+  <!-- Our Story -->
+  <section class="our-story">
+    <div class="our-story__container">
+      <div class="our-story__image">
+        <i data-lucide="leaf"></i>
+      </div>
+      <div class="our-story__content">
+        <span class="our-story__eyebrow">Our Story</span>
+        <h2 class="our-story__title">From Passion to Purpose</h2>
+        <p class="our-story__text">
+          Yard Guard Landscaping was founded on a simple belief: everyone deserves a beautiful outdoor space they can actually enjoy. After graduating from Humber College's Horticulture Science and Landscape Design program, I spent years perfecting the craft of landscape transformation.
+        </p>
+        <p class="our-story__text">
+          Today, we've helped over 500 families in Mississauga and the GTA reclaim their weekends and transform their yards into low-maintenance outdoor oases. Our team combines technical expertise with genuine care for every project we take on.
+        </p>
+        <p class="our-story__text">
+          When we introduced 3D design visualization to our process, everything changed. Now our clients can see exactly what their yard will look like before we break ground - no surprises, no guesswork, just confidence in their investment.
+        </p>
+        <div class="our-story__signature">
+          <p class="our-story__signature-name">Michael Kasowski</p>
+          <p class="our-story__signature-title">Founder & Lead Designer</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats-section">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-item__value">15+</div>
+        <div class="stat-item__label">Years Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-item__value">500+</div>
+        <div class="stat-item__label">Yards Transformed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-item__value">4.9</div>
+        <div class="stat-item__label">Google Rating</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-item__value">10</div>
+        <div class="stat-item__label">Year Warranty</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Values -->
+  <section class="values-section">
+    <div class="values-section__header">
+      <h2 class="values-section__title">What We Stand For</h2>
+      <p class="values-section__subtitle">The principles that guide everything we do</p>
+    </div>
+
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-card__icon">
+          <i data-lucide="heart" style="width: 32px; height: 32px;"></i>
+        </div>
+        <h3 class="value-card__title">Genuine Care</h3>
+        <p class="value-card__description">
+          We treat every yard like it's our own. Your satisfaction isn't just a goal - it's the only outcome we'll accept.
+        </p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-card__icon">
+          <i data-lucide="eye" style="width: 32px; height: 32px;"></i>
+        </div>
+        <h3 class="value-card__title">Full Transparency</h3>
+        <p class="value-card__description">
+          No hidden fees, no surprises. You'll see your design in 3D and know exactly what you're getting before we start.
+        </p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-card__icon">
+          <i data-lucide="award" style="width: 32px; height: 32px;"></i>
+        </div>
+        <h3 class="value-card__title">Quality First</h3>
+        <p class="value-card__description">
+          We use only premium materials and proven techniques. Our 10-year warranty backs every installation we do.
+        </p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-card__icon">
+          <i data-lucide="message-circle" style="width: 32px; height: 32px;"></i>
+        </div>
+        <h3 class="value-card__title">Clear Communication</h3>
+        <p class="value-card__description">
+          You'll always know what's happening and what comes next. We return calls, answer questions, and keep you informed.
+        </p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-card__icon">
+          <i data-lucide="users" style="width: 32px; height: 32px;"></i>
+        </div>
+        <h3 class="value-card__title">Family Focus</h3>
+        <p class="value-card__description">
+          We're a family business that understands family needs. Your backyard should be a place where memories are made.
+        </p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-card__icon">
+          <i data-lucide="leaf" style="width: 32px; height: 32px;"></i>
+        </div>
+        <h3 class="value-card__title">Environmental Responsibility</h3>
+        <p class="value-card__description">
+          Artificial turf saves thousands of litres of water annually and eliminates the need for harmful pesticides and fertilizers.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Credentials -->
+  <section class="credentials-section">
+    <div class="credentials-section__header">
+      <h2 class="credentials-section__title">Our Credentials</h2>
+    </div>
+
+    <div class="credentials-grid">
+      <div class="credential-item">
+        <div class="credential-item__icon">
+          <i data-lucide="graduation-cap" style="width: 24px; height: 24px;"></i>
+        </div>
+        <h3 class="credential-item__title">Humber College</h3>
+        <p class="credential-item__description">Horticulture Science & Landscape Design</p>
+      </div>
+
+      <div class="credential-item">
+        <div class="credential-item__icon">
+          <i data-lucide="badge" style="width: 24px; height: 24px;"></i>
+        </div>
+        <h3 class="credential-item__title">Landscape Ontario</h3>
+        <p class="credential-item__description">Certified Member</p>
+      </div>
+
+      <div class="credential-item">
+        <div class="credential-item__icon">
+          <i data-lucide="shield-check" style="width: 24px; height: 24px;"></i>
+        </div>
+        <h3 class="credential-item__title">Fully Insured</h3>
+        <p class="credential-item__description">$2M Liability Coverage</p>
+      </div>
+
+      <div class="credential-item">
+        <div class="credential-item__icon">
+          <i data-lucide="hard-hat" style="width: 24px; height: 24px;"></i>
+        </div>
+        <h3 class="credential-item__title">WSIB Compliant</h3>
+        <p class="credential-item__description">All Workers Covered</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area -->
+  <section class="service-area">
+    <div class="service-area__container">
+      <div class="service-area__content">
+        <h2 class="service-area__title">Serving the GTA</h2>
+        <p class="service-area__description">
+          We're proud to serve homeowners throughout Mississauga and the Greater Toronto Area. Our centrally-located team can typically start projects within 2 weeks of booking.
+        </p>
+        <div class="service-area__list">
+          <div class="service-area__item">
+            <i data-lucide="check" class="icon" style="width: 18px; height: 18px;"></i>
+            Mississauga
+          </div>
+          <div class="service-area__item">
+            <i data-lucide="check" class="icon" style="width: 18px; height: 18px;"></i>
+            Etobicoke
+          </div>
+          <div class="service-area__item">
+            <i data-lucide="check" class="icon" style="width: 18px; height: 18px;"></i>
+            Oakville
+          </div>
+          <div class="service-area__item">
+            <i data-lucide="check" class="icon" style="width: 18px; height: 18px;"></i>
+            Burlington
+          </div>
+          <div class="service-area__item">
+            <i data-lucide="check" class="icon" style="width: 18px; height: 18px;"></i>
+            Brampton
+          </div>
+          <div class="service-area__item">
+            <i data-lucide="check" class="icon" style="width: 18px; height: 18px;"></i>
+            Milton
+          </div>
+          <div class="service-area__item">
+            <i data-lucide="check" class="icon" style="width: 18px; height: 18px;"></i>
+            Toronto West
+          </div>
+          <div class="service-area__item">
+            <i data-lucide="check" class="icon" style="width: 18px; height: 18px;"></i>
+            Surrounding GTA
+          </div>
+        </div>
+      </div>
+      <div class="service-area__map">
+        <i data-lucide="map"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team-section">
+    <div class="team-section__header">
+      <h2 class="team-section__title">Meet the Team</h2>
+      <p class="team-section__subtitle">The people behind your backyard transformation</p>
+    </div>
+
+    <div class="team-grid">
+      <div class="team-member">
+        <div class="team-member__photo">
+          <i data-lucide="user"></i>
+        </div>
+        <h3 class="team-member__name">Michael Kasowski</h3>
+        <p class="team-member__role">Founder & Lead Designer</p>
+        <p class="team-member__bio">
+          15+ years in landscape design with a passion for creating outdoor spaces families actually use and enjoy.
+        </p>
+      </div>
+
+      <div class="team-member">
+        <div class="team-member__photo">
+          <i data-lucide="user"></i>
+        </div>
+        <h3 class="team-member__name">Sarah Chen</h3>
+        <p class="team-member__role">Project Manager</p>
+        <p class="team-member__bio">
+          Ensures every project runs smoothly from consultation to final walkthrough. Your main point of contact.
+        </p>
+      </div>
+
+      <div class="team-member">
+        <div class="team-member__photo">
+          <i data-lucide="user"></i>
+        </div>
+        <h3 class="team-member__name">David Rodriguez</h3>
+        <p class="team-member__role">Lead Installer</p>
+        <p class="team-member__bio">
+          10+ years of hands-on installation experience. Leads our crew and maintains our quality standards.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="about-cta">
+    <div class="about-cta__content">
+      <h2 class="about-cta__headline">Ready to Transform Your Yard?</h2>
+      <p class="about-cta__description">
+        Let's talk about your backyard goals. Get a free consultation and 3D design - no obligation.
+      </p>
+      <a href="quote.html" class="btn-primary about-cta__button">Get Your Free Consultation</a>
+      <p class="about-cta__phone">or call <a href="tel:+16472167787">(647) 216-7787</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="footer__brand">
+        <div class="footer__logo"><img src="https://static.wixstatic.com/media/e83a48_77d3e37bf7c04f32af25998246892eb8~mv2.png" alt="Yard Guard Landscaping"></div>
+        <p class="footer__tagline">Transform your backyard into a low-maintenance outdoor oasis.</p>
+        <div class="footer__social">
+          <a href="https://www.facebook.com/YardGuardlandscaping/" target="_blank" class="footer__social-link"><i data-lucide="facebook"></i></a>
+          <a href="https://www.instagram.com/yardguardlandscaping/" target="_blank" class="footer__social-link"><i data-lucide="instagram"></i></a>
+          <a href="https://www.yardguardlandscaping.com" target="_blank" class="footer__social-link"><i data-lucide="globe"></i></a>
+        </div>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__column-title">Services</h4>
+        <a href="packages.html#easy-lawn" class="footer__link">Easy Lawn</a>
+        <a href="packages.html#pet-yard" class="footer__link">Pet Yard</a>
+        <a href="packages.html#golfers-green" class="footer__link">Golfer's Green</a>
+        <a href="quote.html" class="footer__link">Get a Quote</a>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__column-title">Company</h4>
+        <a href="about.html" class="footer__link">About Us</a>
+        <a href="gallery.html" class="footer__link">Gallery</a>
+        <a href="how-it-works.html" class="footer__link">How It Works</a>
+        <a href="faq.html" class="footer__link">FAQ</a>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__column-title">Contact</h4>
+        <div class="footer__contact-item">
+          <i data-lucide="phone" class="icon"></i>
+          <span>(647) 216-7787</span>
+        </div>
+        <div class="footer__contact-item">
+          <i data-lucide="mail" class="icon"></i>
+          <span>info@yardguardlandscaping.com</span>
+        </div>
+        <div class="footer__contact-item">
+          <i data-lucide="map-pin" class="icon"></i>
+          <span>Mississauga, ON<br>Serving Etobicoke & GTA</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copyright">&copy; 2025 Yard Guard Landscaping. All rights reserved.</p>
+      <div class="footer__legal">
+        <a href="privacy.html" class="footer__legal-link">Privacy Policy</a>
+        <a href="terms.html" class="footer__legal-link">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky CTA -->
+  <div class="mobile-sticky-cta">
+    <a href="tel:+16472167787" class="mobile-sticky-cta__call">
+      <i data-lucide="phone"></i> Call Now
+    </a>
+    <a href="quote.html" class="mobile-sticky-cta__quote">Get Free Quote</a>
+  </div>
+
+  <!-- Initialize Lucide Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

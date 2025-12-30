@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artificial Turf FAQ | Common Questions Answered | Yard Guard Mississauga</title>
+  <meta name="description" content="Get answers to common artificial turf questions: cost, maintenance, durability, pet safety, installation time, warranty and more. Serving Mississauga & GTA.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* ========================================
+       CSS RESET & BASE
+       ======================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #212121;
+      background: #FFFFFF;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ========================================
+       CSS VARIABLES
+       ======================================== */
+    :root {
+      --primary-green: #2E7D32;
+      --primary-green-hover: #1B5E20;
+      --dark-green: #1A3C1A;
+      --light-green: #E8F5E9;
+      --white: #FFFFFF;
+      --off-white: #FAFAFA;
+      --dark-text: #212121;
+      --medium-text: #616161;
+      --light-text: #9E9E9E;
+      --border: #E0E0E0;
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      --shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    /* ========================================
+       TYPOGRAPHY
+       ======================================== */
+    h1, h2, h3, h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    h1 { font-size: 48px; }
+    h2 { font-size: 42px; font-weight: 600; }
+    h3 { font-size: 32px; font-weight: 600; }
+    h4 { font-size: 24px; font-weight: 600; }
+
+    @media (max-width: 767px) {
+      h1 { font-size: 32px; }
+      h2 { font-size: 28px; }
+      h3 { font-size: 24px; }
+      h4 { font-size: 20px; }
+    }
+
+    /* ========================================
+       BUTTONS
+       ======================================== */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: var(--primary-green);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+      padding: 16px 32px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(46, 125, 50, 0.25);
+      min-height: 54px;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-green-hover);
+      box-shadow: 0 6px 12px rgba(46, 125, 50, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: transparent;
+      color: var(--primary-green);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      padding: 14px 30px;
+      border: 2px solid var(--primary-green);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--light-green);
+      border-color: var(--primary-green-hover);
+    }
+
+    /* ========================================
+       HEADER
+       ======================================== */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: var(--white);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      z-index: 1000;
+    }
+
+    .header__container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header__logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .header__logo img {
+      height: 50px;
+      width: auto;
+    }
+
+    .header__nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-link {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--dark-text);
+      padding: 8px 16px;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    .nav-link:hover {
+      color: var(--primary-green);
+    }
+
+    .nav-link.active {
+      color: var(--primary-green);
+    }
+
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 16px;
+      right: 16px;
+      height: 3px;
+      background: var(--primary-green);
+      border-radius: 2px;
+    }
+
+    .header__cta {
+      padding: 12px 24px;
+      font-size: 14px;
+      min-height: auto;
+    }
+
+    @media (max-width: 1023px) {
+      .header__nav {
+        display: none;
+      }
+    }
+
+    /* ========================================
+       HERO BANNER
+       ======================================== */
+    .faq-hero {
+      position: relative;
+      height: 350px;
+      margin-top: 80px;
+      background: linear-gradient(135deg, rgba(46, 125, 50, 0.9) 0%, rgba(27, 94, 32, 0.95) 100%),
+                  url('https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1920&q=80') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .faq-hero__content {
+      max-width: 800px;
+      padding: 0 24px;
+      color: var(--white);
+    }
+
+    .faq-hero__breadcrumb {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 24px;
+    }
+
+    .faq-hero__breadcrumb a {
+      color: rgba(255, 255, 255, 0.7);
+      transition: color 0.3s ease;
+    }
+
+    .faq-hero__breadcrumb a:hover {
+      color: var(--white);
+      text-decoration: underline;
+    }
+
+    .faq-hero__title {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+
+    .faq-hero__subtitle {
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    @media (max-width: 767px) {
+      .faq-hero {
+        height: 280px;
+      }
+      .faq-hero__title {
+        font-size: 32px;
+      }
+      .faq-hero__subtitle {
+        font-size: 16px;
+      }
+    }
+
+    /* ========================================
+       FAQ NAVIGATION
+       ======================================== */
+    .faq-nav {
+      background: var(--white);
+      padding: 24px;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 80px;
+      z-index: 100;
+    }
+
+    .faq-nav__container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .faq-nav__link {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--medium-text);
+      padding: 10px 20px;
+      background: var(--off-white);
+      border: 2px solid transparent;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+    }
+
+    .faq-nav__link:hover {
+      color: var(--primary-green);
+      background: var(--light-green);
+    }
+
+    .faq-nav__link.active {
+      color: var(--white);
+      background: var(--primary-green);
+    }
+
+    @media (max-width: 767px) {
+      .faq-nav {
+        padding: 16px;
+      }
+      .faq-nav__link {
+        font-size: 13px;
+        padding: 8px 16px;
+      }
+    }
+
+    /* ========================================
+       FAQ SECTIONS
+       ======================================== */
+    .faq-section {
+      padding: 80px 24px;
+      background: var(--white);
+    }
+
+    .faq-section:nth-child(even) {
+      background: var(--off-white);
+    }
+
+    .faq-section__header {
+      max-width: 800px;
+      margin: 0 auto 48px;
+    }
+
+    .faq-section__icon {
+      width: 60px;
+      height: 60px;
+      background: var(--light-green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-green);
+      margin-bottom: 16px;
+    }
+
+    .faq-section__title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 28px;
+      color: var(--dark-text);
+      margin-bottom: 8px;
+    }
+
+    .faq-section__description {
+      font-size: 16px;
+      color: var(--medium-text);
+    }
+
+    @media (max-width: 767px) {
+      .faq-section {
+        padding: 48px 16px;
+      }
+    }
+
+    /* ========================================
+       ACCORDION
+       ======================================== */
+    .faq-accordion {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-accordion__item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 16px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .faq-section:nth-child(even) .faq-accordion__item {
+      background: var(--white);
+    }
+
+    .faq-accordion__item:hover {
+      box-shadow: var(--shadow);
+    }
+
+    .faq-accordion__header {
+      width: 100%;
+      padding: 24px;
+      background: none;
+      border: none;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .faq-accordion__question {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 17px;
+      color: var(--dark-text);
+      flex-grow: 1;
+    }
+
+    .faq-accordion__icon {
+      width: 24px;
+      height: 24px;
+      color: var(--primary-green);
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .faq-accordion__item.active .faq-accordion__icon {
+      transform: rotate(180deg);
+    }
+
+    .faq-accordion__content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .faq-accordion__item.active .faq-accordion__content {
+      max-height: 500px;
+    }
+
+    .faq-accordion__answer {
+      padding: 0 24px 24px;
+      font-size: 16px;
+      color: var(--medium-text);
+      line-height: 1.7;
+    }
+
+    .faq-accordion__answer p {
+      margin-bottom: 12px;
+    }
+
+    .faq-accordion__answer p:last-child {
+      margin-bottom: 0;
+    }
+
+    .faq-accordion__answer ul {
+      margin: 12px 0;
+      padding-left: 24px;
+    }
+
+    .faq-accordion__answer li {
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 767px) {
+      .faq-accordion__header {
+        padding: 20px;
+      }
+      .faq-accordion__question {
+        font-size: 15px;
+      }
+      .faq-accordion__answer {
+        padding: 0 20px 20px;
+        font-size: 15px;
+      }
+    }
+
+    /* ========================================
+       STILL HAVE QUESTIONS
+       ======================================== */
+    .still-questions {
+      background: var(--light-green);
+      padding: 80px 24px;
+      text-align: center;
+    }
+
+    .still-questions__content {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .still-questions__icon {
+      width: 80px;
+      height: 80px;
+      background: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      color: var(--primary-green);
+      box-shadow: var(--shadow);
+    }
+
+    .still-questions__title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 28px;
+      color: var(--dark-text);
+      margin-bottom: 16px;
+    }
+
+    .still-questions__description {
+      font-size: 18px;
+      color: var(--medium-text);
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    .still-questions__buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 767px) {
+      .still-questions {
+        padding: 48px 16px;
+      }
+      .still-questions__title {
+        font-size: 24px;
+      }
+      .still-questions__description {
+        font-size: 16px;
+      }
+    }
+
+    /* ========================================
+       FINAL CTA
+       ======================================== */
+    .faq-final-cta {
+      background: linear-gradient(135deg, var(--primary-green-hover) 0%, var(--primary-green) 100%);
+      padding: 80px 24px;
+      text-align: center;
+    }
+
+    .faq-final-cta__content {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .faq-final-cta__headline {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 36px;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .faq-final-cta__description {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    .faq-final-cta__button {
+      background: var(--white);
+      color: var(--primary-green);
+      margin-bottom: 20px;
+    }
+
+    .faq-final-cta__button:hover {
+      background: var(--light-green);
+    }
+
+    .faq-final-cta__phone {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .faq-final-cta__phone a {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    @media (max-width: 767px) {
+      .faq-final-cta {
+        padding: 48px 16px;
+      }
+      .faq-final-cta__headline {
+        font-size: 28px;
+      }
+      .faq-final-cta__description {
+        font-size: 16px;
+      }
+    }
+
+    /* ========================================
+       FOOTER
+       ======================================== */
+    .footer {
+      background: var(--dark-green);
+      padding: 80px 24px 40px;
+    }
+
+    .footer__main {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer__logo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .footer__logo img {
+      height: 60px;
+      width: auto;
+    }
+
+    .footer__tagline {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+      max-width: 250px;
+      margin-bottom: 24px;
+    }
+
+    .footer__social {
+      display: flex;
+      gap: 16px;
+    }
+
+    .footer__social-link {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      transition: all 0.3s ease;
+    }
+
+    .footer__social-link:hover {
+      background: var(--primary-green);
+    }
+
+    .footer__column-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .footer__link {
+      display: block;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      padding: 8px 0;
+      transition: color 0.3s ease;
+    }
+
+    .footer__link:hover {
+      color: var(--white);
+    }
+
+    .footer__contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 12px;
+    }
+
+    .footer__contact-item .icon {
+      color: #81C784;
+      flex-shrink: 0;
+    }
+
+    .footer__bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 48px;
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .footer__copyright {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer__legal {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer__legal-link {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer__legal-link:hover {
+      color: var(--white);
+    }
+
+    @media (max-width: 1023px) {
+      .footer__main {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .footer {
+        padding: 64px 16px 32px;
+      }
+      .footer__main {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .footer__bottom {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+      }
+    }
+
+    /* ========================================
+       MOBILE STICKY CTA
+       ======================================== */
+    .mobile-sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 70px;
+      background: var(--white);
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      padding: 12px 16px;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .mobile-sticky-cta__call {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--primary-green);
+      padding: 12px 16px;
+      border: 2px solid var(--primary-green);
+      border-radius: 8px;
+    }
+
+    .mobile-sticky-cta__quote {
+      flex-grow: 1;
+      background: var(--primary-green);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 14px 24px;
+      border: none;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    @media (max-width: 767px) {
+      .mobile-sticky-cta {
+        display: flex;
+      }
+      body {
+        padding-bottom: 70px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header__container">
+      <a href="homepage.html" class="header__logo"><img src="https://static.wixstatic.com/media/e83a48_77d3e37bf7c04f32af25998246892eb8~mv2.png" alt="Yard Guard Landscaping"></a>
+      <nav class="header__nav">
+        <a href="homepage.html" class="nav-link">Home</a>
+        <a href="packages.html" class="nav-link">Packages</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="how-it-works.html" class="nav-link">How It Works</a>
+        <a href="faq.html" class="nav-link active">FAQ</a>
+      </nav>
+      <a href="quote.html" class="btn-primary header__cta">Get a Quote</a>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="faq-hero">
+    <div class="faq-hero__content">
+      <div class="faq-hero__breadcrumb">
+        <a href="homepage.html">Home</a> &gt; <a href="homepage.html">Artificial Turf</a> &gt; FAQ
+      </div>
+      <h1 class="faq-hero__title">Frequently Asked Questions</h1>
+      <p class="faq-hero__subtitle">Everything you need to know about artificial turf</p>
+    </div>
+  </section>
+
+  <!-- FAQ Navigation -->
+  <nav class="faq-nav">
+    <div class="faq-nav__container">
+      <a href="#general" class="faq-nav__link active">General</a>
+      <a href="#cost" class="faq-nav__link">Cost & Pricing</a>
+      <a href="#installation" class="faq-nav__link">Installation</a>
+      <a href="#maintenance" class="faq-nav__link">Maintenance</a>
+      <a href="#pets" class="faq-nav__link">Pets & Kids</a>
+      <a href="#durability" class="faq-nav__link">Durability</a>
+    </div>
+  </nav>
+
+  <!-- General Questions -->
+  <section class="faq-section" id="general">
+    <div class="faq-section__header">
+      <div class="faq-section__icon">
+        <i data-lucide="help-circle"></i>
+      </div>
+      <h2 class="faq-section__title">General Questions</h2>
+      <p class="faq-section__description">Basic information about artificial turf</p>
+    </div>
+
+    <div class="faq-accordion">
+      <div class="faq-accordion__item active">
+        <button class="faq-accordion__header">
+          <span class="faq-accordion__question">What is artificial turf made of?</span>
+          <i data-lucide="chevron-down" class="faq-accordion__icon"></i>
+        </button>
+        <div class="faq-accordion__content">
+          <div class="faq-accordion__answer">
+            <p>Modern artificial turf is made from high-quality synthetic fibers, typically polyethylene or polypropylene. These materials are designed to look and feel like natural grass while being incredibly durable.</p>
+            <p>The turf is constructed in layers: the grass blades are attached to a backing material with drainage holes, and infill (usually silica sand or rubber) is added to keep the blades upright and add weight.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-accordion__item">
+        <button class="faq-accordion__header">
+          <span class="faq-accordion__question">Does artificial turf look fake?</span>
+          <i data-lucide="chevron-down" class="faq-accordion__icon"></i>
+        </button>
+        <div class="faq-accordion__content">
+          <div class="faq-accordion__answer">
+            <p>Not anymore! Today's premium artificial turf is virtually indistinguishable from natural grass. We use turf with multiple blade shapes, colors, and textures that mimic real grass perfectly.</p>
+            <p>Most visitors won't realize it's artificial unless you tell them. Our 3D design preview lets you see exactly how realistic it will look in your yard before installation.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-accordion__item">
+        <button class="faq-accordion__header">
+          <span class="faq-accordion__question">Does artificial turf get hot in summer?</span>
+          <i data-lucide="chevron-down" class="faq-accordion__icon"></i>
+        </button>
+        <div class="faq-accordion__content">
+          <div class="faq-accordion__answer">
+            <p>Artificial turf can get warm on hot summer days, similar to a deck or driveway. However, it's typically 10-15 degrees cooler than concrete surfaces.</p>
+            <p>A quick spray with the hose cools it down instantly. Many of our customers find that the turf cools quickly once the sun moves or in the evening, and their pets and kids still enjoy playing on it throughout the summer.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-accordion__item">
+        <button class="faq-accordion__header">
+          <span class="faq-accordion__question">Is artificial turf environmentally friendly?</span>
+          <i data-lucide="chevron-down" class="faq-accordion__icon"></i>
+        </button>
+        <div class="faq-accordion__content">
+          <div class="faq-accordion__answer">
+            <p>Artificial turf offers several environmental benefits:</p>
+            <ul>
+              <li>Eliminates the need for watering (saves thousands of litres annually)</li>
+              <li>No gas-powered mowing or lawn equipment</li>
+              <li>No pesticides, herbicides, or fertilizers needed</li>
+              <li>Lasts 15-25 years before replacement</li>
+            </ul>
+            <p>While synthetic materials are used, the water savings alone make it an eco-friendly choice for many homeowners.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cost & Pricing -->
+  <section class="faq-section" id="cost">
+    <div class="faq-section__header">
+      <div class="faq-section__icon">
+        <i data-lucide="dollar-sign"></i>
+      </div>
+      <h2 class="faq-section__title">Cost & Pricing</h2>
+      <p class="faq-section__description">Understanding the investment</p>
+    </div>
+
+    <div class="faq-accordion">
+      <div class="faq-accordion__item">
+        <button class="faq-accordion__header">
+          <span class="faq-accordion__question">How much does artificial turf cost?</span>
+          <i data-lucide="chevron-down" class="faq-accordion__icon"></i>
+        </button>
+        <div class="faq-accordion__content">
+          <div class="faq-accordion__answer">
+            <p>Our packages range from $12-28 per square foot, fully installed:</p>
+            <ul>
+              <li><strong>Easy Lawn:</strong> $12-14/sq ft - Standard lawn replacement</li>
+              <li><strong>Pet Yard:</strong> $14-17/sq ft - Antimicrobial with enhanced drainage</li>
+              <li><strong>Golfer's Green:</strong> $22-28/sq ft - Professional putting surfaces</li>
+              <li><strong>Premium Integration:</strong> Custom pricing for full backyard makeovers</li>
+            </ul>
+            <p>A typical 500 sq ft backyard would cost between $6,000-$8,500 for our most popular Pet Yard package.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-accordion__item">
+        <button class="faq-accordion__header">
+          <span class="faq-accordion__question">What's included in the price?</span>
+          <i data-lucide="chevron-down" class="faq-accordion__icon"></i>
+        </button>
+        <div class="faq-accordion__content">
+          <div class="faq-accordion__answer">
+            <p>Our all-inclusive pricing covers everything:</p>
+            <ul>
+              <li>Free 3D design visualization</li>
+              <li>Removal and disposal of existing lawn</li>
+              <li>Ground preparation and leveling</li>
+              <li>Base material and compaction</li>
+              <li>Premium turf materials</li>
+              <li>Professional installation</li>
+              <li>Infill and finishing</li>
+              <li>Site cleanup</li>
+              <li>10-year warranty</li>
+            </ul>
+            <p>No hidden fees or surprise charges. The quote you receive is the price you pay.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-accordion__item">
+        <button class="faq-accordion__header">
+          <span class="faq-accordion__question">Do you offer financing?</span>
+          <i data-lucide="chevron-down" class="faq-accordion__icon"></i>
+        </button>
+        <div class="faq-accordion__content">
+          <div class="faq-accordion__answer">
+            <p>Yes! We partner with trusted financing providers to offer flexible payment options. Typical terms include:</p>
+            <ul>
+              <li>0% interest for 12 months (OAC)</li>
+              <li>Low monthly payments spread over 2-5 years</li>
+              <li>Quick approval process</li>
+            </ul>
+            <p>Ask about financing options during your free consultation.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-accordion__item">
+        <button class="faq-accordion__header">
+          <span class="faq-accordion__question">Is artificial turf worth the investment?</span>
+          <i data-lucide="chevron-down" class="faq-accordion__icon"></i>
+        </button>
+        <div class="faq-accordion__content">
+          <div class="faq-accordion__answer">
+            <p>For most homeowners, artificial turf pays for itself over time through:</p>
+            <ul>
+              <li>Eliminated lawn maintenance costs ($2,000-4,000/year)</li>
+              <li>Water savings (thousands of litres annually)</li>
+              <li>No fertilizer, pesticide, or equipment costs</li>
+              <li>Time saved (200+ hours per year)</li>
+              <li>Increased property value</li>
+            </ul>
+            <p>Most customers see a full return on investment within 3-5 years, while enjoying a beautiful yard from day one.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Installation -->
+  <section class="faq-section" id="installation">
+    <div class="faq-section__header">
+      <div class="faq-section__icon">
+        <i data-lucide="hard-hat"></i>
+      </div>
+      <h2 class="faq-section__title">Installation</h2>
+      <p class="faq-section__description">What to expect during the process</p>
+    </div>
+
+    <div class="faq-accordion">
+      <div class="faq-accordion__item">
+        <button class="faq-accordion__header">
+          <span class="faq-accordion__question">How long does installation take?</span>
+          <i data-lucide="chevron-down" class="faq-accordion__icon"></i>
+        </button>
+        <div class="faq-accordion__content">
+          <div class="faq-accordion__answer">
+            <p>Most residential installations are completed in 2-5 days:</p>
+            <ul>
+              <li><strong>Small areas (under 400 sq ft):</strong> 1-2 days</li>
+              <li><strong>Average backyards (400-800 sq ft):</strong> 2-3 days</li>
+              <li><strong>Large projects (800+ sq ft):</strong> 3-5 days</li>
+            </ul>
+            <p>Projects with significant grading, complex shapes, or hardscape integration may take longer. We'll provide an accurate timeline during your consultation.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-accordion__item">
+        <button class="faq-accordion__header">
+          <span class="faq-accordion__question">What happens to my existing lawn?</span>
+          <i data-lucide="chevron-down" class="faq-accordion__icon"></i>
+        </button>
+        <div class="faq-accordion__content">
+          <div class="faq-accordion__answer">
+            <p>We remove all existing grass, weeds, and organic material as part of the installation. The debris is hauled away and disposed of properly - you don't need to do anything.</p>
+            <p>We then excavate 3-4 inches and build a proper base of crushed rock and sand to ensure proper drainage and a stable surface.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-accordion__item">
+        <button class="faq-accordion__header">
+          <span class="faq-accordion__question">Can turf be installed over concrete or pavers?</span>
+          <i data-lucide="chevron-down" class="faq-accordion__icon"></i>
+        </button>
+        <div class="faq-accordion__content">
+          <div class="faq-accordion__answer">
+            <p>Yes! Artificial turf can be installed over concrete, pavers, or rooftop decks with proper preparation. We use a foam underlayment to provide cushioning and drainage.</p>
+            <p>This is a popular option for patios, balconies, and rooftop spaces where traditional landscaping isn't possible.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-accordion__item">
+        <button class="faq-accordion__header">
+          <span class="faq-accordion__question">Do I need to be home during installation?</span>
+          <i data-lucide="chevron-down" class="faq-accordion__icon"></i>
+        </button>
+        <div class="faq-accordion__content">
+          <div class="faq-accordion__answer">
+            <p>Not necessarily. Once we have access to the work area and have discussed the project details, our crew can complete the installation independently.</p>
+            <p>We recommend being present for:</p>
+            <ul>
+              <li>The initial setup and walkthrough</li>
+              <li>Any mid-project decisions</li>
+              <li>The final inspection and walkthrough</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Maintenance -->
+  <section class="faq-section" id="maintenance">
+    <div class="faq-section__header">
+      <div class="faq-section__icon">
+        <i data-lucide="settings"></i>
+      </div>
+      <h2 class="faq-section__title">Maintenance</h2>
+      <p class="faq-section__description">Keeping your turf looking great</p>
+    </div>
+
+    <div class="faq-accordion">
+      <div class="faq-accordion__item">
+        <button class="faq-accordion__header">
+          <span class="faq-accordion__question">How do I maintain artificial turf?</span>
+          <i data-lucide="chevron-down" class="faq-accordion__icon"></i>
+        </button>
+        <div class="faq-accordion__content">
+          <div class="faq-accordion__answer">
+            <p>Artificial turf requires minimal maintenance compared to natural grass:</p>
+            <ul>
+              <li><strong>Monthly:</strong> Brush to keep blades upright (5 minutes)</li>
+              <li><strong>As needed:</strong> Remove leaves and debris with a leaf blower</li>
+              <li><strong>Occasionally:</strong> Rinse with water to remove dust</li>
+              <li><strong>Annually:</strong> Inspect edges and seams</li>
+            </ul>
+            <p>That's it! No mowing, watering, fertilizing, or pesticides needed.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-accordion__item">
+        <button class="faq-accordion__header">
+          <span class="faq-accordion__question">How do I clean stains or spills?</span>
+          <i data-lucide="chevron-down" class="faq-accordion__icon"></i>
+        </button>
+        <div class="faq-accordion__content">
+          <div class="faq-accordion__answer">
+            <p>Most spills can be cleaned with water and a mild soap solution:</p>
+            <ul>
+              <li><strong>Food/drinks:</strong> Rinse with water, use mild soap if needed</li>
+              <li><strong>Grease/oil:</strong> Mild degreaser and water</li>
+              <li><strong>Chewing gum:</strong> Freeze with ice, then scrape off</li>
+              <li><strong>Paint:</strong> Mineral spirits or paint remover (test first)</li>
+            </ul>
+            <p>For stubborn stains, we're always happy to provide guidance.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-accordion__item">
+        <button class="faq-accordion__header">
+          <span class="faq-accordion__question">Does artificial turf drain properly?</span>
+          <i data-lucide="chevron-down" class="faq-accordion__icon"></i>
+        </button>
+        <div class="faq-accordion__content">
+          <div class="faq-accordion__answer">
+            <p>Yes! Our turf systems are engineered for excellent drainage. The backing has perforations that allow water to pass through, and we install a proper base layer that channels water away.</p>
+            <p>Most turf systems drain at a rate of 30+ inches per hour - far faster than any natural lawn. Your turf will dry quickly after rain.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pets & Kids -->
+  <section class="faq-section" id="pets">
+    <div class="faq-section__header">
+      <div class="faq-section__icon">
+        <i data-lucide="paw-print"></i>
+      </div>
+      <h2 class="faq-section__title">Pets & Kids</h2>
+      <p class="faq-section__description">Safe for the whole family</p>
+    </div>
+
+    <div class="faq-accordion">
+      <div class="faq-accordion__item">
+        <button class="faq-accordion__header">
+          <span class="faq-accordion__question">Is artificial turf safe for pets?</span>
+          <i data-lucide="chevron-down" class="faq-accordion__icon"></i>
+        </button>
+        <div class="faq-accordion__content">
+          <div class="faq-accordion__answer">
+            <p>Absolutely! Our Pet Yard package is specifically designed for pet owners:</p>
+            <ul>
+              <li>Antimicrobial fibers prevent bacteria growth</li>
+              <li>Non-toxic materials safe if pets chew on grass</li>
+              <li>Enhanced drainage for quick drying after use</li>
+              <li>Zeolite infill neutralizes odors naturally</li>
+            </ul>
+            <p>Dogs love playing on turf, and you'll love not having muddy paw prints in your house!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-accordion__item">
+        <button class="faq-accordion__header">
+          <span class="faq-accordion__question">How do I clean up pet waste?</span>
+          <i data-lucide="chevron-down" class="faq-accordion__icon"></i>
+        </button>
+        <div class="faq-accordion__content">
+          <div class="faq-accordion__answer">
+            <p>Pet waste cleanup is easy:</p>
+            <ul>
+              <li><strong>Solid waste:</strong> Pick up as you would on natural grass</li>
+              <li><strong>Liquid waste:</strong> Drains through naturally, rinse occasionally</li>
+              <li><strong>Odor control:</strong> Weekly rinse with hose, or use enzyme cleaner monthly</li>
+            </ul>
+            <p>Our Pet Yard package includes zeolite infill that naturally neutralizes ammonia odors from urine.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-accordion__item">
+        <button class="faq-accordion__header">
+          <span class="faq-accordion__question">Is artificial turf safe for children?</span>
+          <i data-lucide="chevron-down" class="faq-accordion__icon"></i>
+        </button>
+        <div class="faq-accordion__content">
+          <div class="faq-accordion__answer">
+            <p>Yes! Our turf products are:</p>
+            <ul>
+              <li>Lead-free and non-toxic</li>
+              <li>Free of harmful chemicals</li>
+              <li>Softer and more cushioned than natural grass for falls</li>
+              <li>Free of allergens, pests, and pesticides</li>
+            </ul>
+            <p>Many parents choose artificial turf specifically because it's cleaner and safer for play areas.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-accordion__item">
+        <button class="faq-accordion__header">
+          <span class="faq-accordion__question">Will dogs dig through the turf?</span>
+          <i data-lucide="chevron-down" class="faq-accordion__icon"></i>
+        </button>
+        <div class="faq-accordion__content">
+          <div class="faq-accordion__answer">
+            <p>Artificial turf is much more durable than natural grass. The combination of turf, infill, and compacted base makes it very difficult for dogs to dig through.</p>
+            <p>Most dogs lose interest in digging on artificial turf because there's nothing interesting underneath - no bugs, no cool dirt, no smells to investigate!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Durability -->
+  <section class="faq-section" id="durability">
+    <div class="faq-section__header">
+      <div class="faq-section__icon">
+        <i data-lucide="shield-check"></i>
+      </div>
+      <h2 class="faq-section__title">Durability & Warranty</h2>
+      <p class="faq-section__description">Built to last for years</p>
+    </div>
+
+    <div class="faq-accordion">
+      <div class="faq-accordion__item">
+        <button class="faq-accordion__header">
+          <span class="faq-accordion__question">How long does artificial turf last?</span>
+          <i data-lucide="chevron-down" class="faq-accordion__icon"></i>
+        </button>
+        <div class="faq-accordion__content">
+          <div class="faq-accordion__answer">
+            <p>Quality artificial turf typically lasts 15-25 years with proper care. The lifespan depends on:</p>
+            <ul>
+              <li>Amount of foot traffic</li>
+              <li>UV exposure</li>
+              <li>Quality of installation</li>
+              <li>Basic maintenance</li>
+            </ul>
+            <p>Our products are designed for Canadian climates and come with a 10-year manufacturer warranty.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-accordion__item">
+        <button class="faq-accordion__header">
+          <span class="faq-accordion__question">Can artificial turf handle Canadian winters?</span>
+          <i data-lucide="chevron-down" class="faq-accordion__icon"></i>
+        </button>
+        <div class="faq-accordion__content">
+          <div class="faq-accordion__answer">
+            <p>Yes! Our turf is specifically chosen for Canadian climates:</p>
+            <ul>
+              <li>Handles freeze-thaw cycles without damage</li>
+              <li>Snow can be shoveled or left to melt naturally</li>
+              <li>Drains properly even after ice and snow</li>
+              <li>UV-resistant to prevent fading</li>
+            </ul>
+            <p>Many customers find their turf looks better than natural grass in spring because there's no brown thatch or dead spots.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-accordion__item">
+        <button class="faq-accordion__header">
+          <span class="faq-accordion__question">What does the warranty cover?</span>
+          <i data-lucide="chevron-down" class="faq-accordion__icon"></i>
+        </button>
+        <div class="faq-accordion__content">
+          <div class="faq-accordion__answer">
+            <p>Our 10-year manufacturer warranty covers:</p>
+            <ul>
+              <li>UV degradation and fading</li>
+              <li>Fiber deterioration</li>
+              <li>Backing separation</li>
+              <li>Material defects</li>
+            </ul>
+            <p>We also stand behind our installation work. If there's ever an issue related to how we installed your turf, we'll make it right.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-accordion__item">
+        <button class="faq-accordion__header">
+          <span class="faq-accordion__question">Can damaged areas be repaired?</span>
+          <i data-lucide="chevron-down" class="faq-accordion__icon"></i>
+        </button>
+        <div class="faq-accordion__content">
+          <div class="faq-accordion__answer">
+            <p>Yes! If a section of turf gets damaged (burns, tears, stains that won't come out), we can:</p>
+            <ul>
+              <li>Patch small areas with matching turf</li>
+              <li>Replace larger damaged sections</li>
+              <li>Re-seam or re-secure edges</li>
+            </ul>
+            <p>Repairs are typically quick and affordable, and the patched area blends seamlessly with the rest of the turf.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Still Have Questions -->
+  <section class="still-questions">
+    <div class="still-questions__content">
+      <div class="still-questions__icon">
+        <i data-lucide="message-circle"></i>
+      </div>
+      <h2 class="still-questions__title">Still Have Questions?</h2>
+      <p class="still-questions__description">
+        We're happy to answer any questions you have about artificial turf. Give us a call or request a free consultation.
+      </p>
+      <div class="still-questions__buttons">
+        <a href="tel:+16472167787" class="btn-secondary">
+          <i data-lucide="phone"></i> (647) 216-7787
+        </a>
+        <a href="quote.html" class="btn-primary">Get Free Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="faq-final-cta">
+    <div class="faq-final-cta__content">
+      <h2 class="faq-final-cta__headline">Ready to Transform Your Yard?</h2>
+      <p class="faq-final-cta__description">
+        Get your free 3D design and see exactly what your yard will look like before we start.
+      </p>
+      <a href="quote.html" class="btn-primary faq-final-cta__button">Get Your Free 3D Design</a>
+      <p class="faq-final-cta__phone">or call <a href="tel:+16472167787">(647) 216-7787</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="footer__brand">
+        <div class="footer__logo"><img src="https://static.wixstatic.com/media/e83a48_77d3e37bf7c04f32af25998246892eb8~mv2.png" alt="Yard Guard Landscaping"></div>
+        <p class="footer__tagline">Transform your backyard into a low-maintenance outdoor oasis.</p>
+        <div class="footer__social">
+          <a href="https://www.facebook.com/YardGuardlandscaping/" target="_blank" class="footer__social-link"><i data-lucide="facebook"></i></a>
+          <a href="https://www.instagram.com/yardguardlandscaping/" target="_blank" class="footer__social-link"><i data-lucide="instagram"></i></a>
+          <a href="https://www.yardguardlandscaping.com" target="_blank" class="footer__social-link"><i data-lucide="globe"></i></a>
+        </div>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__column-title">Services</h4>
+        <a href="packages.html#easy-lawn" class="footer__link">Easy Lawn</a>
+        <a href="packages.html#pet-yard" class="footer__link">Pet Yard</a>
+        <a href="packages.html#golfers-green" class="footer__link">Golfer's Green</a>
+        <a href="quote.html" class="footer__link">Get a Quote</a>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__column-title">Company</h4>
+        <a href="about.html" class="footer__link">About Us</a>
+        <a href="gallery.html" class="footer__link">Gallery</a>
+        <a href="how-it-works.html" class="footer__link">How It Works</a>
+        <a href="faq.html" class="footer__link">FAQ</a>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__column-title">Contact</h4>
+        <div class="footer__contact-item">
+          <i data-lucide="phone" class="icon"></i>
+          <span>(647) 216-7787</span>
+        </div>
+        <div class="footer__contact-item">
+          <i data-lucide="mail" class="icon"></i>
+          <span>info@yardguardlandscaping.com</span>
+        </div>
+        <div class="footer__contact-item">
+          <i data-lucide="map-pin" class="icon"></i>
+          <span>Mississauga, ON<br>Serving Etobicoke & GTA</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copyright">&copy; 2025 Yard Guard Landscaping. All rights reserved.</p>
+      <div class="footer__legal">
+        <a href="privacy.html" class="footer__legal-link">Privacy Policy</a>
+        <a href="terms.html" class="footer__legal-link">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky CTA -->
+  <div class="mobile-sticky-cta">
+    <a href="tel:+16472167787" class="mobile-sticky-cta__call">
+      <i data-lucide="phone"></i> Call Now
+    </a>
+    <a href="quote.html" class="mobile-sticky-cta__quote">Get Free Quote</a>
+  </div>
+
+  <!-- Initialize Lucide Icons -->
+  <script>
+    lucide.createIcons();
+
+    // Accordion functionality
+    document.querySelectorAll('.faq-accordion__header').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        const wasActive = item.classList.contains('active');
+
+        // Close all items in the same accordion
+        item.parentElement.querySelectorAll('.faq-accordion__item').forEach(i => {
+          i.classList.remove('active');
+        });
+
+        // Toggle clicked item
+        if (!wasActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+
+    // FAQ nav active state
+    document.querySelectorAll('.faq-nav__link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        document.querySelectorAll('.faq-nav__link').forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

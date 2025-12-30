@@ -1,0 +1,1716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artificial Turf Packages | Pet Turf, Putting Greens & More | Yard Guard</title>
+  <meta name="description"
+    content="Choose from 4 artificial turf packages: Easy Lawn ($12-14/sq ft), Pet Yard ($14-17/sq ft), Golfer's Green ($22-28/sq ft), or Premium Integration. Free 3D design included.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* ========================================
+       CSS RESET & BASE
+       ======================================== */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #212121;
+      background: #FFFFFF;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ========================================
+       CSS VARIABLES
+       ======================================== */
+    :root {
+      --primary-green: #2E7D32;
+      --primary-green-hover: #1B5E20;
+      --dark-green: #1A3C1A;
+      --light-green: #E8F5E9;
+      --white: #FFFFFF;
+      --off-white: #FAFAFA;
+      --dark-text: #212121;
+      --medium-text: #616161;
+      --light-text: #9E9E9E;
+      --border: #E0E0E0;
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      --shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    /* ========================================
+       TYPOGRAPHY
+       ======================================== */
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: 48px;
+    }
+
+    h2 {
+      font-size: 42px;
+      font-weight: 600;
+    }
+
+    h3 {
+      font-size: 32px;
+      font-weight: 600;
+    }
+
+    h4 {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    @media (max-width: 767px) {
+      h1 {
+        font-size: 32px;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+
+      h3 {
+        font-size: 24px;
+      }
+
+      h4 {
+        font-size: 20px;
+      }
+    }
+
+    /* ========================================
+       BUTTONS
+       ======================================== */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: var(--primary-green);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+      padding: 16px 32px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(46, 125, 50, 0.25);
+      min-height: 54px;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-green-hover);
+      box-shadow: 0 6px 12px rgba(46, 125, 50, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: transparent;
+      color: var(--primary-green);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      padding: 14px 30px;
+      border: 2px solid var(--primary-green);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--light-green);
+      border-color: var(--primary-green-hover);
+      color: var(--primary-green-hover);
+    }
+
+    .btn-text {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--primary-green);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-text:hover {
+      color: var(--primary-green-hover);
+    }
+
+    .btn-text:hover .arrow {
+      transform: translateX(4px);
+    }
+
+    .btn-text .arrow {
+      transition: transform 0.3s ease;
+    }
+
+    /* ========================================
+       HEADER / NAVIGATION
+       ======================================== */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: var(--white);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      z-index: 1000;
+    }
+
+    .header__container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header__logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .header__logo img {
+      height: 50px;
+      width: auto;
+    }
+
+    .header__nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-link {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--dark-text);
+      padding: 8px 16px;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    .nav-link:hover {
+      color: var(--primary-green);
+    }
+
+    .nav-link.active {
+      color: var(--primary-green);
+    }
+
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 16px;
+      right: 16px;
+      height: 3px;
+      background: var(--primary-green);
+      border-radius: 2px;
+    }
+
+    .header__cta {
+      padding: 12px 24px;
+      font-size: 14px;
+      min-height: auto;
+    }
+
+    @media (max-width: 1023px) {
+      .header__nav {
+        display: none;
+      }
+    }
+
+    /* ========================================
+       HERO BANNER
+       ======================================== */
+    .packages-hero {
+      position: relative;
+      height: 400px;
+      margin-top: 80px;
+      background: linear-gradient(135deg, rgba(46, 125, 50, 0.9) 0%, rgba(27, 94, 32, 0.95) 100%),
+        url('https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1920&q=80') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .packages-hero__content {
+      max-width: 800px;
+      padding: 0 24px;
+      color: var(--white);
+    }
+
+    .packages-hero__breadcrumb {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 24px;
+    }
+
+    .packages-hero__breadcrumb a {
+      color: rgba(255, 255, 255, 0.7);
+      transition: color 0.3s ease;
+    }
+
+    .packages-hero__breadcrumb a:hover {
+      color: var(--white);
+      text-decoration: underline;
+    }
+
+    .packages-hero__title {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+
+    .packages-hero__subtitle {
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    @media (max-width: 767px) {
+      .packages-hero {
+        height: 300px;
+      }
+
+      .packages-hero__title {
+        font-size: 32px;
+      }
+
+      .packages-hero__subtitle {
+        font-size: 16px;
+      }
+    }
+
+    /* ========================================
+       PACKAGES SECTION
+       ======================================== */
+    .packages-section {
+      padding: 80px 24px;
+      background: var(--white);
+    }
+
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      max-width: 1200px;
+      margin: 0 auto 48px;
+    }
+
+    /* Care Club Card Styles */
+    .package-card--care-club {
+      border: 2px solid var(--star-gold);
+      background: linear-gradient(135deg, #FFF8E1 0%, #FFFFFF 100%);
+    }
+
+    .package-card--care-club .package-card__ribbon {
+      background: var(--star-gold);
+      color: #3E2723;
+    }
+
+    .package-card--care-club .package-card__ribbon::after {
+      border-color: #F57F17 #F57F17 transparent transparent;
+    }
+
+    /* DIY Card Styles */
+    .package-card--diy {
+      border: 2px dashed var(--medium-text);
+      background: #FAFAFA;
+    }
+
+    @media (max-width: 1023px) {
+      .packages-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 767px) {
+      .packages-section {
+        padding: 48px 16px;
+      }
+
+      .packages-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+
+    /* ========================================
+       PACKAGE CARD
+       ======================================== */
+    .package-card {
+      background: var(--white);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .package-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-8px);
+    }
+
+    .package-card__image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background: linear-gradient(135deg, #81C784 0%, #4CAF50 100%);
+    }
+
+    .package-card__ribbon {
+      position: absolute;
+      top: 16px;
+      right: -8px;
+      background: var(--primary-green);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+      padding: 6px 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .package-card__ribbon::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: -8px;
+      border-width: 4px;
+      border-style: solid;
+      border-color: var(--primary-green-hover) var(--primary-green-hover) transparent transparent;
+    }
+
+    .package-card__content {
+      padding: 32px 24px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .package-card__title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      color: var(--dark-text);
+      margin-bottom: 8px;
+    }
+
+    .package-card__tagline {
+      font-size: 16px;
+      color: var(--primary-green);
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .package-card__divider {
+      height: 1px;
+      background: var(--border);
+      margin: 16px 0;
+    }
+
+    .package-card__price-label {
+      font-size: 14px;
+      color: var(--medium-text);
+      margin-bottom: 4px;
+    }
+
+    .package-card__price {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 32px;
+      color: var(--dark-text);
+      margin-bottom: 4px;
+    }
+
+    .package-card__price span {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--medium-text);
+    }
+
+    .package-card__section-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--dark-text);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+
+    .package-card__list {
+      list-style: none;
+      margin-bottom: 16px;
+    }
+
+    .package-card__list-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 15px;
+      color: var(--medium-text);
+      padding: 6px 0;
+      line-height: 1.4;
+    }
+
+    .package-card__list-item .icon {
+      color: var(--primary-green);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .package-card__cta {
+      margin-top: auto;
+      padding-top: 24px;
+    }
+
+    .package-card__cta .btn-primary {
+      width: 100%;
+    }
+
+    /* Featured Package Card */
+    .package-card--featured {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: linear-gradient(135deg, var(--dark-green) 0%, var(--primary-green) 100%);
+      color: var(--white);
+    }
+
+    .package-card--featured:hover {
+      transform: translateY(-8px);
+    }
+
+    .package-card--featured .package-card__image {
+      height: 100%;
+      min-height: 400px;
+    }
+
+    .package-card--featured .package-card__content {
+      padding: 48px 40px;
+    }
+
+    .package-card--featured .package-card__title {
+      color: var(--white);
+      font-size: 32px;
+    }
+
+    .package-card--featured .package-card__tagline {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .package-card--featured .package-card__price {
+      color: var(--white);
+      font-size: 24px;
+    }
+
+    .package-card--featured .package-card__section-title {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .package-card--featured .package-card__list-item {
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .package-card--featured .package-card__list-item .icon {
+      color: #81C784;
+    }
+
+    .package-card--featured .package-card__divider {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .package-card--featured .btn-primary {
+      background: var(--white);
+      color: var(--primary-green);
+    }
+
+    .package-card--featured .btn-primary:hover {
+      background: var(--light-green);
+    }
+
+    @media (max-width: 767px) {
+      .package-card--featured {
+        grid-template-columns: 1fr;
+      }
+
+      .package-card--featured .package-card__image {
+        height: 250px;
+        min-height: auto;
+      }
+
+      .package-card--featured .package-card__content {
+        padding: 32px 24px;
+      }
+    }
+
+    /* ========================================
+       COMPARISON TABLE SECTION
+       ======================================== */
+    .comparison-section {
+      background: var(--off-white);
+      padding: 80px 24px;
+    }
+
+    .comparison-section__header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .comparison-section__title {
+      font-size: 32px;
+      color: var(--dark-text);
+    }
+
+    .comparison-table-wrapper {
+      max-width: 1000px;
+      margin: 0 auto;
+      overflow-x: auto;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      padding: 16px 20px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .comparison-table th {
+      background: var(--dark-green);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .comparison-table th:first-child {
+      text-align: left;
+      background: var(--primary-green);
+    }
+
+    .comparison-table td:first-child {
+      text-align: left;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--dark-text);
+      background: #F5F5F5;
+    }
+
+    .comparison-table td {
+      font-size: 15px;
+      color: var(--medium-text);
+    }
+
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .comparison-table .checkmark {
+      color: var(--primary-green);
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .comparison-table .dash {
+      color: var(--light-text);
+    }
+
+    .comparison-table__highlight {
+      background: var(--light-green) !important;
+    }
+
+    @media (max-width: 767px) {
+      .comparison-section {
+        padding: 48px 16px;
+      }
+
+      .comparison-section__title {
+        font-size: 24px;
+      }
+
+      .comparison-table th,
+      .comparison-table td {
+        padding: 12px 10px;
+        font-size: 13px;
+      }
+
+      .comparison-table th:first-child,
+      .comparison-table td:first-child {
+        position: sticky;
+        left: 0;
+        z-index: 1;
+      }
+    }
+
+    /* ========================================
+       CUSTOM PROJECTS SECTION
+       ======================================== */
+    .custom-projects-section {
+      background: var(--white);
+      padding: 80px 24px;
+      text-align: center;
+    }
+
+    .custom-projects-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .custom-projects-section__icon {
+      width: 80px;
+      height: 80px;
+      background: var(--light-green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 36px;
+      color: var(--primary-green);
+    }
+
+    .custom-projects-section__headline {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 32px;
+      color: var(--dark-text);
+      margin-bottom: 16px;
+    }
+
+    .custom-projects-section__description {
+      font-size: 18px;
+      color: var(--medium-text);
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: 767px) {
+      .custom-projects-section {
+        padding: 48px 16px;
+      }
+
+      .custom-projects-section__headline {
+        font-size: 24px;
+      }
+
+      .custom-projects-section__description {
+        font-size: 16px;
+      }
+    }
+
+    /* ========================================
+       PROCESS REMINDER SECTION
+       ======================================== */
+    .process-reminder {
+      background: var(--light-green);
+      padding: 60px 24px;
+    }
+
+    .process-reminder__content {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 48px;
+    }
+
+    .process-reminder__steps {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .process-reminder__step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .process-reminder__step-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      color: var(--primary-green);
+    }
+
+    .process-reminder__step-label {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--dark-text);
+    }
+
+    .process-reminder__step-sublabel {
+      font-size: 12px;
+      color: var(--primary-green);
+      font-weight: 600;
+    }
+
+    .process-reminder__connector {
+      width: 40px;
+      height: 2px;
+      background: var(--primary-green);
+      position: relative;
+    }
+
+    .process-reminder__cta {
+      text-align: right;
+    }
+
+    .process-reminder__cta-text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      color: var(--dark-text);
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 767px) {
+      .process-reminder {
+        padding: 40px 16px;
+      }
+
+      .process-reminder__content {
+        flex-direction: column;
+        gap: 32px;
+      }
+
+      .process-reminder__steps {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .process-reminder__cta {
+        text-align: center;
+      }
+    }
+
+    /* ========================================
+       FINAL CTA SECTION
+       ======================================== */
+    .packages-final-cta {
+      background: linear-gradient(135deg, var(--primary-green-hover) 0%, var(--primary-green) 100%);
+      padding: 80px 24px;
+      text-align: center;
+    }
+
+    .packages-final-cta__content {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .packages-final-cta__headline {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 36px;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .packages-final-cta__description {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    .packages-final-cta__button {
+      background: var(--white);
+      color: var(--primary-green);
+      margin-bottom: 20px;
+    }
+
+    .packages-final-cta__button:hover {
+      background: var(--light-green);
+      transform: translateY(-2px);
+    }
+
+    .packages-final-cta__phone {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .packages-final-cta__phone a {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    .packages-final-cta__phone a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 767px) {
+      .packages-final-cta {
+        padding: 48px 16px;
+      }
+
+      .packages-final-cta__headline {
+        font-size: 28px;
+      }
+
+      .packages-final-cta__description {
+        font-size: 16px;
+      }
+    }
+
+    /* ========================================
+       FOOTER
+       ======================================== */
+    .footer {
+      background: var(--dark-green);
+      padding: 80px 24px 40px;
+    }
+
+    .footer__main {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer__logo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .footer__logo img {
+      height: 60px;
+      width: auto;
+    }
+
+    .footer__tagline {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+      max-width: 250px;
+      margin-bottom: 24px;
+    }
+
+    .footer__social {
+      display: flex;
+      gap: 16px;
+    }
+
+    .footer__social-link {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      transition: all 0.3s ease;
+    }
+
+    .footer__social-link:hover {
+      background: var(--primary-green);
+    }
+
+    .footer__column-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .footer__link {
+      display: block;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      padding: 8px 0;
+      transition: color 0.3s ease;
+    }
+
+    .footer__link:hover {
+      color: var(--white);
+    }
+
+    .footer__contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 12px;
+    }
+
+    .footer__contact-item .icon {
+      color: #81C784;
+      flex-shrink: 0;
+    }
+
+    .footer__bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 48px;
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .footer__copyright {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer__legal {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer__legal-link {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer__legal-link:hover {
+      color: var(--white);
+    }
+
+    @media (max-width: 1023px) {
+      .footer__main {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .footer {
+        padding: 64px 16px 32px;
+      }
+
+      .footer__main {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .footer__bottom {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+      }
+    }
+
+    /* ========================================
+       MOBILE STICKY CTA
+       ======================================== */
+    .mobile-sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 70px;
+      background: var(--white);
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      padding: 12px 16px;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .mobile-sticky-cta__call {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--primary-green);
+      padding: 12px 16px;
+      border: 2px solid var(--primary-green);
+      border-radius: 8px;
+    }
+
+    .mobile-sticky-cta__quote {
+      flex-grow: 1;
+      background: var(--primary-green);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 14px 24px;
+      border: none;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    @media (max-width: 767px) {
+      .mobile-sticky-cta {
+        display: flex;
+      }
+
+      body {
+        padding-bottom: 70px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header__container">
+      <a href="homepage.html" class="header__logo"><img
+          src="https://static.wixstatic.com/media/e83a48_77d3e37bf7c04f32af25998246892eb8~mv2.png"
+          alt="Yard Guard Landscaping"></a>
+      <nav class="header__nav">
+        <a href="homepage.html" class="nav-link">Home</a>
+        <a href="packages.html" class="nav-link active">Packages</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="how-it-works.html" class="nav-link">How It Works</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+      </nav>
+      <a href="quote.html" class="btn-primary header__cta">Get a Quote</a>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="packages-hero">
+    <div class="packages-hero__content">
+      <div class="packages-hero__breadcrumb">
+        <a href="homepage.html">Home</a> &gt; <a href="homepage.html">Artificial Turf</a> &gt; Packages
+      </div>
+      <h1 class="packages-hero__title">Choose Your Transformation</h1>
+      <p class="packages-hero__subtitle">Four packages designed for every backyard and budget</p>
+    </div>
+  </section>
+
+  <!-- Package Cards Section -->
+  <section class="packages-section">
+    <div class="packages-grid">
+      <!-- Package 1: Easy Lawn -->
+      <div class="package-card">
+        <div class="package-card__image">
+          <img src="images/gallery-6.jpg" alt="Easy Lawn" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="package-card__content">
+          <h2 class="package-card__title">The Easy Lawn</h2>
+          <p class="package-card__tagline">"Your weekends back"</p>
+
+          <div class="package-card__divider"></div>
+
+          <p class="package-card__price-label">Starting at</p>
+          <p class="package-card__price">$12-14 <span>/sq ft</span></p>
+
+          <div class="package-card__divider"></div>
+
+          <p class="package-card__section-title">Perfect for:</p>
+          <ul class="package-card__list">
+            <li class="package-card__list-item">
+              <i data-lucide="check" class="icon"></i>
+              <span>Homeowners tired of endless mowing</span>
+            </li>
+            <li class="package-card__list-item">
+              <i data-lucide="check" class="icon"></i>
+              <span>Busy families who want their weekends back</span>
+            </li>
+            <li class="package-card__list-item">
+              <i data-lucide="check" class="icon"></i>
+              <span>Front or backyard lawn replacement</span>
+            </li>
+          </ul>
+
+          <div class="package-card__divider"></div>
+
+          <p class="package-card__section-title">What's Included:</p>
+          <ul class="package-card__list">
+            <li class="package-card__list-item">
+              <i data-lucide="circle" class="icon" style="width: 8px; height: 8px; fill: currentColor;"></i>
+              <span>Premium polyethylene turf</span>
+            </li>
+            <li class="package-card__list-item">
+              <i data-lucide="circle" class="icon" style="width: 8px; height: 8px; fill: currentColor;"></i>
+              <span>Professional base preparation</span>
+            </li>
+            <li class="package-card__list-item">
+              <i data-lucide="circle" class="icon" style="width: 8px; height: 8px; fill: currentColor;"></i>
+              <span>Clean edge finishing</span>
+            </li>
+            <li class="package-card__list-item">
+              <i data-lucide="circle" class="icon" style="width: 8px; height: 8px; fill: currentColor;"></i>
+              <span>10-year manufacturer warranty</span>
+            </li>
+          </ul>
+
+          <div class="package-card__cta">
+            <a href="quote.html" class="btn-primary">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package 2: Pet Yard (Most Popular) -->
+      <div class="package-card">
+        <div class="package-card__ribbon">Most Popular</div>
+        <div class="package-card__image">
+          <img src="images/gallery-4.jpg" alt="Pet Yard" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="package-card__content">
+          <h2 class="package-card__title">The Pet Yard</h2>
+          <p class="package-card__tagline">"Built for your best friend"</p>
+
+          <div class="package-card__divider"></div>
+
+          <p class="package-card__price-label">Starting at</p>
+          <p class="package-card__price">$14-17 <span>/sq ft</span></p>
+
+          <div class="package-card__divider"></div>
+
+          <p class="package-card__section-title">Perfect for:</p>
+          <ul class="package-card__list">
+            <li class="package-card__list-item">
+              <i data-lucide="check" class="icon"></i>
+              <span>Dog owners with worn-out lawns</span>
+            </li>
+            <li class="package-card__list-item">
+              <i data-lucide="check" class="icon"></i>
+              <span>Households dealing with mud and odor</span>
+            </li>
+            <li class="package-card__list-item">
+              <i data-lucide="check" class="icon"></i>
+              <span>Multi-pet families</span>
+            </li>
+          </ul>
+
+          <div class="package-card__divider"></div>
+
+          <p class="package-card__section-title">What's Included:</p>
+          <ul class="package-card__list">
+            <li class="package-card__list-item">
+              <i data-lucide="circle" class="icon" style="width: 8px; height: 8px; fill: currentColor;"></i>
+              <span>Antimicrobial pet-safe turf</span>
+            </li>
+            <li class="package-card__list-item">
+              <i data-lucide="circle" class="icon" style="width: 8px; height: 8px; fill: currentColor;"></i>
+              <span>Enhanced drainage system</span>
+            </li>
+            <li class="package-card__list-item">
+              <i data-lucide="circle" class="icon" style="width: 8px; height: 8px; fill: currentColor;"></i>
+              <span>Zeolite odor-control infill</span>
+            </li>
+            <li class="package-card__list-item">
+              <i data-lucide="circle" class="icon" style="width: 8px; height: 8px; fill: currentColor;"></i>
+              <span>Easy-rinse design</span>
+            </li>
+            <li class="package-card__list-item">
+              <i data-lucide="circle" class="icon" style="width: 8px; height: 8px; fill: currentColor;"></i>
+              <span>10-year manufacturer warranty</span>
+            </li>
+          </ul>
+
+          <div class="package-card__cta">
+            <a href="quote.html" class="btn-primary">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package 3: Golfer's Green -->
+      <div class="package-card">
+        <div class="package-card__image">
+          <img src="images/gallery-8.jpg" alt="Golfer's Green" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="package-card__content">
+          <h3 class="package-card__title">The "Golfer's Green"</h3>
+          <p class="package-card__tagline">"Your private practice space"</p>
+          <div class="package-card__divider"></div>
+          <p class="package-card__price-label">Installed Price</p>
+          <p class="package-card__price">$22-28 <span>/ sq ft</span></p>
+          <p class="package-card__price-label" style="font-size: 13px; color: var(--primary-green); font-weight: 600;">
+            or $289/mo financing</p>
+
+          <p class="package-card__section-title" style="margin-top: 24px;">Includes:</p>
+          <ul class="package-card__list">
+            <li class="package-card__list-item">
+              <i data-lucide="check" class="icon"></i>
+              <span>Pro stiff turf for true ball roll</span>
+            </li>
+            <li class="package-card__list-item">
+              <i data-lucide="check" class="icon"></i>
+              <span>Custom cups & flags</span>
+            </li>
+            <li class="package-card__list-item">
+              <i data-lucide="check" class="icon"></i>
+              <span>Chip-from fringe included</span>
+            </li>
+          </ul>
+          <div class="package-card__cta">
+            <a href="quote.html?package=golfers-green" class="btn-primary btn-primary--white">Get Free Estimate</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- NEW: DIY Kit -->
+      <div class="package-card package-card--diy">
+        <div class="package-card__ribbon" style="background: var(--medium-text);">Budget Friendly</div>
+        <div class="package-card__image">
+          <img src="images/gallery-9.jpg" alt="DIY Kit" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="package-card__content">
+          <h3 class="package-card__title">The DIY Pro Kit</h3>
+          <p class="package-card__tagline">"We ship, you install"</p>
+          <div class="package-card__divider"></div>
+          <p class="package-card__price-label">Material Only</p>
+          <p class="package-card__price">$6-8 <span>/ sq ft</span></p>
+          <p class="package-card__price-label" style="font-size: 13px; color: var(--medium-text);">Save ~50% on labor
+            costs</p>
+
+          <p class="package-card__section-title" style="margin-top: 24px;">You Get:</p>
+          <ul class="package-card__list">
+            <li class="package-card__list-item">
+              <i data-lucide="package" class="icon"></i>
+              <span>Same premium turf we use</span>
+            </li>
+            <li class="package-card__list-item">
+              <i data-lucide="truck" class="icon"></i>
+              <span>Direct driveway delivery</span>
+            </li>
+            <li class="package-card__list-item">
+              <i data-lucide="video" class="icon"></i>
+              <span>"Pro Secrets" Video Course</span>
+            </li>
+          </ul>
+          <div class="package-card__cta">
+            <a href="quote.html?package=diy" class="btn-secondary" style="width: 100%">Order Kit</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- NEW: Care Club -->
+      <div class="package-card package-card--care-club">
+        <div class="package-card__ribbon">Best Value</div>
+        <div class="package-card__image">
+          <img src="images/gallery-7.jpg" alt="Care Club" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="package-card__content">
+          <h3 class="package-card__title">The Care Club</h3>
+          <p class="package-card__tagline">"Forever-New Guarantee"</p>
+          <div class="package-card__divider"></div>
+          <p class="package-card__price-label">Membership</p>
+          <p class="package-card__price">$39 <span>/ month</span></p>
+          <p class="package-card__price-label" style="font-size: 13px; color: #E65100;">Billed annually or monthly</p>
+
+          <p class="package-card__section-title" style="margin-top: 24px;">Perks:</p>
+          <ul class="package-card__list">
+            <li class="package-card__list-item">
+              <i data-lucide="sparkles" class="icon" style="color: #F57F17;"></i>
+              <span>Spring "Power Broom" fluff-up</span>
+            </li>
+            <li class="package-card__list-item">
+              <i data-lucide="droplets" class="icon" style="color: #F57F17;"></i>
+              <span>Summer Enzyme Deep Clean</span>
+            </li>
+            <li class="package-card__list-item">
+              <i data-lucide="shield-check" class="icon" style="color: #F57F17;"></i>
+              <span>Extends Warranty +1 Year</span>
+            </li>
+          </ul>
+          <div class="package-card__cta">
+            <a href="quote.html?package=care-club" class="btn-primary" style="background: #F57F17;">Join the Club</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- NEW: Event Rentals -->
+      <div class="package-card">
+        <div class="package-card__image">
+          <img src="images/gallery-2.jpg" alt="Event Rental" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="package-card__content">
+          <h3 class="package-card__title">Event Rentals</h3>
+          <p class="package-card__tagline">"Instant green for your party"</p>
+          <div class="package-card__divider"></div>
+          <p class="package-card__price-label">48-Hour Rental</p>
+          <p class="package-card__price">$4 <span>/ sq ft</span></p>
+          <p class="package-card__price-label" style="font-size: 13px; color: var(--medium-text);">Delivery & Pickup
+            included</p>
+
+          <p class="package-card__section-title" style="margin-top: 24px;">Perfect For:</p>
+          <ul class="package-card__list">
+            <li class="package-card__list-item">
+              <i data-lucide="glass-water" class="icon" style="color: #9C27B0;"></i>
+              <span>Weddings & Parties</span>
+            </li>
+            <li class="package-card__list-item">
+              <i data-lucide="tent" class="icon" style="color: #9C27B0;"></i>
+              <span>Corporate Events / Trade Shows</span>
+            </li>
+            <li class="package-card__list-item">
+              <i data-lucide="clock" class="icon" style="color: #9C27B0;"></i>
+              <span>Installed in 1 hour</span>
+            </li>
+          </ul>
+          <div class="package-card__cta">
+            <a href="quote.html?package=rental" class="btn-primary btn-primary--white">Check Availability</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package 4: Premium Integration (Featured) -->
+      <div class="package-card package-card--featured">
+        <div class="package-card__image">
+          <img src="images/hero-after.jpg" alt="Premium Integration"
+            style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="package-card__content">
+          <h2 class="package-card__title">Premium Integration</h2>
+          <p class="package-card__tagline">"The complete transformation"</p>
+
+          <div class="package-card__divider"></div>
+
+          <p class="package-card__price">Custom Pricing</p>
+
+          <div class="package-card__divider"></div>
+
+          <p class="package-card__section-title">Perfect for:</p>
+          <ul class="package-card__list">
+            <li class="package-card__list-item">
+              <i data-lucide="check" class="icon"></i>
+              <span>Full backyard overhauls</span>
+            </li>
+            <li class="package-card__list-item">
+              <i data-lucide="check" class="icon"></i>
+              <span>Outdoor living spaces</span>
+            </li>
+            <li class="package-card__list-item">
+              <i data-lucide="check" class="icon"></i>
+              <span>Entertaining areas</span>
+            </li>
+          </ul>
+
+          <div class="package-card__divider"></div>
+
+          <p class="package-card__section-title">Includes any turf package PLUS:</p>
+          <ul class="package-card__list">
+            <li class="package-card__list-item">
+              <i data-lucide="circle" class="icon" style="width: 8px; height: 8px; fill: currentColor;"></i>
+              <span>Patio and hardscape integration</span>
+            </li>
+            <li class="package-card__list-item">
+              <i data-lucide="circle" class="icon" style="width: 8px; height: 8px; fill: currentColor;"></i>
+              <span>Fire pits and outdoor kitchens</span>
+            </li>
+            <li class="package-card__list-item">
+              <i data-lucide="circle" class="icon" style="width: 8px; height: 8px; fill: currentColor;"></i>
+              <span>Water features and lighting</span>
+            </li>
+            <li class="package-card__list-item">
+              <i data-lucide="circle" class="icon" style="width: 8px; height: 8px; fill: currentColor;"></i>
+              <span>Complete landscape design</span>
+            </li>
+            <li class="package-card__list-item">
+              <i data-lucide="circle" class="icon" style="width: 8px; height: 8px; fill: currentColor;"></i>
+              <span>Single contractor convenience</span>
+            </li>
+          </ul>
+
+          <div class="package-card__cta">
+            <a href="quote.html" class="btn-primary">Schedule Consultation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table Section -->
+  <section class="comparison-section">
+    <div class="comparison-section__header">
+      <h2 class="comparison-section__title">Compare Packages at a Glance</h2>
+    </div>
+    <div class="comparison-table-wrapper">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Easy Lawn</th>
+            <th class="comparison-table__highlight">Pet Yard</th>
+            <th>Golfer's Green</th>
+            <th>Premium</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Price/sq ft</td>
+            <td>$12-14</td>
+            <td class="comparison-table__highlight">$14-17</td>
+            <td>$22-28</td>
+            <td>Custom</td>
+          </tr>
+          <tr>
+            <td>Turf Type</td>
+            <td>Standard Polyethylene</td>
+            <td class="comparison-table__highlight">Antimicrobial</td>
+            <td>Putting Surface</td>
+            <td>Your Choice</td>
+          </tr>
+          <tr>
+            <td>Drainage</td>
+            <td>Standard</td>
+            <td class="comparison-table__highlight">Enhanced</td>
+            <td>Standard</td>
+            <td>Enhanced</td>
+          </tr>
+          <tr>
+            <td>Odor Control</td>
+            <td class="dash">-</td>
+            <td class="comparison-table__highlight"><span class="checkmark">&#10003;</span> Zeolite</td>
+            <td class="dash">-</td>
+            <td>Optional</td>
+          </tr>
+          <tr>
+            <td>Custom Contours</td>
+            <td class="dash">-</td>
+            <td class="comparison-table__highlight dash">-</td>
+            <td><span class="checkmark">&#10003;</span></td>
+            <td><span class="checkmark">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Hardscape Integration</td>
+            <td class="dash">-</td>
+            <td class="comparison-table__highlight dash">-</td>
+            <td class="dash">-</td>
+            <td><span class="checkmark">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Fire Features</td>
+            <td class="dash">-</td>
+            <td class="comparison-table__highlight dash">-</td>
+            <td class="dash">-</td>
+            <td><span class="checkmark">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Warranty</td>
+            <td>10 Years</td>
+            <td class="comparison-table__highlight">10 Years</td>
+            <td>10 Years</td>
+            <td>10 Years</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Custom Projects Section -->
+  <section class="custom-projects-section">
+    <div class="custom-projects-content">
+      <div class="custom-projects-section__icon">
+        <i data-lucide="lightbulb"></i>
+      </div>
+      <h2 class="custom-projects-section__headline">Need Something Unique?</h2>
+      <p class="custom-projects-section__description">
+        Every backyard is different. If you have a special project in mind - unusual shapes,
+        specific requirements, or a creative vision - we'd love to hear about it.
+      </p>
+      <a href="quote.html" class="btn-primary">Let's Discuss Your Project</a>
+    </div>
+  </section>
+
+  <!-- Process Reminder Section -->
+  <section class="process-reminder">
+    <div class="process-reminder__content">
+      <div class="process-reminder__steps">
+        <div class="process-reminder__step">
+          <div class="process-reminder__step-icon">
+            <i data-lucide="calendar"></i>
+          </div>
+          <span class="process-reminder__step-label">Consult</span>
+          <span class="process-reminder__step-sublabel">FREE</span>
+        </div>
+        <div class="process-reminder__connector"></div>
+        <div class="process-reminder__step">
+          <div class="process-reminder__step-icon">
+            <i data-lucide="palette"></i>
+          </div>
+          <span class="process-reminder__step-label">Design</span>
+          <span class="process-reminder__step-sublabel">FREE</span>
+        </div>
+        <div class="process-reminder__connector"></div>
+        <div class="process-reminder__step">
+          <div class="process-reminder__step-icon">
+            <i data-lucide="sparkles"></i>
+          </div>
+          <span class="process-reminder__step-label">Transform</span>
+          <span class="process-reminder__step-sublabel">2-5 days</span>
+        </div>
+      </div>
+      <div class="process-reminder__cta">
+        <p class="process-reminder__cta-text">How does it work?</p>
+        <a href="how-it-works.html" class="btn-text">
+          See the full process <i data-lucide="arrow-right" class="arrow"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="packages-final-cta">
+    <div class="packages-final-cta__content">
+      <h2 class="packages-final-cta__headline">Not Sure Which Package Is Right?</h2>
+      <p class="packages-final-cta__description">
+        Book a free consultation and we'll help you choose the perfect solution for your backyard and budget.
+      </p>
+      <a href="quote.html" class="btn-primary packages-final-cta__button">Get Your Free Consultation</a>
+      <p class="packages-final-cta__phone">or call <a href="tel:+16472167787">(647) 216-7787</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="footer__brand">
+        <div class="footer__logo"><img
+            src="https://static.wixstatic.com/media/e83a48_77d3e37bf7c04f32af25998246892eb8~mv2.png"
+            alt="Yard Guard Landscaping"></div>
+        <p class="footer__tagline">Transform your backyard into a low-maintenance outdoor oasis.</p>
+        <div class="footer__social">
+          <a href="https://www.facebook.com/YardGuardlandscaping/" target="_blank" class="footer__social-link"><i
+              data-lucide="facebook"></i></a>
+          <a href="https://www.instagram.com/yardguardlandscaping/" target="_blank" class="footer__social-link"><i
+              data-lucide="instagram"></i></a>
+          <a href="https://www.yardguardlandscaping.com" target="_blank" class="footer__social-link"><i
+              data-lucide="globe"></i></a>
+        </div>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__column-title">Services</h4>
+        <a href="packages.html" class="footer__link">Easy Lawn</a>
+        <a href="packages.html" class="footer__link">Pet Yard</a>
+        <a href="packages.html" class="footer__link">Golfer's Green</a>
+        <a href="quote.html" class="footer__link">Get a Quote</a>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__column-title">Company</h4>
+        <a href="about.html" class="footer__link">About Us</a>
+        <a href="gallery.html" class="footer__link">Gallery</a>
+        <a href="how-it-works.html" class="footer__link">How It Works</a>
+        <a href="faq.html" class="footer__link">FAQ</a>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__column-title">Contact</h4>
+        <div class="footer__contact-item">
+          <i data-lucide="phone" class="icon"></i>
+          <span>(647) 216-7787</span>
+        </div>
+        <div class="footer__contact-item">
+          <i data-lucide="mail" class="icon"></i>
+          <span>info@yardguardlandscaping.com</span>
+        </div>
+        <div class="footer__contact-item">
+          <i data-lucide="map-pin" class="icon"></i>
+          <span>Mississauga, ON<br>Serving Etobicoke & GTA</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copyright">&copy; 2025 Yard Guard Landscaping. All rights reserved.</p>
+      <div class="footer__legal">
+        <a href="privacy.html" class="footer__legal-link">Privacy Policy</a>
+        <a href="terms.html" class="footer__legal-link">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky CTA -->
+  <div class="mobile-sticky-cta">
+    <a href="tel:+16472167787" class="mobile-sticky-cta__call">
+      <i data-lucide="phone"></i> Call Now
+    </a>
+    <a href="quote.html" class="mobile-sticky-cta__quote">Get Free Quote</a>
+  </div>
+
+  <!-- Initialize Lucide Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+
+</html>

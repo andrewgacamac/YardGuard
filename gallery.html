@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artificial Turf Gallery | Before & After Photos | Yard Guard Mississauga</title>
+  <meta name="description"
+    content="Browse our portfolio of artificial turf installations in Mississauga & GTA. See real before/after transformations of pet yards, putting greens, and lawn replacements.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* ========================================
+       CSS RESET & BASE
+       ======================================== */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #212121;
+      background: #FFFFFF;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ========================================
+       CSS VARIABLES
+       ======================================== */
+    :root {
+      --primary-green: #2E7D32;
+      --primary-green-hover: #1B5E20;
+      --dark-green: #1A3C1A;
+      --light-green: #E8F5E9;
+      --white: #FFFFFF;
+      --off-white: #FAFAFA;
+      --dark-text: #212121;
+      --medium-text: #616161;
+      --light-text: #9E9E9E;
+      --border: #E0E0E0;
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      --shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    /* ========================================
+       TYPOGRAPHY
+       ======================================== */
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: 48px;
+    }
+
+    h2 {
+      font-size: 42px;
+      font-weight: 600;
+    }
+
+    h3 {
+      font-size: 32px;
+      font-weight: 600;
+    }
+
+    h4 {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    @media (max-width: 767px) {
+      h1 {
+        font-size: 32px;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+
+      h3 {
+        font-size: 24px;
+      }
+
+      h4 {
+        font-size: 20px;
+      }
+    }
+
+    /* ========================================
+       BUTTONS
+       ======================================== */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: var(--primary-green);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+      padding: 16px 32px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(46, 125, 50, 0.25);
+      min-height: 54px;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-green-hover);
+      box-shadow: 0 6px 12px rgba(46, 125, 50, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: transparent;
+      color: var(--primary-green);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      padding: 14px 30px;
+      border: 2px solid var(--primary-green);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--light-green);
+      border-color: var(--primary-green-hover);
+    }
+
+    /* ========================================
+       HEADER
+       ======================================== */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: var(--white);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      z-index: 1000;
+    }
+
+    .header__container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header__logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .header__logo img {
+      height: 50px;
+      width: auto;
+    }
+
+    .header__nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-link {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--dark-text);
+      padding: 8px 16px;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    .nav-link:hover {
+      color: var(--primary-green);
+    }
+
+    .nav-link.active {
+      color: var(--primary-green);
+    }
+
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 16px;
+      right: 16px;
+      height: 3px;
+      background: var(--primary-green);
+      border-radius: 2px;
+    }
+
+    .header__cta {
+      padding: 12px 24px;
+      font-size: 14px;
+      min-height: auto;
+    }
+
+    @media (max-width: 1023px) {
+      .header__nav {
+        display: none;
+      }
+    }
+
+    /* ========================================
+       HERO BANNER
+       ======================================== */
+    .gallery-hero {
+      position: relative;
+      height: 350px;
+      margin-top: 80px;
+      background: linear-gradient(135deg, rgba(46, 125, 50, 0.9) 0%, rgba(27, 94, 32, 0.95) 100%),
+        url('images/gallery-hero.jpg') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .gallery-hero__content {
+      max-width: 800px;
+      padding: 0 24px;
+      color: var(--white);
+    }
+
+    .gallery-hero__breadcrumb {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 24px;
+    }
+
+    .gallery-hero__breadcrumb a {
+      color: rgba(255, 255, 255, 0.7);
+      transition: color 0.3s ease;
+    }
+
+    .gallery-hero__breadcrumb a:hover {
+      color: var(--white);
+      text-decoration: underline;
+    }
+
+    .gallery-hero__title {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+
+    .gallery-hero__subtitle {
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    @media (max-width: 767px) {
+      .gallery-hero {
+        height: 280px;
+      }
+
+      .gallery-hero__title {
+        font-size: 32px;
+      }
+
+      .gallery-hero__subtitle {
+        font-size: 16px;
+      }
+    }
+
+    /* ========================================
+       FILTER TABS
+       ======================================== */
+    .gallery-filters {
+      background: var(--white);
+      padding: 24px;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 80px;
+      z-index: 100;
+    }
+
+    .gallery-filters__container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--medium-text);
+      padding: 10px 20px;
+      background: var(--off-white);
+      border: 2px solid transparent;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .filter-btn:hover {
+      color: var(--primary-green);
+      background: var(--light-green);
+    }
+
+    .filter-btn.active {
+      color: var(--white);
+      background: var(--primary-green);
+      border-color: var(--primary-green);
+    }
+
+    @media (max-width: 767px) {
+      .gallery-filters {
+        padding: 16px;
+      }
+
+      .filter-btn {
+        font-size: 13px;
+        padding: 8px 16px;
+      }
+    }
+
+    /* ========================================
+       GALLERY GRID
+       ======================================== */
+    .gallery-section {
+      padding: 64px 24px;
+      background: var(--off-white);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 1023px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 767px) {
+      .gallery-section {
+        padding: 32px 16px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+
+    /* ========================================
+       GALLERY CARD
+       ======================================== */
+    .gallery-card {
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-8px);
+    }
+
+    .gallery-card__image {
+      position: relative;
+      height: 280px;
+      overflow: hidden;
+    }
+
+    .gallery-card__before,
+    .gallery-card__after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.5s ease;
+    }
+
+    .gallery-card__before {
+      background: linear-gradient(135deg, #8D6E63 0%, #5D4037 100%);
+      z-index: 2;
+      /* Remove default clip-path so JS can set it, or set default */
+      clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+    }
+
+    .gallery-card__after {
+      background: linear-gradient(135deg, #66BB6A 0%, #2E7D32 100%);
+      z-index: 1;
+    }
+
+    .gallery-card__label {
+      position: absolute;
+      top: 16px;
+      padding: 6px 12px;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-radius: 4px;
+      z-index: 10;
+    }
+
+    .gallery-card__label--before {
+      left: 16px;
+    }
+
+    .gallery-card__label--after {
+      right: 16px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    /* REMOVED HOVER EFFECTS TO ALLOW JS CONTROL */
+    /*
+    .gallery-card:hover .gallery-card__before {
+      clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+    }
+
+    .gallery-card:hover .gallery-card__label--after {
+      opacity: 1;
+    }
+    */
+    .gallery-card__label--after {
+      opacity: 1;
+      /* Always show label now that slider is visible */
+    }
+
+    .gallery-card__slider {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 3px;
+      background: white;
+      z-index: 15;
+      opacity: 1;
+      /* Always visible */
+      transition: none;
+      /* Remove transition for instant drag response */
+      pointer-events: none;
+      /* Let clicks pass through */
+    }
+
+    /* REMOVED HOVER OPACITY
+    .gallery-card:hover .gallery-card__slider {
+      opacity: 1;
+    }
+    */
+
+    .gallery-card__slider::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 36px;
+      height: 36px;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .gallery-card__content {
+      padding: 20px 24px;
+    }
+
+    .gallery-card__location {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      color: var(--medium-text);
+      margin-bottom: 8px;
+    }
+
+    .gallery-card__location .icon {
+      color: var(--primary-green);
+    }
+
+    .gallery-card__title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      color: var(--dark-text);
+      margin-bottom: 8px;
+    }
+
+    .gallery-card__package {
+      display: inline-block;
+      font-size: 13px;
+      color: var(--primary-green);
+      background: var(--light-green);
+      padding: 4px 12px;
+      border-radius: 50px;
+      font-weight: 600;
+    }
+
+    .gallery-card__meta {
+      display: flex;
+      gap: 16px;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+
+    .gallery-card__meta-item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 13px;
+      color: var(--medium-text);
+    }
+
+    .gallery-card__meta-item .icon {
+      width: 14px;
+      height: 14px;
+      color: var(--light-text);
+    }
+
+    /* ========================================
+       FEATURED PROJECT
+       ======================================== */
+    .featured-project {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .featured-project__image {
+      position: relative;
+      min-height: 400px;
+      background: linear-gradient(135deg, #66BB6A 0%, #2E7D32 100%);
+    }
+
+    .featured-project__badge {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: var(--primary-green);
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+      padding: 8px 16px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .featured-project__content {
+      padding: 48px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .featured-project__location {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      color: var(--medium-text);
+      margin-bottom: 12px;
+    }
+
+    .featured-project__title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+      color: var(--dark-text);
+      margin-bottom: 16px;
+    }
+
+    .featured-project__description {
+      font-size: 16px;
+      color: var(--medium-text);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .featured-project__stats {
+      display: flex;
+      gap: 32px;
+      margin-bottom: 24px;
+    }
+
+    .featured-project__stat {
+      text-align: center;
+    }
+
+    .featured-project__stat-value {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+      color: var(--primary-green);
+    }
+
+    .featured-project__stat-label {
+      font-size: 13px;
+      color: var(--medium-text);
+    }
+
+    .featured-project__cta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 767px) {
+      .featured-project {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-project__image {
+        min-height: 250px;
+      }
+
+      .featured-project__content {
+        padding: 32px 24px;
+      }
+
+      .featured-project__title {
+        font-size: 24px;
+      }
+    }
+
+    /* ========================================
+       TESTIMONIAL INLINE
+       ======================================== */
+    .gallery-testimonial {
+      grid-column: 1 / -1;
+      background: var(--light-green);
+      border-radius: 16px;
+      padding: 48px;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .gallery-testimonial__photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #9E9E9E 0%, #757575 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 40px;
+      flex-shrink: 0;
+      border: 4px solid white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .gallery-testimonial__content {
+      flex-grow: 1;
+    }
+
+    .gallery-testimonial__stars {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 12px;
+    }
+
+    .gallery-testimonial__star {
+      color: #FFB300;
+      font-size: 18px;
+    }
+
+    .gallery-testimonial__quote {
+      font-size: 18px;
+      font-style: italic;
+      color: var(--dark-text);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .gallery-testimonial__author {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--dark-text);
+    }
+
+    .gallery-testimonial__location {
+      font-size: 14px;
+      color: var(--medium-text);
+    }
+
+    @media (max-width: 767px) {
+      .gallery-testimonial {
+        flex-direction: column;
+        text-align: center;
+        padding: 32px 24px;
+      }
+
+      .gallery-testimonial__quote {
+        font-size: 16px;
+      }
+    }
+
+    /* ========================================
+       LOAD MORE
+       ======================================== */
+    .gallery-load-more {
+      text-align: center;
+      padding: 48px 24px;
+      background: var(--off-white);
+    }
+
+    .gallery-load-more__text {
+      font-size: 14px;
+      color: var(--medium-text);
+      margin-bottom: 16px;
+    }
+
+    /* ========================================
+       CTA SECTION
+       ======================================== */
+    .gallery-cta {
+      background: linear-gradient(135deg, var(--primary-green-hover) 0%, var(--primary-green) 100%);
+      padding: 80px 24px;
+      text-align: center;
+    }
+
+    .gallery-cta__content {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .gallery-cta__headline {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 36px;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .gallery-cta__description {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    .gallery-cta__button {
+      background: var(--white);
+      color: var(--primary-green);
+    }
+
+    .gallery-cta__button:hover {
+      background: var(--light-green);
+    }
+
+    @media (max-width: 767px) {
+      .gallery-cta {
+        padding: 48px 16px;
+      }
+
+      .gallery-cta__headline {
+        font-size: 28px;
+      }
+
+      .gallery-cta__description {
+        font-size: 16px;
+      }
+    }
+
+    /* ========================================
+       FOOTER
+       ======================================== */
+    .footer {
+      background: var(--dark-green);
+      padding: 80px 24px 40px;
+    }
+
+    .footer__main {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer__logo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .footer__logo img {
+      height: 60px;
+      width: auto;
+    }
+
+    .footer__tagline {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+      max-width: 250px;
+      margin-bottom: 24px;
+    }
+
+    .footer__social {
+      display: flex;
+      gap: 16px;
+    }
+
+    .footer__social-link {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      transition: all 0.3s ease;
+    }
+
+    .footer__social-link:hover {
+      background: var(--primary-green);
+    }
+
+    .footer__column-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .footer__link {
+      display: block;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      padding: 8px 0;
+      transition: color 0.3s ease;
+    }
+
+    .footer__link:hover {
+      color: var(--white);
+    }
+
+    .footer__contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 12px;
+    }
+
+    .footer__contact-item .icon {
+      color: #81C784;
+      flex-shrink: 0;
+    }
+
+    .footer__bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 48px;
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .footer__copyright {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer__legal {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer__legal-link {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer__legal-link:hover {
+      color: var(--white);
+    }
+
+    @media (max-width: 1023px) {
+      .footer__main {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .footer {
+        padding: 64px 16px 32px;
+      }
+
+      .footer__main {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .footer__bottom {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+      }
+    }
+
+    /* ========================================
+       MOBILE STICKY CTA
+       ======================================== */
+    .mobile-sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 70px;
+      background: var(--white);
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      padding: 12px 16px;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .mobile-sticky-cta__call {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--primary-green);
+      padding: 12px 16px;
+      border: 2px solid var(--primary-green);
+      border-radius: 8px;
+    }
+
+    .mobile-sticky-cta__quote {
+      flex-grow: 1;
+      background: var(--primary-green);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 14px 24px;
+      border: none;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    @media (max-width: 767px) {
+      .mobile-sticky-cta {
+        display: flex;
+      }
+
+      body {
+        padding-bottom: 70px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header__container">
+      <a href="homepage.html" class="header__logo"><img
+          src="https://static.wixstatic.com/media/e83a48_77d3e37bf7c04f32af25998246892eb8~mv2.png"
+          alt="Yard Guard Landscaping"></a>
+      <nav class="header__nav">
+        <a href="homepage.html" class="nav-link">Home</a>
+        <a href="packages.html" class="nav-link">Packages</a>
+        <a href="gallery.html" class="nav-link active">Gallery</a>
+        <a href="how-it-works.html" class="nav-link">How It Works</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+      </nav>
+      <a href="quote.html" class="btn-primary header__cta">Get a Quote</a>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="gallery-hero">
+    <div class="gallery-hero__content">
+      <div class="gallery-hero__breadcrumb">
+        <a href="homepage.html">Home</a> &gt; <a href="homepage.html">Artificial Turf</a> &gt; Gallery
+      </div>
+      <h1 class="gallery-hero__title">Real Transformations</h1>
+      <p class="gallery-hero__subtitle">See what's possible for your backyard</p>
+    </div>
+  </section>
+
+  <!-- Filter Tabs -->
+  <section class="gallery-filters">
+    <div class="gallery-filters__container">
+      <button class="filter-btn active">All Projects</button>
+      <button class="filter-btn">Easy Lawn</button>
+      <button class="filter-btn">Pet Yard</button>
+      <button class="filter-btn">Putting Greens</button>
+      <button class="filter-btn">Premium</button>
+    </div>
+  </section>
+
+  <!-- Gallery Grid -->
+  <section class="gallery-section">
+    <div class="gallery-grid">
+      <!-- Featured Project -->
+      <div class="featured-project">
+        <div class="featured-project__image">
+          <img src="images/hero-after.jpg" alt="Beautiful artificial turf backyard"
+            style="width: 100%; height: 100%; object-fit: cover;">
+          <span class="featured-project__badge">Featured Project</span>
+        </div>
+        <div class="featured-project__content">
+          <div class="featured-project__location">
+            <i data-lucide="map-pin" class="icon"></i>
+            Lorne Park, Mississauga
+          </div>
+          <h2 class="featured-project__title">Complete Backyard Transformation</h2>
+          <p class="featured-project__description">
+            This family of four and their two golden retrievers were tired of a muddy, patchy lawn. We installed our Pet
+            Yard package with enhanced drainage and added a custom patio integration for seamless indoor-outdoor living.
+          </p>
+          <div class="featured-project__stats">
+            <div class="featured-project__stat">
+              <div class="featured-project__stat-value">850</div>
+              <div class="featured-project__stat-label">sq ft installed</div>
+            </div>
+            <div class="featured-project__stat">
+              <div class="featured-project__stat-value">4</div>
+              <div class="featured-project__stat-label">days to complete</div>
+            </div>
+          </div>
+          <div class="featured-project__cta">
+            <a href="quote.html" class="btn-primary">Get Similar Quote</a>
+            <button class="btn-secondary">View Full Story</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery Card 1 -->
+      <div class="gallery-card">
+        <div class="gallery-card__image">
+          <div class="gallery-card__before">
+            <img src="images/gallery-1.jpg" alt="Muddy backyard before artificial turf"
+              style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="gallery-card__after">
+            <img src="images/gallery-2.jpg" alt="Beautiful artificial turf backyard after installation"
+              style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <span class="gallery-card__label gallery-card__label--before">Before</span>
+          <span class="gallery-card__label gallery-card__label--after">After</span>
+          <div class="gallery-card__slider"></div>
+        </div>
+        <div class="gallery-card__content">
+          <div class="gallery-card__location">
+            <i data-lucide="map-pin" class="icon"></i>
+            Port Credit
+          </div>
+          <h3 class="gallery-card__title">Front Yard Makeover</h3>
+          <span class="gallery-card__package">Easy Lawn</span>
+          <div class="gallery-card__meta">
+            <span class="gallery-card__meta-item">
+              <i data-lucide="ruler" class="icon"></i>
+              400 sq ft
+            </span>
+            <span class="gallery-card__meta-item">
+              <i data-lucide="clock" class="icon"></i>
+              2 days
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery Card 2 -->
+      <div class="gallery-card">
+        <div class="gallery-card__image">
+          <div class="gallery-card__before">
+            <img src="images/gallery-3.jpg" alt="Muddy backyard before artificial turf"
+              style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="gallery-card__after">
+            <img src="images/gallery-4.jpg" alt="Beautiful artificial turf backyard after installation"
+              style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <span class="gallery-card__label gallery-card__label--before">Before</span>
+          <span class="gallery-card__label gallery-card__label--after">After</span>
+          <div class="gallery-card__slider"></div>
+        </div>
+        <div class="gallery-card__content">
+          <div class="gallery-card__location">
+            <i data-lucide="map-pin" class="icon"></i>
+            Erindale
+          </div>
+          <h3 class="gallery-card__title">Pet Paradise</h3>
+          <span class="gallery-card__package">Pet Yard</span>
+          <div class="gallery-card__meta">
+            <span class="gallery-card__meta-item">
+              <i data-lucide="ruler" class="icon"></i>
+              600 sq ft
+            </span>
+            <span class="gallery-card__meta-item">
+              <i data-lucide="clock" class="icon"></i>
+              3 days
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery Card 3 -->
+      <div class="gallery-card">
+        <div class="gallery-card__image">
+          <div class="gallery-card__before">
+            <img src="images/gallery-5.jpg" alt="Muddy backyard before artificial turf"
+              style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="gallery-card__after">
+            <img src="images/gallery-6.jpg" alt="Beautiful artificial turf backyard after installation"
+              style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <span class="gallery-card__label gallery-card__label--before">Before</span>
+          <span class="gallery-card__label gallery-card__label--after">After</span>
+          <div class="gallery-card__slider"></div>
+        </div>
+        <div class="gallery-card__content">
+          <div class="gallery-card__location">
+            <i data-lucide="map-pin" class="icon"></i>
+            Clarkson
+          </div>
+          <h3 class="gallery-card__title">Backyard Putting Green</h3>
+          <span class="gallery-card__package">Golfer's Green</span>
+          <div class="gallery-card__meta">
+            <span class="gallery-card__meta-item">
+              <i data-lucide="ruler" class="icon"></i>
+              350 sq ft
+            </span>
+            <span class="gallery-card__meta-item">
+              <i data-lucide="clock" class="icon"></i>
+              5 days
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial -->
+      <div class="gallery-testimonial">
+        <div class="gallery-testimonial__photo">
+          <i data-lucide="user"></i>
+        </div>
+        <div class="gallery-testimonial__content">
+          <div class="gallery-testimonial__stars">
+            <span class="gallery-testimonial__star">★</span>
+            <span class="gallery-testimonial__star">★</span>
+            <span class="gallery-testimonial__star">★</span>
+            <span class="gallery-testimonial__star">★</span>
+            <span class="gallery-testimonial__star">★</span>
+          </div>
+          <p class="gallery-testimonial__quote">
+            "The 3D design was so accurate! When they finished, it looked exactly like what we approved. Our kids are
+            out there every day now."
+          </p>
+          <p class="gallery-testimonial__author">Jennifer & Mark T.</p>
+          <p class="gallery-testimonial__location">Streetsville, Mississauga</p>
+        </div>
+      </div>
+
+      <!-- Gallery Card 4 -->
+      <div class="gallery-card">
+        <div class="gallery-card__image">
+          <div class="gallery-card__before">
+            <img src="images/gallery-7.jpg" alt="Messy backyard before artificial turf"
+              style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="gallery-card__after">
+            <img src="images/gallery-8.jpg" alt="Modern backyard after artificial turf installation"
+              style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <span class="gallery-card__label gallery-card__label--before">Before</span>
+          <span class="gallery-card__label gallery-card__label--after">After</span>
+          <div class="gallery-card__slider"></div>
+        </div>
+        <div class="gallery-card__content">
+          <div class="gallery-card__location">
+            <i data-lucide="map-pin" class="icon"></i>
+            Etobicoke
+          </div>
+          <h3 class="gallery-card__title">Townhouse Backyard</h3>
+          <span class="gallery-card__package">Easy Lawn</span>
+          <div class="gallery-card__meta">
+            <span class="gallery-card__meta-item">
+              <i data-lucide="ruler" class="icon"></i>
+              250 sq ft
+            </span>
+            <span class="gallery-card__meta-item">
+              <i data-lucide="clock" class="icon"></i>
+              1 day
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery Card 5 -->
+      <div class="gallery-card">
+        <div class="gallery-card__image">
+          <div class="gallery-card__before">
+            <img src="images/gallery-9.jpg" alt="Messy backyard before artificial turf"
+              style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="gallery-card__after">
+            <img src="images/gallery-10.jpg" alt="Modern backyard after artificial turf installation"
+              style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <span class="gallery-card__label gallery-card__label--before">Before</span>
+          <span class="gallery-card__label gallery-card__label--after">After</span>
+          <div class="gallery-card__slider"></div>
+        </div>
+        <div class="gallery-card__content">
+          <div class="gallery-card__location">
+            <i data-lucide="map-pin" class="icon"></i>
+            Oakville
+          </div>
+          <h3 class="gallery-card__title">Multi-Dog Family</h3>
+          <span class="gallery-card__package">Pet Yard</span>
+          <div class="gallery-card__meta">
+            <span class="gallery-card__meta-item">
+              <i data-lucide="ruler" class="icon"></i>
+              900 sq ft
+            </span>
+            <span class="gallery-card__meta-item">
+              <i data-lucide="clock" class="icon"></i>
+              4 days
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery Card 6 -->
+      <div class="gallery-card">
+        <div class="gallery-card__image">
+          <div class="gallery-card__before">
+            <img src="images/hero-before.jpg" alt="Messy backyard before artificial turf"
+              style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="gallery-card__after">
+            <img src="images/hero-after.jpg" alt="Modern backyard after artificial turf installation"
+              style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <span class="gallery-card__label gallery-card__label--before">Before</span>
+          <span class="gallery-card__label gallery-card__label--after">After</span>
+          <div class="gallery-card__slider"></div>
+        </div>
+        <div class="gallery-card__content">
+          <div class="gallery-card__location">
+            <i data-lucide="map-pin" class="icon"></i>
+            Mississauga
+          </div>
+          <h3 class="gallery-card__title">Outdoor Living Space</h3>
+          <span class="gallery-card__package">Premium Integration</span>
+          <div class="gallery-card__meta">
+            <span class="gallery-card__meta-item">
+              <i data-lucide="ruler" class="icon"></i>
+              1,200 sq ft
+            </span>
+            <span class="gallery-card__meta-item">
+              <i data-lucide="clock" class="icon"></i>
+              7 days
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery Card 7 -->
+      <div class="gallery-card">
+        <div class="gallery-card__image">
+          <div class="gallery-card__before">
+            <img src="images/gallery-1.jpg" alt="Muddy backyard before artificial turf"
+              style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="gallery-card__after">
+            <img src="images/gallery-2.jpg" alt="Beautiful artificial turf backyard after installation"
+              style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <span class="gallery-card__label gallery-card__label--before">Before</span>
+          <span class="gallery-card__label gallery-card__label--after">After</span>
+          <div class="gallery-card__slider"></div>
+        </div>
+        <div class="gallery-card__content">
+          <div class="gallery-card__location">
+            <i data-lucide="map-pin" class="icon"></i>
+            Meadowvale
+          </div>
+          <h3 class="gallery-card__title">Championship Green</h3>
+          <span class="gallery-card__package">Golfer's Green</span>
+          <div class="gallery-card__meta">
+            <span class="gallery-card__meta-item">
+              <i data-lucide="ruler" class="icon"></i>
+              500 sq ft
+            </span>
+            <span class="gallery-card__meta-item">
+              <i data-lucide="clock" class="icon"></i>
+              5 days
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery Card 8 -->
+      <div class="gallery-card">
+        <div class="gallery-card__image">
+          <div class="gallery-card__before">
+            <img src="images/gallery-3.jpg" alt="Messy backyard before artificial turf"
+              style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="gallery-card__after">
+            <img src="images/gallery-4.jpg" alt="Modern backyard after artificial turf installation"
+              style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <span class="gallery-card__label gallery-card__label--before">Before</span>
+          <span class="gallery-card__label gallery-card__label--after">After</span>
+          <div class="gallery-card__slider"></div>
+        </div>
+        <div class="gallery-card__content">
+          <div class="gallery-card__location">
+            <i data-lucide="map-pin" class="icon"></i>
+            Cooksville
+          </div>
+          <h3 class="gallery-card__title">Side Yard Solution</h3>
+          <span class="gallery-card__package">Easy Lawn</span>
+          <div class="gallery-card__meta">
+            <span class="gallery-card__meta-item">
+              <i data-lucide="ruler" class="icon"></i>
+              180 sq ft
+            </span>
+            <span class="gallery-card__meta-item">
+              <i data-lucide="clock" class="icon"></i>
+              1 day
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Load More -->
+  <section class="gallery-load-more">
+    <p class="gallery-load-more__text">Showing 10 of 50+ projects</p>
+    <button class="btn-secondary">Load More Projects</button>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="gallery-cta">
+    <div class="gallery-cta__content">
+      <h2 class="gallery-cta__headline">Ready to See Your Yard Here?</h2>
+      <p class="gallery-cta__description">
+        Get a free 3D design and see exactly how your backyard will look before we break ground.
+      </p>
+      <a href="quote.html" class="btn-primary gallery-cta__button">Get Your Free 3D Design</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="footer__brand">
+        <div class="footer__logo"><img
+            src="https://static.wixstatic.com/media/e83a48_77d3e37bf7c04f32af25998246892eb8~mv2.png"
+            alt="Yard Guard Landscaping"></div>
+        <p class="footer__tagline">Transform your backyard into a low-maintenance outdoor oasis.</p>
+        <div class="footer__social">
+          <a href="https://www.facebook.com/YardGuardlandscaping/" target="_blank" class="footer__social-link"><i
+              data-lucide="facebook"></i></a>
+          <a href="https://www.instagram.com/yardguardlandscaping/" target="_blank" class="footer__social-link"><i
+              data-lucide="instagram"></i></a>
+          <a href="https://www.yardguardlandscaping.com" target="_blank" class="footer__social-link"><i
+              data-lucide="globe"></i></a>
+        </div>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__column-title">Services</h4>
+        <a href="packages.html" class="footer__link">Easy Lawn</a>
+        <a href="packages.html" class="footer__link">Pet Yard</a>
+        <a href="packages.html" class="footer__link">Golfer's Green</a>
+        <a href="quote.html" class="footer__link">Get a Quote</a>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__column-title">Company</h4>
+        <a href="about.html" class="footer__link">About Us</a>
+        <a href="gallery.html" class="footer__link">Gallery</a>
+        <a href="how-it-works.html" class="footer__link">How It Works</a>
+        <a href="faq.html" class="footer__link">FAQ</a>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__column-title">Contact</h4>
+        <div class="footer__contact-item">
+          <i data-lucide="phone" class="icon"></i>
+          <span>(647) 216-7787</span>
+        </div>
+        <div class="footer__contact-item">
+          <i data-lucide="mail" class="icon"></i>
+          <span>info@yardguardlandscaping.com</span>
+        </div>
+        <div class="footer__contact-item">
+          <i data-lucide="map-pin" class="icon"></i>
+          <span>Mississauga, ON<br>Serving Etobicoke & GTA</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copyright">&copy; 2025 Yard Guard Landscaping. All rights reserved.</p>
+      <div class="footer__legal">
+        <a href="privacy.html" class="footer__legal-link">Privacy Policy</a>
+        <a href="terms.html" class="footer__legal-link">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky CTA -->
+  <div class="mobile-sticky-cta">
+    <a href="tel:+16472167787" class="mobile-sticky-cta__call">
+      <i data-lucide="phone"></i> Call Now
+    </a>
+    <a href="quote.html" class="mobile-sticky-cta__quote">Get Free Quote</a>
+  </div>
+
+  <!-- Initialize Lucide Icons -->
+  <script>
+    lucide.createIcons();
+
+    // Interactive Gallery Cards Slider
+    function initGallerySliders() {
+      const cards = document.querySelectorAll('.gallery-card');
+
+      cards.forEach(card => {
+        const imageContainer = card.querySelector('.gallery-card__image');
+        if (!imageContainer) return;
+
+        const beforeImage = imageContainer.querySelector('.gallery-card__before');
+        const slider = imageContainer.querySelector('.gallery-card__slider');
+        if (!beforeImage || !slider) return;
+
+        // Force initial state (50%)
+        beforeImage.style.clipPath = 'polygon(0 0, 50% 0, 50% 100%, 0 100%)';
+        slider.style.opacity = '1';
+        slider.style.left = '50%';
+
+
+        function updateSlider(x) {
+          const rect = imageContainer.getBoundingClientRect();
+          let offsetX = x - rect.left;
+
+          if (offsetX < 0) offsetX = 0;
+          if (offsetX > rect.width) offsetX = rect.width;
+
+          const percentage = (offsetX / rect.width) * 100;
+
+          beforeImage.style.clipPath = `polygon(0 0, ${percentage}% 0, ${percentage}% 100%, 0 100%)`;
+          slider.style.left = `${percentage}%`;
+        }
+
+        imageContainer.addEventListener('mousemove', (e) => {
+          updateSlider(e.clientX);
+        });
+
+        imageContainer.addEventListener('touchmove', (e) => {
+          updateSlider(e.touches[0].clientX);
+          e.preventDefault();
+        });
+
+        imageContainer.addEventListener('click', (e) => {
+          updateSlider(e.clientX);
+        });
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initGallerySliders);
+    } else {
+      initGallerySliders();
+    }
+  </script>
+</body>
+
+</html>

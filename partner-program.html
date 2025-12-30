@@ -1,0 +1,1907 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partner Program | For Pool Installers & Contractors | Yard Guard</title>
+  <meta name="description"
+    content="Partner with Yard Guard to solve the 'muddy mess' problem for your pool clients. We restore backyards in 48 hours. Earn referral fees or offer exclusive discounts.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* ============================================
+       RESET & BASE
+       ============================================ */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #212121;
+      background: #FFFFFF;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ============================================
+       VARIABLES
+       ============================================ */
+    :root {
+      --primary-green: #2E7D32;
+      --primary-green-hover: #1B5E20;
+      --dark-green: #1A3C1A;
+      --light-green: #E8F5E9;
+      --white: #FFFFFF;
+      --off-white: #FAFAFA;
+      --dark-text: #212121;
+      --medium-text: #616161;
+      --light-text: #9E9E9E;
+      --border: #E0E0E0;
+      --star-gold: #FFB300;
+
+      --container-max: 1200px;
+      --header-height: 80px;
+    }
+
+    /* ============================================
+       TYPOGRAPHY
+       ============================================ */
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: 56px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    h2 {
+      font-size: 42px;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+    }
+
+    h3 {
+      font-size: 32px;
+      font-weight: 600;
+    }
+
+    h4 {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    @media (max-width: 767px) {
+      h1 {
+        font-size: 36px;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+
+      h3 {
+        font-size: 24px;
+      }
+
+      h4 {
+        font-size: 20px;
+      }
+    }
+
+    /* ============================================
+       CONTAINER
+       ============================================ */
+    .container {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ============================================
+       BUTTONS
+       ============================================ */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: var(--primary-green);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+      padding: 16px 32px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(46, 125, 50, 0.25);
+      min-height: 54px;
+      text-decoration: none;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-green-hover);
+      box-shadow: 0 6px 12px rgba(46, 125, 50, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .btn-primary--large {
+      padding: 20px 48px;
+      font-size: 18px;
+    }
+
+    .btn-primary--white {
+      background: var(--white);
+      color: var(--primary-green);
+    }
+
+    .btn-primary--white:hover {
+      background: var(--light-green);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: transparent;
+      color: var(--primary-green);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      padding: 14px 30px;
+      border: 2px solid var(--primary-green);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--light-green);
+      border-color: var(--primary-green-hover);
+    }
+
+    .btn-text {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: none;
+      color: var(--primary-green);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      padding: 8px 0;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn-text:hover {
+      color: var(--primary-green-hover);
+    }
+
+    .btn-text:hover .arrow {
+      transform: translateX(4px);
+    }
+
+    .btn-text .arrow {
+      transition: transform 0.3s ease;
+    }
+
+    /* ============================================
+       HEADER
+       ============================================ */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--header-height);
+      background: var(--white);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+    }
+
+    .header__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .header__logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .header__logo img {
+      height: 50px;
+      width: auto;
+    }
+
+    .header__nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-link {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--dark-text);
+      padding: 8px 16px;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    .nav-link:hover {
+      color: var(--primary-green);
+    }
+
+    .nav-link.active {
+      color: var(--primary-green);
+    }
+
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 16px;
+      right: 16px;
+      height: 3px;
+      background: var(--primary-green);
+      border-radius: 2px;
+    }
+
+    .header__cta {
+      margin-left: 16px;
+      padding: 12px 24px;
+      font-size: 14px;
+      min-height: auto;
+    }
+
+    @media (max-width: 1023px) {
+      .header__nav {
+        display: none;
+      }
+
+      .header__cta {
+        display: none;
+      }
+    }
+
+    /* ============================================
+       HERO SECTION
+       ============================================ */
+    .hero {
+      position: relative;
+      min-height: 90vh;
+      padding-top: var(--header-height);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero__background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+    }
+
+    .hero__slider {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .hero__image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero__image--before {
+      clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+    }
+
+    .hero__image--after {
+      z-index: 1;
+    }
+
+    .hero__slider-handle {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 4px;
+      background: white;
+      z-index: 10;
+      cursor: ew-resize;
+    }
+
+    .hero__slider-handle::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero__slider-handle::after {
+      content: '< >';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: monospace;
+      font-size: 14px;
+      color: var(--dark-text);
+      letter-spacing: 4px;
+    }
+
+    .hero__label {
+      position: absolute;
+      top: 24px;
+      padding: 8px 16px;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-radius: 4px;
+      z-index: 5;
+    }
+
+    .hero__label--before {
+      left: 24px;
+    }
+
+    .hero__label--after {
+      right: 24px;
+    }
+
+    .hero__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 80px 24px 120px;
+      background: linear-gradient(to bottom,
+          rgba(0, 0, 0, 0.1) 0%,
+          rgba(0, 0, 0, 0.4) 50%,
+          rgba(0, 0, 0, 0.6) 100%);
+      z-index: 20;
+    }
+
+    .hero__headline {
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 24px;
+      max-width: 800px;
+    }
+
+    .hero__subheadline {
+      font-size: 24px;
+      color: white;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+      margin-bottom: 40px;
+      max-width: 600px;
+    }
+
+    @media (max-width: 767px) {
+      .hero__subheadline {
+        font-size: 18px;
+      }
+    }
+
+    .hero__cta {
+      margin-bottom: 48px;
+    }
+
+    .trust-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 20px 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 48px;
+      flex-wrap: wrap;
+      z-index: 25;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--dark-text);
+    }
+
+    .trust-item__icon {
+      width: 24px;
+      height: 24px;
+      background: var(--primary-green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    @media (max-width: 767px) {
+      .trust-bar {
+        gap: 16px;
+        padding: 16px;
+      }
+
+      .trust-item {
+        font-size: 12px;
+      }
+    }
+
+    /* ============================================
+       PROBLEM / SOLUTION SECTION
+       ============================================ */
+    .problem-solution {
+      background: var(--off-white);
+      padding: 100px 24px;
+    }
+
+    @media (max-width: 767px) {
+      .problem-solution {
+        padding: 64px 16px;
+      }
+    }
+
+    .problem-solution__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    @media (max-width: 767px) {
+      .problem-solution__grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+    }
+
+    .problem-solution__column {}
+
+    .problem-solution__header {
+      margin-bottom: 32px;
+    }
+
+    .problem-solution__header--problem {
+      color: var(--medium-text);
+    }
+
+    .problem-solution__header--solution {
+      color: var(--primary-green);
+    }
+
+    .problem-item,
+    .solution-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .solution-item {
+      border-bottom-color: #C8E6C9;
+    }
+
+    .problem-item:last-child,
+    .solution-item:last-child {
+      border-bottom: none;
+    }
+
+    .problem-item__icon,
+    .solution-item__icon {
+      width: 48px;
+      height: 48px;
+      background: #F5F5F5;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+
+    .solution-item__icon {
+      background: var(--light-green);
+    }
+
+    .problem-item__text {
+      font-size: 18px;
+      color: var(--medium-text);
+      line-height: 1.5;
+    }
+
+    .solution-item__text {
+      font-size: 18px;
+      color: var(--dark-text);
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .problem-solution__divider {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 64px;
+      height: 64px;
+      background: var(--primary-green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+      box-shadow: 0 4px 20px rgba(46, 125, 50, 0.3);
+      z-index: 10;
+    }
+
+    @media (max-width: 767px) {
+      .problem-solution__divider {
+        display: none;
+      }
+    }
+
+    /* ============================================
+       HOW IT WORKS SECTION
+       ============================================ */
+    .how-it-works {
+      background: var(--white);
+      padding: 100px 24px;
+    }
+
+    @media (max-width: 767px) {
+      .how-it-works {
+        padding: 64px 16px;
+      }
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .section-header__headline {
+      margin-bottom: 16px;
+    }
+
+    .section-header__subheadline {
+      font-size: 20px;
+      color: var(--medium-text);
+    }
+
+    @media (max-width: 767px) {
+      .section-header {
+        margin-bottom: 48px;
+      }
+
+      .section-header__subheadline {
+        font-size: 18px;
+      }
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px;
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    @media (max-width: 767px) {
+      .steps {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    .steps__connector {
+      position: absolute;
+      top: 50px;
+      left: calc(16.67% + 60px);
+      right: calc(16.67% + 60px);
+      height: 4px;
+      background: linear-gradient(to right, var(--primary-green), #C8E6C9, var(--primary-green));
+      border-radius: 2px;
+    }
+
+    @media (max-width: 767px) {
+      .steps__connector {
+        display: none;
+      }
+    }
+
+    .step {
+      text-align: center;
+      position: relative;
+    }
+
+    .step__circle {
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-hover) 100%);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      margin: 0 auto 24px;
+      box-shadow: 0 8px 24px rgba(46, 125, 50, 0.3);
+    }
+
+    .step__icon {
+      font-size: 32px;
+      margin-bottom: 4px;
+    }
+
+    .step__number {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .step__title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 24px;
+      color: var(--dark-text);
+      margin-bottom: 16px;
+    }
+
+    .step__description {
+      font-size: 16px;
+      color: var(--medium-text);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .step__meta {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      font-size: 14px;
+      color: var(--medium-text);
+    }
+
+    .step__meta-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .step__meta-item--free {
+      color: var(--primary-green);
+      font-weight: 600;
+    }
+
+    .how-it-works__cta {
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    /* ============================================
+       PACKAGES SECTION
+       ============================================ */
+    .packages {
+      background: #F5F5F5;
+      padding: 100px 24px;
+    }
+
+    @media (max-width: 767px) {
+      .packages {
+        padding: 64px 16px;
+      }
+    }
+
+    .packages__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 64px;
+    }
+
+    @media (max-width: 1023px) {
+      .packages__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 767px) {
+      .packages__grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+
+    .package-card {
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .package-card:hover {
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+      transform: translateY(-8px);
+    }
+
+    .package-card__image {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 48px;
+    }
+
+    .package-card__content {
+      padding: 32px 24px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .package-card__title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      color: var(--dark-text);
+      margin-bottom: 8px;
+    }
+
+    .package-card__tagline {
+      font-size: 16px;
+      color: var(--primary-green);
+      font-style: italic;
+      margin-bottom: 16px;
+    }
+
+    .package-card__divider {
+      height: 2px;
+      background: var(--border);
+      margin: 16px 0;
+    }
+
+    .package-card__price {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+      color: var(--dark-text);
+      margin-bottom: 24px;
+    }
+
+    .package-card__price span {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--medium-text);
+    }
+
+    .package-card__features {
+      list-style: none;
+      margin-bottom: 24px;
+    }
+
+    .package-card__feature {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 15px;
+      color: var(--medium-text);
+      padding: 8px 0;
+    }
+
+    .package-card__feature i {
+      color: var(--primary-green);
+    }
+
+    .package-card__cta {
+      margin-top: auto;
+    }
+
+    .packages__cta {
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    /* ============================================
+       GALLERY SECTION
+       ============================================ */
+    .gallery {
+      background: var(--white);
+      padding: 100px 24px;
+    }
+
+    @media (max-width: 767px) {
+      .gallery {
+        padding: 64px 16px;
+      }
+    }
+
+    .gallery__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    @media (max-width: 1023px) {
+      .gallery__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 767px) {
+      .gallery__grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+    }
+
+    .gallery-card {
+      background: var(--white);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery-card:hover {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      transform: translateY(-4px);
+    }
+
+    .gallery-card__image {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .gallery-card__before,
+    .gallery-card__after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: opacity 0.5s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: white;
+      font-weight: 600;
+    }
+
+    .gallery-card__before {
+      background: linear-gradient(135deg, #795548 0%, #5D4037 100%);
+      z-index: 1;
+    }
+
+    .gallery-card__after {
+      background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+      z-index: 0;
+    }
+
+    .gallery-card:hover .gallery-card__before {
+      opacity: 0;
+    }
+
+    .gallery-card__content {
+      padding: 16px;
+    }
+
+    .gallery-card__location {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      color: var(--medium-text);
+      margin-bottom: 4px;
+    }
+
+    .gallery-card__package {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--primary-green);
+    }
+
+    .gallery__cta {
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    /* ============================================
+       TESTIMONIAL SECTION
+       ============================================ */
+    .testimonial {
+      background: var(--light-green);
+      padding: 100px 24px;
+    }
+
+    @media (max-width: 767px) {
+      .testimonial {
+        padding: 64px 16px;
+      }
+    }
+
+    .testimonial__content {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .testimonial__stars {
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+      margin-bottom: 32px;
+    }
+
+    .testimonial__star {
+      color: var(--star-gold);
+      font-size: 28px;
+    }
+
+    .testimonial__quote {
+      font-size: 24px;
+      font-style: italic;
+      color: var(--dark-text);
+      line-height: 1.6;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    @media (max-width: 767px) {
+      .testimonial__quote {
+        font-size: 18px;
+      }
+    }
+
+    .testimonial__author {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .testimonial__photo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #9E9E9E 0%, #757575 100%);
+      border: 4px solid white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 32px;
+    }
+
+    .testimonial__info {
+      text-align: left;
+    }
+
+    .testimonial__name {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      color: var(--dark-text);
+      margin-bottom: 4px;
+    }
+
+    .testimonial__location {
+      font-size: 14px;
+      color: var(--medium-text);
+      margin-bottom: 2px;
+    }
+
+    .testimonial__package {
+      font-size: 14px;
+      color: var(--primary-green);
+      font-weight: 600;
+    }
+
+    .testimonial__video-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--primary-green);
+      background: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .testimonial__video-cta:hover {
+      background: var(--primary-green);
+      color: white;
+      box-shadow: 0 4px 16px rgba(46, 125, 50, 0.3);
+    }
+
+    /* ============================================
+       TRUST SIGNALS SECTION
+       ============================================ */
+    .trust-signals {
+      background: var(--off-white);
+      padding: 60px 24px;
+    }
+
+    @media (max-width: 767px) {
+      .trust-signals {
+        padding: 40px 16px;
+      }
+    }
+
+    .trust-signals__grid {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 64px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 767px) {
+      .trust-signals__grid {
+        gap: 32px;
+      }
+    }
+
+    .trust-signal {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .trust-signal__logo {
+      height: 50px;
+      width: auto;
+      margin-bottom: 8px;
+      filter: grayscale(100%);
+      opacity: 0.7;
+      transition: all 0.3s ease;
+    }
+
+    .trust-signal:hover .trust-signal__logo {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+
+    .trust-signal__stat {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 36px;
+      color: var(--primary-green);
+      margin-bottom: 8px;
+    }
+
+    .trust-signal__icon {
+      width: 50px;
+      height: 50px;
+      background: var(--primary-green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .trust-signal__label {
+      font-size: 14px;
+      color: var(--medium-text);
+    }
+
+    /* ============================================
+       FINAL CTA SECTION
+       ============================================ */
+    .final-cta {
+      background: linear-gradient(135deg, var(--primary-green-hover) 0%, var(--primary-green) 100%);
+      padding: 100px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @media (max-width: 767px) {
+      .final-cta {
+        padding: 64px 16px;
+      }
+    }
+
+    .final-cta__content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .final-cta__headline {
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 767px) {
+      .final-cta__headline {
+        font-size: 28px;
+      }
+    }
+
+    .final-cta__subheadline {
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 40px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 767px) {
+      .final-cta__subheadline {
+        font-size: 16px;
+      }
+    }
+
+    .final-cta__phone {
+      margin-top: 24px;
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .final-cta__phone a {
+      color: white;
+      font-weight: 600;
+    }
+
+    .final-cta__phone a:hover {
+      text-decoration: underline;
+    }
+
+    /* ============================================
+       FOOTER
+       ============================================ */
+    .footer {
+      background: var(--dark-green);
+      padding: 80px 24px 40px;
+    }
+
+    @media (max-width: 767px) {
+      .footer {
+        padding: 64px 16px 32px;
+      }
+    }
+
+    .footer__main {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      max-width: var(--container-max);
+      margin: 0 auto;
+    }
+
+    @media (max-width: 1023px) {
+      .footer__main {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .footer__main {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    .footer__brand {}
+
+    .footer__logo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .footer__logo img {
+      height: 60px;
+      width: auto;
+    }
+
+    .footer__tagline {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+      max-width: 250px;
+      margin-bottom: 24px;
+    }
+
+    .footer__social {
+      display: flex;
+      gap: 16px;
+    }
+
+    .footer__social-link {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      transition: all 0.3s ease;
+    }
+
+    .footer__social-link:hover {
+      background: var(--primary-green);
+    }
+
+    .footer__column-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .footer__link {
+      display: block;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      padding: 8px 0;
+      transition: color 0.3s ease;
+    }
+
+    .footer__link:hover {
+      color: white;
+    }
+
+    .footer__contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 12px;
+    }
+
+    .footer__contact-item i {
+      color: #81C784;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .footer__bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 48px;
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: var(--container-max);
+      margin-left: auto;
+      margin-right: auto;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer__copyright {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer__legal {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer__legal-link {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer__legal-link:hover {
+      color: white;
+    }
+
+    /* ============================================
+       MOBILE STICKY CTA
+       ============================================ */
+    .mobile-sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 70px;
+      background: white;
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      padding: 12px 16px;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    @media (max-width: 767px) {
+      .mobile-sticky-cta {
+        display: flex;
+      }
+
+      body {
+        padding-bottom: 70px;
+      }
+    }
+
+    .mobile-sticky-cta__call {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--primary-green);
+      padding: 12px 16px;
+      border: 2px solid var(--primary-green);
+      border-radius: 8px;
+    }
+
+    .mobile-sticky-cta__quote {
+      flex-grow: 1;
+      background: var(--primary-green);
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 14px 24px;
+      border: none;
+      border-radius: 8px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================
+       HEADER
+       ============================================ -->
+  <header class="header">
+    <div class="header__container">
+      <a href="homepage.html" class="header__logo">
+        <img src="https://static.wixstatic.com/media/e83a48_77d3e37bf7c04f32af25998246892eb8~mv2.png"
+          alt="Yard Guard Landscaping">
+      </a>
+
+      <nav class="header__nav">
+        <a href="homepage.html" class="nav-link active">Home</a>
+        <a href="packages.html" class="nav-link">Packages</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="how-it-works.html" class="nav-link">How It Works</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+      </nav>
+
+      <a href="quote.html" class="btn-primary header__cta">Get a Quote</a>
+    </div>
+  </header>
+
+  <!-- ============================================
+       HERO SECTION
+       ============================================ -->
+  <section class="hero">
+    <div class="hero__background">
+      <div class="hero__slider">
+        <!-- Simulated before/after images with gradients -->
+        <div class="hero__image hero__image--after"
+          style="background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 50%, #1B5E20 100%);"></div>
+        <div class="hero__image hero__image--before"
+          style="background: linear-gradient(135deg, #8D6E63 0%, #6D4C41 50%, #4E342E 100%);"></div>
+        <span class="hero__label hero__label--before">BEFORE</span>
+        <span class="hero__label hero__label--after">AFTER</span>
+        <div class="hero__slider-handle"></div>
+      </div>
+    </div>
+
+    <div class="hero__overlay">
+      <div class="hero__headline">
+        <h1>Don't Leave Your Clients With a Muddy Mess</h1>
+      </div>
+      <div class="hero__subheadline">
+        <h2>Partner with Yard Guard to finish your pool projects with a 48-Hour Instant Green Restoration.</h2>
+      </div>
+      <a href="#partner-form" class="btn-primary btn-primary--large hero__cta">Become a Partner</a>
+    </div>
+
+    <div class="trust-bar">
+      <div class="trust-item">
+        <span class="trust-item__icon">
+          <i data-lucide="check" style="width: 14px; height: 14px;"></i>
+        </span>
+        15 Years Experience
+      </div>
+      <div class="trust-item">
+        <span class="trust-item__icon">
+          <i data-lucide="check" style="width: 14px; height: 14px;"></i>
+        </span>
+        10-Year Warranty
+      </div>
+      <div class="trust-item">
+        <span class="trust-item__icon">
+          <i data-lucide="check" style="width: 14px; height: 14px;"></i>
+        </span>
+        Free Estimates
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PROBLEM / SOLUTION SECTION
+       ============================================ -->
+  <section class="problem-solution">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-header__headline">The "Muddy Gap" in Your Projects</h2>
+        <p class="section-header__subheadline">You build beautiful pools, but the construction process destroys the
+          yard.</p>
+      </div>
+
+      <div class="problem-solution__grid">
+        <div class="problem-solution__column">
+          <h3 class="problem-solution__header problem-solution__header--problem">The Problem for Your Clients</h3>
+          <div class="problem-item">
+            <div class="problem-item__icon">😩</div>
+            <p class="problem-item__text"><strong>Mud & Dirt Everywhere:</strong> Dogs and kids track mud into the house
+              and the new pool.</p>
+          </div>
+          <div class="problem-item">
+            <div class="problem-item__icon">⏳</div>
+            <p class="problem-item__text"><strong>Long Wait Times:</strong> Sod takes weeks to root and can't be used
+              immediately.</p>
+          </div>
+          <div class="problem-item">
+            <div class="problem-item__icon">👎</div>
+            <p class="problem-item__text"><strong>Ruined Aesthetic:</strong> A stunning new pool surrounded by a
+              construction site.</p>
+          </div>
+        </div>
+
+        <div class="problem-solution__divider">VS</div>
+
+        <div class="problem-solution__column">
+          <h3 class="problem-solution__header problem-solution__header--solution">The Yard Guard Solution</h3>
+          <div class="solution-item">
+            <div class="solution-item__icon">✨</div>
+            <p class="solution-item__text"><strong>Instant Cleanliness:</strong> No mud, no dirt, just pristine green
+              immediately.</p>
+          </div>
+          <div class="solution-item">
+            <div class="solution-item__icon">⚡️</div>
+            <p class="solution-item__text"><strong>48-Hour Restoration:</strong> We come in as soon as you leave and
+              finish the yard in 2 days.</p>
+          </div>
+          <div class="solution-item">
+            <div class="solution-item__icon">🤝</div>
+            <p class="solution-item__text"><strong>Happy Clients:</strong> You look like a hero for recommending a
+              complete solution.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       HOW IT WORKS SECTION
+       ============================================ -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-header__headline">How It Works</h2>
+        <p class="section-header__subheadline">Your backyard transformation in 3 simple steps</p>
+      </div>
+
+      <div class="steps">
+        <div class="steps__connector"></div>
+
+        <div class="step">
+          <div class="step__circle">
+            <span class="step__icon">📅</span>
+            <span class="step__number">1</span>
+          </div>
+          <h4 class="step__title">Free Consultation</h4>
+          <p class="step__description">We visit your yard, take measurements, and discuss your vision. No pressure, no
+            obligation.</p>
+          <div class="step__meta">
+            <span class="step__meta-item">⏱ 30 min</span>
+            <span class="step__meta-item step__meta-item--free">💲 FREE</span>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step__circle">
+            <span class="step__icon">🎨</span>
+            <span class="step__number">2</span>
+          </div>
+          <h4 class="step__title">3D Design</h4>
+          <p class="step__description">See YOUR backyard transformed in a photorealistic 3D rendering — before we break
+            ground.</p>
+          <div class="step__meta">
+            <span class="step__meta-item">⏱ 3-5 days</span>
+            <span class="step__meta-item step__meta-item--free">💲 FREE*</span>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step__circle">
+            <span class="step__icon">✨</span>
+            <span class="step__number">3</span>
+          </div>
+          <h4 class="step__title">Transform</h4>
+          <p class="step__description">Our professional crew brings your approved design to life, typically in just 2-5
+            days.</p>
+          <div class="step__meta">
+            <span class="step__meta-item">⏱ 2-5 days</span>
+            <span class="step__meta-item">💲 Per quote</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="how-it-works__cta">
+        <a href="quote.html" class="btn-primary">Get Started — It's Free</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PACKAGES SECTION
+       ============================================ -->
+  <section class="packages" id="packages">
+    <div class="packages__cta">
+      <a href="packages.html" class="btn-text">View All Packages <span class="arrow">→</span></a>
+    </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       GALLERY SECTION
+       ============================================ -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-header__headline">Real Transformations</h2>
+        <p class="section-header__subheadline">See what's possible for your backyard</p>
+      </div>
+
+      <div class="gallery__grid">
+        <div class="gallery-card">
+          <div class="gallery-card__image">
+            <div class="gallery-card__before">BEFORE</div>
+            <div class="gallery-card__after">AFTER</div>
+          </div>
+          <div class="gallery-card__content">
+            <p class="gallery-card__location">
+              <i data-lucide="map-pin" style="width: 14px; height: 14px;"></i>
+              Lorne Park
+            </p>
+            <p class="gallery-card__package">The Pet Yard</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <div class="gallery-card__image">
+            <div class="gallery-card__before">BEFORE</div>
+            <div class="gallery-card__after">AFTER</div>
+          </div>
+          <div class="gallery-card__content">
+            <p class="gallery-card__location">
+              <i data-lucide="map-pin" style="width: 14px; height: 14px;"></i>
+              Port Credit
+            </p>
+            <p class="gallery-card__package">The Easy Lawn</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <div class="gallery-card__image">
+            <div class="gallery-card__before">BEFORE</div>
+            <div class="gallery-card__after">AFTER</div>
+          </div>
+          <div class="gallery-card__content">
+            <p class="gallery-card__location">
+              <i data-lucide="map-pin" style="width: 14px; height: 14px;"></i>
+              Erindale
+            </p>
+            <p class="gallery-card__package">The Golfer's Green</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <div class="gallery-card__image">
+            <div class="gallery-card__before">BEFORE</div>
+            <div class="gallery-card__after">AFTER</div>
+          </div>
+          <div class="gallery-card__content">
+            <p class="gallery-card__location">
+              <i data-lucide="map-pin" style="width: 14px; height: 14px;"></i>
+              Etobicoke
+            </p>
+            <p class="gallery-card__package">Premium Integration</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery__cta">
+        <a href="gallery.html" class="btn-text">See More Transformations <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       TESTIMONIAL SECTION
+       ============================================ -->
+  <section class="testimonial">
+    <div class="testimonial__content">
+      <div class="testimonial__stars">
+        <span class="testimonial__star">★</span>
+        <span class="testimonial__star">★</span>
+        <span class="testimonial__star">★</span>
+        <span class="testimonial__star">★</span>
+        <span class="testimonial__star">★</span>
+      </div>
+
+      <p class="testimonial__quote">
+        "We couldn't believe how accurate the 3D design was. When the crew finished, it looked EXACTLY like the
+        rendering. Our kids and dog are out there every single day now. Best investment we've ever made in our home."
+      </p>
+
+      <div class="testimonial__author">
+        <div class="testimonial__photo">
+          <i data-lucide="user" style="width: 32px; height: 32px;"></i>
+        </div>
+        <div class="testimonial__info">
+          <p class="testimonial__name">Sarah & Mike T.</p>
+          <p class="testimonial__location">Lorne Park, Mississauga</p>
+          <p class="testimonial__package">The Pet Yard Package</p>
+        </div>
+      </div>
+
+      <a href="#" class="testimonial__video-cta">
+        <i data-lucide="play" style="width: 20px; height: 20px;"></i>
+        Watch Their Story
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================================
+       TRUST SIGNALS SECTION
+       ============================================ -->
+  <section class="trust-signals">
+    <div class="container">
+      <div class="trust-signals__grid">
+        <div class="trust-signal">
+          <div class="trust-signal__icon">
+            <i data-lucide="award" style="width: 24px; height: 24px;"></i>
+          </div>
+          <span class="trust-signal__label">Landscape Ontario</span>
+        </div>
+
+        <div class="trust-signal">
+          <div class="trust-signal__icon">
+            <i data-lucide="badge-check" style="width: 24px; height: 24px;"></i>
+          </div>
+          <span class="trust-signal__label">Certified Partner</span>
+        </div>
+
+        <div class="trust-signal">
+          <span class="trust-signal__stat">15+</span>
+          <span class="trust-signal__label">Years Experience</span>
+        </div>
+
+        <div class="trust-signal">
+          <span class="trust-signal__stat">500+</span>
+          <span class="trust-signal__label">Yards Transformed</span>
+        </div>
+
+        <div class="trust-signal">
+          <div class="trust-signal__icon">
+            <i data-lucide="shield-check" style="width: 24px; height: 24px;"></i>
+          </div>
+          <span class="trust-signal__label">10-Year Warranty</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FINAL CTA SECTION
+       ============================================ -->
+  <section class="final-cta" id="quote">
+    <div class="final-cta__content">
+      <h2 class="final-cta__headline">Ready to Transform Your Backyard?</h2>
+      <p class="final-cta__subheadline">Get your free 3D design and see your yard transformed — before we break ground.
+      </p>
+      <a href="quote.html" class="btn-primary btn-primary--white btn-primary--large">Get Your Free 3D Design</a>
+      <p class="final-cta__phone">or call <a href="tel:+16472167787">(647) 216-7787</a></p>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="https://static.wixstatic.com/media/e83a48_77d3e37bf7c04f32af25998246892eb8~mv2.png"
+            alt="Yard Guard Landscaping">
+        </div>
+        <p class="footer__tagline">Transform your backyard into a low-maintenance outdoor oasis.</p>
+        <div class="footer__social">
+          <a href="https://www.facebook.com/YardGuardlandscaping/" target="_blank" class="footer__social-link">
+            <i data-lucide="facebook" style="width: 20px; height: 20px;"></i>
+          </a>
+          <a href="https://www.instagram.com/yardguardlandscaping/" target="_blank" class="footer__social-link">
+            <i data-lucide="instagram" style="width: 20px; height: 20px;"></i>
+          </a>
+          <a href="https://www.yardguardlandscaping.com" target="_blank" class="footer__social-link">
+            <i data-lucide="globe" style="width: 20px; height: 20px;"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__column">
+        <h4 class="footer__column-title">Services</h4>
+        <a href="packages.html" class="footer__link">Easy Lawn</a>
+        <a href="packages.html" class="footer__link">Pet Yard</a>
+        <a href="packages.html" class="footer__link">Golfer's Green</a>
+        <a href="quote.html" class="footer__link">Get a Quote</a>
+      </div>
+
+      <div class="footer__column">
+        <h4 class="footer__column-title">Company</h4>
+        <a href="about.html" class="footer__link">About Us</a>
+        <a href="gallery.html" class="footer__link">Gallery</a>
+        <a href="how-it-works.html" class="footer__link">How It Works</a>
+        <a href="faq.html" class="footer__link">FAQ</a>
+      </div>
+
+      <div class="footer__column">
+        <h4 class="footer__column-title">Contact</h4>
+        <div class="footer__contact-item">
+          <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
+          (647) 216-7787
+        </div>
+        <div class="footer__contact-item">
+          <i data-lucide="mail" style="width: 16px; height: 16px;"></i>
+          info@yardguardlandscaping.com
+        </div>
+        <div class="footer__contact-item">
+          <i data-lucide="map-pin" style="width: 16px; height: 16px;"></i>
+          Mississauga, ON<br>Serving Etobicoke & GTA
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copyright">© 2025 Yard Guard Landscaping. All rights reserved.</p>
+      <div class="footer__legal">
+        <a href="privacy.html" class="footer__legal-link">Privacy Policy</a>
+        <a href="terms.html" class="footer__legal-link">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       MOBILE STICKY CTA
+       ============================================ -->
+  <div class="mobile-sticky-cta">
+    <a href="tel:+16472167787" class="mobile-sticky-cta__call">
+      <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
+      Call Now
+    </a>
+    <a href="quote.html" class="mobile-sticky-cta__quote">Get Free Quote</a>
+  </div>
+
+  <!-- Initialize Lucide Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+
+</body>
+
+</html>
