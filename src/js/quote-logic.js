@@ -4,7 +4,15 @@
 
 // Expose navigation functions globally immediately
 window.nextStep = function (targetStep) {
-    console.log("Navigating to step", targetStep); // Debug log
+    const currentStepEl = document.querySelector('.form-step.active');
+    const currentStep = Number(currentStepEl?.dataset.step || 1);
+
+    if (targetStep > currentStep && currentStepEl && !validateStep(currentStepEl)) {
+        const firstInvalid = currentStepEl.querySelector(':invalid');
+        firstInvalid?.focus();
+        firstInvalid?.reportValidity();
+        return;
+    }
 
     // Hide all steps
     document.querySelectorAll('.form-step').forEach(s => s.classList.remove('active'));
@@ -13,8 +21,9 @@ window.nextStep = function (targetStep) {
     const targetStepEl = document.querySelector(`.form-step[data-step="${targetStep}"]`);
     if (targetStepEl) {
         targetStepEl.classList.add('active');
+        targetStepEl.querySelector('input, select, textarea, button')?.focus({ preventScroll: true });
     } else {
-        console.error("Target step not found:", targetStep);
+        return;
     }
 
     // Update progress bar
@@ -23,11 +32,14 @@ window.nextStep = function (targetStep) {
         if (pStep < targetStep) {
             p.classList.add('completed');
             p.classList.remove('active');
+            p.removeAttribute('aria-current');
         } else if (pStep === targetStep) {
             p.classList.add('active');
             p.classList.remove('completed');
+            p.setAttribute('aria-current', 'step');
         } else {
             p.classList.remove('active', 'completed');
+            p.removeAttribute('aria-current');
         }
     });
 
@@ -36,7 +48,7 @@ window.nextStep = function (targetStep) {
 
     // Scroll to top
     const formContainer = document.querySelector('.quote-form-container');
-    if (formContainer) formContainer.scrollIntoView({ behavior: 'smooth' });
+    if (formContainer) formContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 window.prevStep = function (step) {
@@ -51,11 +63,13 @@ function validateStep(stepEl) {
         if (!input.checkValidity()) {
             isValid = false;
             input.classList.add('error');
+            input.setAttribute('aria-invalid', 'true');
             // Ensure error message is visible
             const errorMsg = input.parentNode.querySelector('.form-error');
             if (errorMsg) errorMsg.style.display = 'block';
         } else {
             input.classList.remove('error');
+            input.removeAttribute('aria-invalid');
             const errorMsg = input.parentNode.querySelector('.form-error');
             if (errorMsg) errorMsg.style.display = 'none';
         }
@@ -87,6 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.form-input, .form-select, .form-textarea').forEach(input => {
         input.addEventListener('input', () => {
             input.classList.remove('error');
+            input.removeAttribute('aria-invalid');
             const errorMsg = input.parentNode.querySelector('.form-error');
             if (errorMsg) errorMsg.style.display = 'none';
         });
@@ -106,6 +121,8 @@ async function handleFormSubmit(e) {
     const form = e.target;
     const btn = form.querySelector('button[type="submit"]');
     const originalText = btn.innerHTML;
+
+    if (!validateStep(document.querySelector('.form-step.active'))) return;
 
     try {
         btn.innerHTML = 'Sending...';
@@ -158,7 +175,9 @@ async function handleFormSubmit(e) {
         // Success State
         form.style.display = 'none';
         document.querySelector('.form-progress').style.display = 'none';
-        document.getElementById('formSuccess').classList.add('active');
+        const success = document.getElementById('formSuccess');
+        success.classList.add('active');
+        success.focus();
         if (window.lucide) window.lucide.createIcons();
 
     } catch (error) {

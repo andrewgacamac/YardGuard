@@ -1,180 +1,170 @@
 function initMain() {
-    try {
-        if (window.lucide) {
-            lucide.createIcons();
-        } else {
-            console.warn("Lucide icons not loaded.");
+    if (window.lucide) {
+        try {
+            window.lucide.createIcons();
+        } catch (error) {
+            console.error('Icon rendering error:', error);
         }
-    } catch (e) {
-        console.error("Icon rendering error:", e);
     }
 
     initSlider();
     initAccordions();
     initMobileMenu();
+    initAnalytics();
 }
 
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initMain);
+    document.addEventListener('DOMContentLoaded', initMain, { once: true });
 } else {
     initMain();
 }
 
-// Interactive Before/After Slider
+// Accessible before/after comparison slider.
 function initSlider() {
     const slider = document.getElementById('heroSlider');
     if (!slider) return;
 
     const beforeImage = slider.querySelector('.hero__image--before');
     const handle = slider.querySelector('.hero__slider-handle');
-    let isDown = false;
+    if (!beforeImage || !handle) return;
 
-    function updateSlider(x) {
-        const sliderRect = slider.getBoundingClientRect();
-        // Calculate position relative to the slider
-        let offsetX = x - sliderRect.left;
+    let percentage = 50;
+    let dragging = false;
 
-        // Clamp valid values
-        if (offsetX < 0) offsetX = 0;
-        if (offsetX > sliderRect.width) offsetX = sliderRect.width;
-
-        const percentage = (offsetX / sliderRect.width) * 100;
-
+    function setPosition(nextPercentage) {
+        percentage = Math.min(100, Math.max(0, nextPercentage));
         beforeImage.style.clipPath = `polygon(0 0, ${percentage}% 0, ${percentage}% 100%, 0 100%)`;
         handle.style.left = `${percentage}%`;
+        handle.setAttribute('aria-valuenow', String(Math.round(percentage)));
     }
 
-    // Mouse Events
-    handle.addEventListener('mousedown', (e) => {
-        isDown = true;
+    function setPositionFromPointer(clientX) {
+        const bounds = slider.getBoundingClientRect();
+        if (!bounds.width) return;
+        setPosition(((clientX - bounds.left) / bounds.width) * 100);
+    }
+
+    slider.addEventListener('pointerdown', (event) => {
+        if (event.target.closest('a, button')) return;
+        dragging = true;
+        slider.setPointerCapture?.(event.pointerId);
         slider.classList.add('active');
+        setPositionFromPointer(event.clientX);
     });
 
-    window.addEventListener('mouseup', () => {
-        isDown = false;
-        if (slider) slider.classList.remove('active');
+    slider.addEventListener('pointermove', (event) => {
+        if (!dragging) return;
+        setPositionFromPointer(event.clientX);
     });
 
-    window.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        updateSlider(e.clientX);
-        e.preventDefault();
-    });
+    const stopDragging = () => {
+        dragging = false;
+        slider.classList.remove('active');
+    };
 
-    // Touch Events
-    handle.addEventListener('touchstart', (e) => {
-        isDown = true;
-    });
+    slider.addEventListener('pointerup', stopDragging);
+    slider.addEventListener('pointercancel', stopDragging);
 
-    window.addEventListener('touchend', () => {
-        isDown = false;
-    });
+    handle.addEventListener('keydown', (event) => {
+        const step = event.shiftKey ? 10 : 2;
+        const controls = {
+            ArrowLeft: percentage - step,
+            ArrowDown: percentage - step,
+            ArrowRight: percentage + step,
+            ArrowUp: percentage + step,
+            Home: 0,
+            End: 100,
+        };
 
-    window.addEventListener('touchmove', (e) => {
-        if (!isDown) return;
-        updateSlider(e.touches[0].clientX);
-        e.preventDefault();
-    });
-
-    // Click-to-move support
-    slider.addEventListener('click', (e) => {
-        updateSlider(e.clientX);
+        if (controls[event.key] === undefined) return;
+        event.preventDefault();
+        setPosition(controls[event.key]);
     });
 }
 
-// Accordion Logic
 function initAccordions() {
     const headers = document.querySelectorAll('.accordion-header, .faq-accordion__header');
 
     headers.forEach((header, index) => {
-        // Determine parent and content based on class
         const isFaq = header.classList.contains('faq-accordion__header');
-        const itemClass = isFaq ? '.faq-accordion__item' : '.accordion-item';
-        const contentClass = isFaq ? '.faq-accordion__content' : '.accordion-content';
-
-        const item = header.closest(itemClass);
-        const content = item.querySelector(contentClass);
-
+        const item = header.closest(isFaq ? '.faq-accordion__item' : '.accordion-item');
+        const content = item?.querySelector(isFaq ? '.faq-accordion__content' : '.accordion-content');
         if (!item || !content) return;
 
-        // Generate unique ID for accessibility if not present
         const contentId = content.id || `accordion-content-${index}`;
         content.id = contentId;
         header.setAttribute('aria-controls', contentId);
-
-        // Set initial state
-        const isActive = item.classList.contains('active');
-        header.setAttribute('aria-expanded', isActive);
+        header.setAttribute('aria-expanded', String(item.classList.contains('active')));
 
         header.addEventListener('click', () => {
-            const currentlyActive = item.classList.contains('active');
+            const willOpen = !item.classList.contains('active');
+            item.classList.toggle('active', willOpen);
+            header.setAttribute('aria-expanded', String(willOpen));
 
-            // Toggle active class
-            item.classList.toggle('active');
-
-            // Update aria-expanded
-            header.setAttribute('aria-expanded', !currentlyActive);
-
-            // GA4 Tracking
-            if (!currentlyActive && typeof window.gtag === 'function') {
-                gtag('event', 'accordion_expand', {
-                    'event_category': 'Engagement',
-                    'event_label': header.innerText.trim()
+            if (willOpen && typeof window.gtag === 'function') {
+                window.gtag('event', 'accordion_expand', {
+                    event_category: 'Engagement',
+                    event_label: header.innerText.trim(),
                 });
             }
         });
     });
 }
 
-// Mobile Menu Toggle
 function initMobileMenu() {
-    console.log("initMobileMenu called");
-    document.addEventListener('click', (e) => {
-        const toggleBtn = e.target.closest('.mobile-menu-toggle');
-        if (toggleBtn) {
-            console.log("mobile toggle clicked!");
-            e.preventDefault();
-            const headerNav = document.querySelector('.header__nav');
-            if (headerNav) {
-                const isActive = headerNav.classList.contains('active');
-                if (isActive) {
-                    headerNav.classList.remove('active');
-                    toggleBtn.setAttribute('aria-expanded', 'false');
-                } else {
-                    headerNav.classList.add('active');
-                    toggleBtn.setAttribute('aria-expanded', 'true');
-                }
-            } else {
-                console.error("No header__nav found");
-            }
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const navigation = document.querySelector('.header__nav');
+    if (!toggle || !navigation) return;
+
+    const setOpen = (isOpen) => {
+        navigation.classList.toggle('active', isOpen);
+        toggle.setAttribute('aria-expanded', String(isOpen));
+        toggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+    };
+
+    toggle.addEventListener('click', () => {
+        setOpen(!navigation.classList.contains('active'));
+    });
+
+    navigation.addEventListener('click', (event) => {
+        if (event.target.closest('a')) setOpen(false);
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && navigation.classList.contains('active')) {
+            setOpen(false);
+            toggle.focus();
         }
     });
+
+    document.addEventListener('click', (event) => {
+        if (!navigation.classList.contains('active')) return;
+        if (!navigation.contains(event.target) && !toggle.contains(event.target)) setOpen(false);
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 1023) setOpen(false);
+    });
 }
 
-// GA4 Event Tracking
 function initAnalytics() {
-    // Micro-conversions: Problem Carousel Cards
-    document.querySelectorAll('.problem-card').forEach(card => {
+    document.querySelectorAll('.problem-card').forEach((card) => {
         card.addEventListener('click', () => {
-            if (typeof window.gtag === 'function') {
-                gtag('event', 'click_problem_card', {
-                    'event_category': 'Engagement',
-                    'event_label': card.querySelector('.problem-card__title')?.innerText || 'Unknown Problem'
-                });
-            }
+            if (typeof window.gtag !== 'function') return;
+            window.gtag('event', 'click_problem_card', {
+                event_category: 'Engagement',
+                event_label: card.querySelector('.problem-card__title')?.innerText || 'Unknown Problem',
+            });
         });
     });
 
-    // Macro-conversions: Click to call
-    document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+    document.querySelectorAll('a[href^="tel:"]').forEach((link) => {
         link.addEventListener('click', () => {
-            if (typeof window.gtag === 'function') {
-                gtag('event', 'click_to_call', {
-                    'event_category': 'Leads',
-                    'event_label': link.href
-                });
-            }
+            if (typeof window.gtag !== 'function') return;
+            window.gtag('event', 'click_to_call', {
+                event_category: 'Leads',
+                event_label: link.href,
+            });
         });
     });
 }
-document.addEventListener('DOMContentLoaded', () => initAnalytics());

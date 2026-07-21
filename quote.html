@@ -566,6 +566,7 @@
     /* Form Actions */
     .form-actions {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       gap: 16px;
@@ -1021,14 +1022,7 @@
     property="og:description" />
   <meta content="https://ygtoronto.com/images/hero-after.jpg" property="og:image" />
   <meta content="https://ygtoronto.com/quote.html" property="og:url" />
-  <!-- Google tag (gtag.js) stub for GA4 Event Tracking -->
-  <script async="" id="ga4-tracking" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
+  <meta content="#173a21" name="theme-color" />
 </head>
 
 <body>
@@ -1037,7 +1031,8 @@
   <header class="header" role="banner">
     <div class="header__container">
       <a class="header__logo" href="index.html"><img alt="Yard Guard Landscaping" src="images/logo.webp" /></a>
-      <button aria-expanded="false" aria-label="Toggle Menu" class="mobile-menu-toggle">
+      <button aria-controls="main-navigation" aria-expanded="false" aria-label="Open navigation menu"
+        class="mobile-menu-toggle" type="button">
         <svg width="28" height="28" fill="none" stroke="#2E7D32" stroke-width="2.5" stroke-linecap="round"
           stroke-linejoin="round">
           <line x1="4" x2="20" y1="12" y2="12"></line>
@@ -1045,7 +1040,7 @@
           <line x1="4" x2="20" y1="18" y2="18"></line>
         </svg>
       </button>
-      <nav aria-label="Main navigation" class="header__nav" role="navigation">
+      <nav aria-label="Main navigation" class="header__nav" id="main-navigation">
         <a class="nav-link" href="index.html">Home</a><a class="nav-link" href="how-it-works.html">How It Works</a><a
           class="nav-link" href="products.html">Pricing &amp; Products</a><a class="nav-link"
           href="gallery.html">Gallery</a><a class="nav-link" href="faq.html">FAQ</a><a class="nav-link active"
@@ -1070,10 +1065,13 @@
           <p class="quote-form__subtitle">Plus a free design visualization of your transformed yard</p>
         </div>
         <!-- Progress Bar -->
-        <div class="form-progress">
-          <div class="form-progress__step active" data-step="1"></div>
-          <div class="form-progress__step" data-step="2"></div>
-          <div class="form-progress__step" data-step="3"></div>
+        <div aria-label="Quote form progress" class="form-progress" role="list">
+          <div aria-current="step" aria-label="Step 1 of 3: Project details" class="form-progress__step active"
+            data-step="1" role="listitem"></div>
+          <div aria-label="Step 2 of 3: Contact information" class="form-progress__step" data-step="2"
+            role="listitem"></div>
+          <div aria-label="Step 3 of 3: Additional information" class="form-progress__step" data-step="3"
+            role="listitem"></div>
         </div>
         <form id="quoteForm">
           <!-- Honeypot: hidden from real users; bots that fill it are rejected -->
@@ -1276,7 +1274,7 @@
           </div>
         </form>
         <!-- Success Message -->
-        <div class="form-success" id="formSuccess">
+        <div aria-live="polite" class="form-success" id="formSuccess" role="status" tabindex="-1">
           <div class="form-success__icon">
             <i data-lucide="check" style="width: 40px; height: 40px;"></i>
           </div>
@@ -1434,59 +1432,6 @@
        Resend key lives inside the function, never here). Runs before the module. -->
   <script>window.QUOTE_ENDPOINT = "https://faas-tor1-70ca848e.doserverless.co/api/v1/web/fn-aff51731-f84e-4458-a853-9d679bf3c80e/api/quote";</script>
   <script src="./src/js/quote-logic.js" type="module"></script>
-  <!-- Fallback Navigation Script for file:// protocol -->
-  <script>
-    // Define navigation functions globally for direct file access
-    window.nextStep = function (targetStep) {
-      console.log("Navigating to step", targetStep);
-
-      // Hide all steps
-      document.querySelectorAll('.form-step').forEach(function (s) {
-        s.classList.remove('active');
-        s.style.display = 'none'; // Ensure display is toggled off
-      });
-
-      // Show target step
-      var targetStepEl = document.querySelector('.form-step[data-step="' + targetStep + '"]');
-      if (targetStepEl) {
-        targetStepEl.classList.add('active');
-        targetStepEl.style.display = 'block'; // Ensure display is toggled on
-      } else {
-        console.error("Target step not found:", targetStep);
-      }
-
-      // Update progress bar
-      document.querySelectorAll('.form-progress__step').forEach(function (p) {
-        var pStep = parseInt(p.dataset.step);
-        if (pStep < targetStep) {
-          p.classList.add('completed');
-          p.classList.remove('active');
-        } else if (pStep === targetStep) {
-          p.classList.add('active');
-          p.classList.remove('completed');
-        } else {
-          p.classList.remove('active', 'completed');
-        }
-      });
-
-      // Icons
-      if (window.lucide) window.lucide.createIcons();
-
-      // Scroll
-      document.querySelector('.quote-form-container').scrollIntoView({ behavior: 'smooth' });
-    };
-
-    window.prevStep = function (step) {
-      window.nextStep(step);
-    };
-
-    // Initial setup on load
-    document.addEventListener('DOMContentLoaded', function () {
-      // Ensure step 1 is visible
-      window.nextStep(1);
-    });
-  </script>
-
   <script src="assets/js/main.js" type="module"></script>
 </body>
 

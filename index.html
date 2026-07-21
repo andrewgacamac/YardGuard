@@ -8,7 +8,7 @@
   <meta
     content="Transform your GTA backyard with YardGuard's premium artificial turf. Say goodbye to mud, mowing, and mess. Get a free quote today."
     name="description" />
-  <title>YardGuard | Premium Artificial Turf Installation in the GTA</title>
+  <title>Artificial Turf Installation in Mississauga &amp; GTA | YardGuard</title>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com?display=swap" rel="preconnect" />
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
@@ -53,7 +53,7 @@
       "areaServed": ["Mississauga", "Toronto", "Brampton", "Vaughan", "Oakville", "Etobicoke", "Markham", "Richmond Hill"],
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "5.0",
+        "ratingValue": "4.9",
         "reviewCount": "127"
       }
     }
@@ -95,21 +95,18 @@
   <meta content="index, follow" name="robots" />
   <link href="https://ygtoronto.com/" rel="canonical" />
   <link href="https://ygtoronto.com/" hreflang="en-CA" rel="alternate" />
-  <meta content="YardGuard | Premium Artificial Turf Installation in the GTA" property="og:title" />
+  <meta content="Artificial Turf Installation in Mississauga &amp; GTA | YardGuard" property="og:title" />
   <meta
     content="Transform your GTA backyard with YardGuard's premium artificial turf. Say goodbye to mud, mowing, and mess. Get a free quote today."
     property="og:description" />
-  <meta content="https://ygtoronto.com/images/hero-after.jpg" property="og:image" />
+  <meta content="https://ygtoronto.com/og.png" property="og:image" />
+  <meta content="YardGuard artificial turf installation in a finished GTA backyard" property="og:image:alt" />
   <meta content="https://ygtoronto.com/" property="og:url" />
-  <link as="image" href="images/hero-after.jpg" rel="preload" />
-  <!-- Google tag (gtag.js) stub for GA4 Event Tracking -->
-  <script async="" id="ga4-tracking" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
+  <meta content="website" property="og:type" />
+  <meta content="summary_large_image" name="twitter:card" />
+  <meta content="https://ygtoronto.com/og.png" name="twitter:image" />
+  <meta content="#173a21" name="theme-color" />
+  <link as="image" href="images/toronto-backyard-after-1920.webp" rel="preload" type="image/webp" />
 </head>
 
 <body>
@@ -122,7 +119,8 @@
       <a class="header__logo" href="index.html">
         <img alt="Yard Guard Landscaping" src="images/logo.webp" />
       </a>
-      <button aria-expanded="false" aria-label="Toggle Menu" class="mobile-menu-toggle">
+      <button aria-controls="main-navigation" aria-expanded="false" aria-label="Open navigation menu"
+        class="mobile-menu-toggle" type="button">
         <svg width="28" height="28" fill="none" stroke="#2E7D32" stroke-width="2.5" stroke-linecap="round"
           stroke-linejoin="round">
           <line x1="4" x2="20" y1="12" y2="12"></line>
@@ -130,7 +128,7 @@
           <line x1="4" x2="20" y1="18" y2="18"></line>
         </svg>
       </button>
-      <nav aria-label="Main navigation" class="header__nav" role="navigation">
+      <nav aria-label="Main navigation" class="header__nav" id="main-navigation">
         <a class="nav-link active" href="index.html">Home</a><a class="nav-link" href="how-it-works.html">How It
           Works</a><a class="nav-link" href="products.html">Pricing &amp; Products</a><a class="nav-link"
           href="gallery.html">Gallery</a><a class="nav-link" href="faq.html">FAQ</a><a class="nav-link"
@@ -147,22 +145,26 @@
       <div class="hero__background">
         <div class="hero__slider" id="heroSlider">
           <!-- Before Image -->
-          <img alt="Backyard Before Transformation" class="hero__image hero__image--before"
-            src="images/Toronto_backyard_before.jpg" />
+          <img alt="Toronto backyard before artificial turf installation" class="hero__image hero__image--before"
+            decoding="async" fetchpriority="high" src="images/toronto-backyard-before-1920.webp" />
           <div class="hero__label hero__label--before">Before</div>
           <!-- After Image -->
-          <img alt="Backyard After Yard Guard" class="hero__image hero__image--after"
-            src="images/Toronto_backyard_after.jpg" />
+          <img alt="The same Toronto backyard after YardGuard artificial turf installation"
+            class="hero__image hero__image--after" decoding="async" fetchpriority="high"
+            src="images/toronto-backyard-after-1920.webp" />
           <div class="hero__label hero__label--after">After</div>
-          <div class="hero__slider-handle"></div>
+          <div aria-label="Compare the backyard before and after" aria-orientation="horizontal" aria-valuemax="100"
+            aria-valuemin="0" aria-valuenow="50" class="hero__slider-handle" role="slider" tabindex="0"></div>
         </div>
       </div>
       <div class="hero__overlay">
-        <h1 class="hero__headline">Your Weekends Back. Your Lawn Handled. Permanently.</h1>
-        <p class="hero__subheadline">See the difference real GTA craftsmanship makes.</p>
+        <p class="hero__eyebrow">Artificial turf, expertly installed across the GTA</p>
+        <h1 class="hero__headline">A Beautiful Lawn.<br />Zero Mud. Zero Mowing.</h1>
+        <p class="hero__subheadline">Premium, pet-friendly turf designed for real Canadian backyards—and installed
+          by a local team with 15 years of landscaping experience.</p>
         <div class="hero__cta-group">
           <a class="btn-primary btn-primary--large" href="quote.html">Get My Free Quote</a>
-          <a class="btn-primary btn-primary--white btn-primary--large" href="products.html">See Pricing Ranges</a>
+          <a class="btn-secondary btn-secondary--light btn-primary--large" href="products.html">Explore Turf Options</a>
         </div>
       </div>
       <div class="trust-bar">
@@ -201,17 +203,18 @@
     <!-- ============================================
        PROBLEM CAROUSEL (Why Switch?)
        ============================================ -->
-    <section class="problem-carousel">
+    <section class="problem-carousel" aria-labelledby="switching-title">
       <div class="container">
         <div class="problem-carousel__header">
-          <h2>Why GTA Homeowners Are Switching</h2>
-          <p>Don't let your yard become a burden.</p>
+          <p class="section-eyebrow">Built for everyday life</p>
+          <h2 id="switching-title">A Lawn That Solves the Real Problems</h2>
+          <p>Clean paws, predictable costs, and a backyard that is always ready.</p>
         </div>
         <div class="problem-carousel__container">
           <!-- Card 1 -->
           <a class="problem-card" href="products.html">
             <img alt="Muddy backyard with dog prints on floor" class="problem-card__image" loading="lazy"
-              src="images/problem-muddy-mess.webp" style="background: #8d6e63;" />
+              src="images/problem-muddy-mess-720.webp" style="background: #8d6e63;" />
             <div class="problem-card__content">
               <h3 class="problem-card__title">The Muddy Mess</h3>
               <p class="problem-card__text">Tired of dog paws tracking mud into your clean home? End the cycle.</p>
@@ -220,7 +223,7 @@
           <!-- Card 2 -->
           <a class="problem-card" href="products.html">
             <img alt="Yellow dog urine spots on natural lawn" class="problem-card__image" loading="lazy"
-              src="images/problem-yellow-spots.webp" style="background: #ffd54f;" />
+              src="images/problem-yellow-spots-720.webp" style="background: #ffd54f;" />
             <div class="problem-card__content">
               <h3 class="problem-card__title">Yellow Dog Spots</h3>
               <p class="problem-card__text">Patchy, burnt grass caused by pets is impossible to keep green naturally.
@@ -230,7 +233,7 @@
           <!-- Card 3 -->
           <a class="problem-card" href="products.html">
             <img alt="Person struggle to mow overgrown grass" class="problem-card__image" loading="lazy"
-              src="images/problem-endless-mowing.webp" style="background: #aed581;" />
+              src="images/problem-endless-mowing-720.webp" style="background: #aed581;" />
             <div class="problem-card__content">
               <h3 class="problem-card__title">Endless Mowing</h3>
               <p class="problem-card__text">Get your weekends back. No more gas, noise, or sweat.</p>
@@ -239,7 +242,7 @@
           <!-- Card 4 -->
           <a class="problem-card" href="products.html">
             <img alt="Expensive water bill and sprinkler usage" class="problem-card__image" loading="lazy"
-              src="images/problem-water-bills.webp" style="background: #4fc3f7;" />
+              src="images/problem-water-bills-720.webp" style="background: #4fc3f7;" />
             <div class="problem-card__content">
               <h3 class="problem-card__title">Sky-High Water Bills</h3>
               <p class="problem-card__text">Save thousands on irrigation and water costs over the years.</p>
@@ -248,7 +251,7 @@
           <!-- Card 5 -->
           <a class="problem-card" href="products.html">
             <img alt="Backyard infested with weeds" class="problem-card__image" loading="lazy"
-              src="images/problem-weeding.webp" style="background: #c5e1a5;" />
+              src="images/problem-weeding-720.webp" style="background: #c5e1a5;" />
             <div class="problem-card__content">
               <h3 class="problem-card__title">Constant Weeding</h3>
               <p class="problem-card__text">Stop fighting a losing battle against invasive weeds.</p>
@@ -257,7 +260,7 @@
           <!-- Card 6 -->
           <a class="problem-card" href="products.html">
             <img alt="Person holding their back in pain after gardening" class="problem-card__image" loading="lazy"
-              src="images/problem-physical-strain.webp" style="background: #ef5350;" />
+              src="images/problem-physical-strain-720.webp" style="background: #ef5350;" />
             <div class="problem-card__content">
               <h3 class="problem-card__title">Physical Strain</h3>
               <p class="problem-card__text">Protect your back and knees from the labor of lawn care as you age.</p>
@@ -266,7 +269,7 @@
           <!-- Card 7 -->
           <a class="problem-card" href="how-it-works.html">
             <img alt="New construction home with dirt backyard" class="problem-card__image" loading="lazy"
-              src="images/problem-new-build.webp" style="background: #ff7043;" />
+              src="images/problem-new-build-720.webp" style="background: #ff7043;" />
             <div class="problem-card__content">
               <h3 class="problem-card__title">New Build Dirt Pit</h3>
               <p class="problem-card__text">Sod often fails in new subdivisions. Get it done right the first time.</p>
@@ -275,7 +278,7 @@
           <!-- Card 8 -->
           <a class="problem-card" href="gallery.html">
             <img alt="Person looking out window at unkempt yard" class="problem-card__image" loading="lazy"
-              src="images/problem-view-inside.webp" style="background: #78909c;" />
+              src="images/problem-view-inside-720.webp" style="background: #78909c;" />
             <div class="problem-card__content">
               <h3 class="problem-card__title">The View from Inside</h3>
               <p class="problem-card__text">Stop looking out your window at a yard that makes you feel stressed.</p>
@@ -290,6 +293,7 @@
     <section class="how-it-works">
       <div class="container">
         <div class="section-header">
+          <p class="section-eyebrow">Simple from start to finish</p>
           <h2 class="section-header__headline">From Mess to Masterpiece in 3 Steps</h2>
           <p class="section-header__subheadline">We make the process simple and stress-free.</p>
         </div>
@@ -328,6 +332,7 @@
     <section class="neighbourhood-proof">
       <div class="container">
         <div class="section-header">
+          <p class="section-eyebrow">Local work, real results</p>
           <h2>Transforming Yards Across the GTA</h2>
           <p>See what we've done in your neighbourhood.</p>
         </div>
@@ -377,7 +382,7 @@
        ============================================ -->
     <section class="social-proof-strip">
       <div class="container">
-        <div class="google-reviews-widget-placeholder">
+        <div class="google-reviews-summary" aria-label="Rated 4.9 out of 5 on Google">
           <i data-lucide="star" style="fill: #FFB300; stroke: none;"></i>
           <i data-lucide="star" style="fill: #FFB300; stroke: none;"></i>
           <i data-lucide="star" style="fill: #FFB300; stroke: none;"></i>
@@ -385,7 +390,8 @@
           <i data-lucide="star" style="fill: #FFB300; stroke: none;"></i>
           <span>4.9 Stars on Google</span>
         </div>
-        <h2>"Best Investment We've Ever Made"</h2>
+        <p class="section-eyebrow">Homeowners say it best</p>
+        <h2>“Best Investment We’ve Ever Made”</h2>
         <div class="testimonials-grid">
           <div class="testimonial-card-small">
             <div class="stars">&starf;&starf;&starf;&starf;&starf;</div>
@@ -413,6 +419,7 @@
        ============================================ -->
     <section class="objection-section">
       <div class="section-header">
+        <p class="section-eyebrow">Straight answers</p>
         <h2>Common Questions</h2>
       </div>
       <div class="accordion">
@@ -455,6 +462,7 @@
        ============================================ -->
     <section class="service-map-section">
       <div class="container">
+        <p class="section-eyebrow">Proudly local</p>
         <h2>Proudly Serving Your Neighbourhood</h2>
         <p>Expert local crews in <strong>Etobicoke &bull; Mississauga &bull; Oakville &bull; Brampton</strong></p>
         <div class="map-placeholder" style="height: auto; background: transparent; padding: 0;">
@@ -470,8 +478,10 @@
        ============================================ -->
     <section class="final-cta" id="quote">
       <div class="final-cta__content">
-        <h2 class="final-cta__headline">Ready to Transform Your Backyard?</h2>
-        <p class="final-cta__subheadline">Get your free quote and design visualization today.</p>
+        <p class="final-cta__eyebrow">Your better backyard starts here</p>
+        <h2 class="final-cta__headline">See What Your Yard Could Become</h2>
+        <p class="final-cta__subheadline">Get a free on-site consultation, transparent quote, and design
+          visualization—with no pressure and no obligation.</p>
         <a class="btn-primary btn-primary--white btn-primary--large" href="quote.html">Get My Free Quote</a>
         <p class="final-cta__phone">or call <a href="tel:+16472167787">(647) 216-7787</a></p>
       </div>
@@ -488,15 +498,17 @@
         </div>
         <p class="footer__tagline">Transform your backyard into a low-maintenance outdoor oasis.</p>
         <div class="footer__social">
-          <a class="footer__social-link" href="https://www.facebook.com/YardGuardlandscaping/" rel="noopener noreferrer"
-            target="_blank">
+          <a aria-label="YardGuard on Facebook" class="footer__social-link"
+            href="https://www.facebook.com/YardGuardlandscaping/" rel="noopener noreferrer" target="_blank">
             <i data-lucide="facebook" style="width: 20px; height: 20px;"></i>
           </a>
-          <a class="footer__social-link" href="https://www.instagram.com/yardguardlandscaping/"
+          <a aria-label="YardGuard on Instagram" class="footer__social-link"
+            href="https://www.instagram.com/yardguardlandscaping/"
             rel="noopener noreferrer" target="_blank">
             <i data-lucide="instagram" style="width: 20px; height: 20px;"></i>
           </a>
-          <a class="footer__social-link" href="https://ygtoronto.com" rel="noopener noreferrer" target="_blank">
+          <a aria-label="YardGuard website" class="footer__social-link" href="https://ygtoronto.com"
+            rel="noopener noreferrer" target="_blank">
             <i data-lucide="globe" style="width: 20px; height: 20px;"></i>
           </a>
         </div>
