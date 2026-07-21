@@ -86,20 +86,26 @@ function initAccordions() {
     const headers = document.querySelectorAll('.accordion-header, .faq-accordion__header');
 
     headers.forEach((header, index) => {
+        if (header.dataset.accordionReady === 'true') return;
+
         const isFaq = header.classList.contains('faq-accordion__header');
         const item = header.closest(isFaq ? '.faq-accordion__item' : '.accordion-item');
         const content = item?.querySelector(isFaq ? '.faq-accordion__content' : '.accordion-content');
         if (!item || !content) return;
 
+        header.dataset.accordionReady = 'true';
         const contentId = content.id || `accordion-content-${index}`;
         content.id = contentId;
         header.setAttribute('aria-controls', contentId);
-        header.setAttribute('aria-expanded', String(item.classList.contains('active')));
+        const initiallyOpen = item.classList.contains('active');
+        header.setAttribute('aria-expanded', String(initiallyOpen));
+        content.style.maxHeight = initiallyOpen ? `${content.scrollHeight}px` : '0px';
 
         header.addEventListener('click', () => {
             const willOpen = !item.classList.contains('active');
             item.classList.toggle('active', willOpen);
             header.setAttribute('aria-expanded', String(willOpen));
+            content.style.maxHeight = willOpen ? `${content.scrollHeight}px` : '0px';
 
             if (willOpen && typeof window.gtag === 'function') {
                 window.gtag('event', 'accordion_expand', {

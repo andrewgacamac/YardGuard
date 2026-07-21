@@ -2322,26 +2322,6 @@
     <!-- Initialize Lucide Icons -->
     <script>
       if (window.lucide) { lucide.createIcons(); }
-      // Accordion functionality
-      document.querySelectorAll(".faq-accordion__header").forEach((button) => {
-        button.addEventListener("click", () => {
-          const item = button.parentElement;
-          const wasActive = item.classList.contains("active");
-
-          // Close all items in the same accordion
-          item.parentElement
-            .querySelectorAll(".faq-accordion__item")
-            .forEach((i) => {
-              i.classList.remove("active");
-            });
-
-          // Toggle clicked item
-          if (!wasActive) {
-            item.classList.add("active");
-          }
-        });
-      });
-
       // FAQ nav active state
       document.querySelectorAll(".faq-nav__link").forEach((link) => {
         link.addEventListener("click", (e) => {
