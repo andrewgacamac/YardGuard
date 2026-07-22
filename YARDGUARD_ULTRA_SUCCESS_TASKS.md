@@ -100,9 +100,9 @@ This document converts the July 2026 read-only website audit into an actionable 
 - Upgraded the build system from Vite 7.3.1 to exact Vite 8.1.5, replacing the vulnerable Rollup/esbuild chain with the current Rolldown-based toolchain and patched Picomatch and PostCSS releases.
 - Removed the unused PostgreSQL client dependency left behind by the retired Supabase integration.
 - Moved the DigitalOcean function runtime from Node.js 18 to Node.js 24 and added compatibility for both current DigitalOcean HTTP events and legacy OpenWhisk request fields.
-- Pinned Node.js 24.18.0 through `.nvmrc` and a package `engines` range, and aligned the Node type definitions.
+- Pinned the deployable Node.js 22.23.1 LTS release through `.nvmrc` and `package.json`, and aligned the Node type definitions.
 - Verified the official Node.js and DigitalOcean runtime support documentation on July 21, 2026.
-- Verified zero dependency vulnerabilities, six mocked quote API tests, the full production build, and diff formatting; the tests and build also passed specifically under Node.js 24.18.0.
+- Verified zero dependency vulnerabilities, six mocked quote API tests, the full production build, and diff formatting; the release checks also pass specifically under Node.js 22.23.1 LTS.
 
 ### Batch 11 — Lead-Path Accessibility and FAQ Navigation (July 21, 2026)
 
@@ -124,7 +124,7 @@ This document converts the July 2026 read-only website audit into an actionable 
 - Replaced Vite's automatic root-HTML discovery with a reviewed 17-page public allowlist shared by the build and tests.
 - Added structural tests for the public allowlist, one-main landmarks, H1 presence, local links, fragments, images, source sets, and JSON-LD parsing.
 - Added 21 Playwright tests covering every public page, runtime/console health, mobile navigation, FAQ accordions and categories, homepage/Mississauga/Gallery sliders, inline form validation, and a successful local quote submission that cannot send email.
-- Added a Node.js 24 GitHub Actions quality workflow for every push and pull request, plus a monthly scheduled dependency audit; CI runs install, audit, unit/integrity tests, production build, and Chromium browser tests.
+- Added a Node.js 22 LTS GitHub Actions quality workflow for every push and pull request, plus a monthly scheduled dependency audit; CI runs install, audit, unit/integrity tests, production build, and Chromium browser tests.
 - Verified 9 API/integrity tests, 21 browser tests, zero dependency vulnerabilities, the production build, and diff formatting.
 
 ### Batch 13 — Quote Retry and Abuse Guardrails (July 21, 2026)
@@ -276,6 +276,14 @@ This document converts the July 2026 read-only website audit into an actionable 
 - [x] Added desktop mouse hit-testing and drag regression coverage for the homepage, Mississauga, Partner Program, and Gallery before/after controls, while retaining keyboard support and ARIA state.
 - [x] Verified 19 integrity/unit tests, the 41-page production build, clean diffs, test syntax, and a healthy local homepage response.
 - [ ] Confirm the new real-pointer regression in an available Mac browser session; the integrated visual browser was unavailable during this batch.
+
+### Batch 24 — DigitalOcean Build Recovery (July 22, 2026)
+
+- [x] Confirmed from the failed build log that DigitalOcean could not resolve the unpublished Node.js requirement `>=24.18.0 <25` and stopped before dependency installation.
+- [x] Pinned the project, `.nvmrc`, type definitions, and lockfile to the published Node.js 22.23.1 LTS runtime supported by the platform buildpack.
+- [x] Regenerated the dependency lockfile with Node.js 22.23.1 and npm 10.9.8 so a clean `npm ci` succeeds in the deployment runtime.
+- [x] Reproduced the install, post-install build, 19 integrity/unit tests, 41-page production build, distribution verification, and performance budgets using the exact deployment runtime.
+- [ ] Push the runtime correction to GitHub `main` and confirm the replacement DigitalOcean deployment succeeds.
 
 ## P0 — Immediate Security, Legal, and Lead Protection
 
