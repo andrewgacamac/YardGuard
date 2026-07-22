@@ -9,7 +9,7 @@
     Pricing &amp; Packages | Artificial Turf Cost GTA | Yard Guard
   </title>
   <meta
-    content="Compare artificial turf costs vs natural grass in Toronto &amp; GTA. See how Yard Guard pays for itself in 5-7 years. Packages start at $10/sq ft."
+    content="Compare YardGuard artificial turf options for GTA lawns, pet areas, putting greens, and integrated landscapes. Request an itemized, property-specific quote."
     name="description" />
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com?display=swap" rel="preconnect" />
@@ -18,7 +18,6 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap"
     rel="stylesheet" />
   <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@0.263.1"></script>
   <style>
     /* ========================================
        CSS RESET & BASE
@@ -684,6 +683,13 @@
       border-radius: 16px;
       overflow: hidden;
       box-shadow: var(--shadow);
+    }
+
+    .comparison-table__caption {
+      padding: 0 0 12px;
+      color: #536257;
+      font-size: 0.95rem;
+      text-align: left;
     }
 
     .comparison-table th,
@@ -1600,9 +1606,10 @@
         "@graph": [
           {
             "@type": "Organization",
+      "@id": "https://ygtoronto.com/#organization",
             "name": "Yard Guard Landscaping",
             "url": "https://ygtoronto.com",
-            "logo": "https://static.wixstatic.com/media/e83a48_77d3e37bf7c04f32af25998246892eb8~mv2.png",
+            "logo": "https://ygtoronto.com/logo.webp",
             "contactPoint": {
               "@type": "ContactPoint",
               "telephone": "+1-647-216-7787",
@@ -1615,8 +1622,9 @@
           },
           {
             "@type": "LocalBusiness",
+      "@id": "https://ygtoronto.com/#organization",
             "name": "Yard Guard Landscaping",
-            "image": "https://ygtoronto.com/images/hero-after.jpg",
+            "image": "https://ygtoronto.com/og.png",
             "telephone": "+1-647-216-7787",
             "address": {
               "@type": "PostalAddress",
@@ -1647,57 +1655,30 @@
             "@type": "Product",
             "name": "The Easy Lawn",
             "description": "Perfect for homeowners tired of endless mowing. Includes premium polyethylene turf, professional base preparation, and clean edge finishing.",
-            "image": "https://ygtoronto.com/images/gallery-6.jpg",
+            "image": "https://ygtoronto.com/product-easy-lawn.webp",
             "brand": {
               "@type": "Brand",
               "name": "Yard Guard"
-            },
-            "offers": {
-              "@type": "AggregateOffer",
-              "lowPrice": "10",
-              "highPrice": "12",
-              "priceCurrency": "CAD",
-              "offerCount": "1",
-              "availability": "https://schema.org/InStock",
-              "url": "https://ygtoronto.com/products.html"
             }
           },
           {
             "@type": "Product",
             "name": "The Pet Yard",
-            "description": "Built for your best friend. Features antimicrobial pet-safe turf, enhanced drainage system, and odor-control infill.",
-            "image": "https://ygtoronto.com/images/gallery-4.jpg",
+            "description": "A pet-area option configured around drainage, cleaning, durability, and the selected turf and infill specifications.",
+            "image": "https://ygtoronto.com/product-pet-yard.webp",
             "brand": {
               "@type": "Brand",
               "name": "Yard Guard"
-            },
-            "offers": {
-              "@type": "AggregateOffer",
-              "lowPrice": "14",
-              "highPrice": "17",
-              "priceCurrency": "CAD",
-              "offerCount": "1",
-              "availability": "https://schema.org/InStock",
-              "url": "https://ygtoronto.com/products.html"
             }
           },
           {
             "@type": "Product",
             "name": "The Golfer's Green",
             "description": "Your private practice space. Includes pro stiff turf for true ball roll, custom cups & flags, and chip-from fringe.",
-            "image": "https://ygtoronto.com/images/gallery-8.jpg",
+            "image": "https://ygtoronto.com/product-golfers-green.webp",
             "brand": {
               "@type": "Brand",
               "name": "Yard Guard"
-            },
-            "offers": {
-              "@type": "AggregateOffer",
-              "lowPrice": "22",
-              "highPrice": "28",
-              "priceCurrency": "CAD",
-              "offerCount": "1",
-              "availability": "https://schema.org/InStock",
-              "url": "https://ygtoronto.com/products.html"
             }
           }
         ]
@@ -1712,7 +1693,7 @@
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://ygtoronto.com/index.html"
+            "item": "https://ygtoronto.com/"
           },
           {
             "@type": "ListItem",
@@ -1728,19 +1709,11 @@
   <link href="https://ygtoronto.com/products.html" hreflang="en-CA" rel="alternate" />
   <meta content="Pricing &amp; Packages | Artificial Turf Cost GTA | Yard Guard" property="og:title" />
   <meta
-    content="Compare artificial turf costs vs natural grass in Toronto &amp; GTA. See how Yard Guard pays for itself in 5-7 years. Packages start at $10/sq ft."
+    content="Compare YardGuard artificial turf options for GTA lawns, pet areas, putting greens, and integrated landscapes. Request an itemized, property-specific quote."
     property="og:description" />
-  <meta content="https://ygtoronto.com/images/hero-after.jpg" property="og:image" />
+  <meta content="https://ygtoronto.com/og.png" property="og:image" />
   <meta content="https://ygtoronto.com/products.html" property="og:url" />
 
-  <!-- Google tag (gtag.js) stub for GA4 Event Tracking -->
-  <script async="" id="ga4-tracking" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
 </head>
 
 <body>
@@ -1774,85 +1747,26 @@
           <a href="index.html">Home</a> &gt; Pricing &amp; Products
         </div>
         <h1 class="packages-hero__title">
-          The Smart Investment for Your Home
+          Artificial Turf Options for Your Property
         </h1>
         <p class="packages-hero__subtitle">
-          Stop paying for a lawn that fails every August. See the true cost
-          comparison.
+          Compare use cases and system features, then request a site-specific,
+          itemized proposal.
         </p>
       </div>
     </section>
-    <!-- Cost Comparison Anchor Section -->
+    <!-- Pricing approach -->
     <section class="cost-comparison-section auto-style-2">
       <div class="auto-style-3">
-        <h2 class="auto-style-4">The 15-Year Cost Reality</h2>
+        <h2 class="auto-style-4">Pricing Starts With the Actual Site</h2>
         <p class="auto-style-5">
-          Most homeowners don't realize they will spend over $30,000
-          maintaining a "cheaper" natural lawn.
-          <br /><strong>See the math below.</strong>
-        </p>
-        <div class="cost-grid auto-style-6">
-          <!-- Natural Grass Column -->
-          <div class="cost-card auto-style-7">
-            <h3 class="auto-style-8">Natural Grass</h3>
-            <p class="auto-style-9">The "Pay Forever" Plan</p>
-            <ul class="auto-style-10">
-              <li class="auto-style-11">
-                <span>Water Bills (15 yrs)</span>
-                <span class="auto-style-12">$9,000+</span>
-              </li>
-              <li class="auto-style-11">
-                <span>Mow/Fertilize (15 yrs)</span>
-                <span class="auto-style-12">$18,500</span>
-              </li>
-              <li class="auto-style-11">
-                <span>Re-sodding (Every 5 yrs)</span>
-                <span class="auto-style-12">$6,000</span>
-              </li>
-            </ul>
-            <div class="auto-style-13">
-              <p class="auto-style-14">15-Year Total Cost</p>
-              <p class="auto-style-15">$33,500+</p>
-              <p class="auto-style-16">Plus 800+ hours of labor lost</p>
-            </div>
-          </div>
-          <!-- Yard Guard Column -->
-          <div class="cost-card auto-style-17">
-            <div class="auto-style-18">The Smart Choice</div>
-            <h3 class="auto-style-19">Yard Guard Turf</h3>
-            <p class="auto-style-20">One Investment. Zero Headaches.</p>
-            <ul class="auto-style-10">
-              <li class="auto-style-11">
-                <span>Installation (Avg. Backyard)</span>
-                <span class="auto-style-12">$12,000</span>
-              </li>
-              <li class="auto-style-11">
-                <span>Maintenance (15 yrs)<br><span
-                    style="font-size: 0.85em; color: var(--medium-text); font-style: italic;">*Optional 2-3 yr infill
-                    &amp; turf fiber lift (add. cost)</span></span>
-                <span class="auto-style-12">$0</span>
-              </li>
-              <li class="auto-style-11">
-                <span>Water Bills</span>
-                <span class="auto-style-12">$0</span>
-              </li>
-            </ul>
-            <div class="auto-style-21">
-              <p class="auto-style-14">15-Year Total Cost</p>
-              <p class="auto-style-22">$12,000</p>
-              <p class="auto-style-23">You SAVE $21,500+</p>
-            </div>
-          </div>
-        </div>
-        <p class="auto-style-24">
-          <em>*Based on average 800 sq ft GTA backyard, Toronto water rates
-            2026, and standard landscape maintenance fees.</em>
+          Access, excavation, grading, drainage, edges, turf selection, waste removal,
+          and project size all affect installed cost. We measure the property and provide
+          an itemized proposal instead of publishing an unsupported one-size-fits-all return.
         </p>
         <div class="auto-style-25">
-          <a class="btn-secondary auto-style-26" href="partner-comparison.html" rel="noopener noreferrer"
-            target="_blank">
-            <i class="auto-style-27" data-lucide="file-text"></i>
-            Download Partner Comparison Sheet (PDF)
+          <a class="btn-secondary auto-style-26" href="quote.html?source=products-pricing">
+            Request a Property-Specific Quote
           </a>
         </div>
       </div>
@@ -1874,8 +1788,8 @@
             <h2 class="package-card__title">The Easy Lawn</h2>
             <p class="package-card__tagline">"Your weekends back"</p>
             <div class="package-card__divider"></div>
-            <p class="package-card__price-label">Starting at</p>
-            <p class="package-card__price">$10-12 <span>/sq ft</span></p>
+            <p class="package-card__price-label">Pricing</p>
+            <p class="package-card__price">Itemized <span>site quote</span></p>
             <div class="package-card__divider"></div>
             <p class="package-card__section-title">Perfect for:</p>
             <ul class="package-card__list">
@@ -1909,7 +1823,7 @@
               </li>
               <li class="package-card__list-item">
                 <i class="icon auto-style-29" data-lucide="circle"></i>
-                <span>15-year manufacturer warranty</span>
+                <span>Product warranty details supplied in writing</span>
               </li>
             </ul>
             <div class="package-card__cta">
@@ -1932,8 +1846,8 @@
             <h2 class="package-card__title">The Pet Yard</h2>
             <p class="package-card__tagline">"Built for your best friend"</p>
             <div class="package-card__divider"></div>
-            <p class="package-card__price-label">Starting at</p>
-            <p class="package-card__price">$14-17 <span>/sq ft</span></p>
+            <p class="package-card__price-label">Pricing</p>
+            <p class="package-card__price">Itemized <span>site quote</span></p>
             <div class="package-card__divider"></div>
             <p class="package-card__section-title">Perfect for:</p>
             <ul class="package-card__list">
@@ -1955,7 +1869,7 @@
             <ul class="package-card__list">
               <li class="package-card__list-item">
                 <i class="icon auto-style-29" data-lucide="circle"></i>
-                <span>Antimicrobial pet-safe turf</span>
+                <span>Pet-area turf selected for the application</span>
               </li>
               <li class="package-card__list-item">
                 <i class="icon auto-style-29" data-lucide="circle"></i>
@@ -1971,7 +1885,7 @@
               </li>
               <li class="package-card__list-item">
                 <i class="icon auto-style-29" data-lucide="circle"></i>
-                <span>15-year manufacturer warranty</span>
+                <span>Product warranty details supplied in writing</span>
               </li>
             </ul>
             <div class="package-card__cta">
@@ -1993,8 +1907,8 @@
             <h3 class="package-card__title">The "Golfer's Green"</h3>
             <p class="package-card__tagline">"Your private practice space"</p>
             <div class="package-card__divider"></div>
-            <p class="package-card__price-label">Installed Price</p>
-            <p class="package-card__price">$22-28 <span>/ sq ft</span></p>
+            <p class="package-card__price-label">Pricing</p>
+            <p class="package-card__price">Itemized <span>site quote</span></p>
             <p class="package-card__section-title auto-style-30">Includes:</p>
             <ul class="package-card__list">
               <li class="package-card__list-item">
@@ -2088,39 +2002,40 @@
       </div>
       <div class="comparison-table-wrapper">
         <table class="comparison-table">
+          <caption class="comparison-table__caption">Package features and documentation included in a YardGuard site quote</caption>
           <thead>
             <tr>
-              <th>Feature</th>
-              <th>Easy Lawn</th>
-              <th class="comparison-table__highlight">Pet Yard</th>
-              <th>Golfer's Green</th>
-              <th>Premium</th>
+              <th scope="col">Feature</th>
+              <th scope="col">Easy Lawn</th>
+              <th scope="col" class="comparison-table__highlight">Pet Yard</th>
+              <th scope="col">Golfer's Green</th>
+              <th scope="col">Premium</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Price/sq ft</td>
-              <td>$10-12</td>
-              <td class="comparison-table__highlight">$14-17</td>
-              <td>$22-28</td>
+              <th scope="row">Price/sq ft</th>
+              <td>Site quote</td>
+              <td class="comparison-table__highlight">Site quote</td>
+              <td>Site quote</td>
               <td>Custom</td>
             </tr>
             <tr>
-              <td>Turf Type</td>
+              <th scope="row">Turf Type</th>
               <td>Standard Polyethylene</td>
-              <td class="comparison-table__highlight">Antimicrobial</td>
+              <td class="comparison-table__highlight">Pet-area system</td>
               <td>Putting Surface</td>
               <td>Your Choice</td>
             </tr>
             <tr>
-              <td>Drainage</td>
+              <th scope="row">Drainage</th>
               <td>Standard</td>
               <td class="comparison-table__highlight">Enhanced</td>
               <td>Standard</td>
               <td>Enhanced</td>
             </tr>
             <tr>
-              <td>Odour Control</td>
+              <th scope="row">Odour Control</th>
               <td><span class="checkmark">&checkmark;</span></td>
               <td class="comparison-table__highlight">
                 <span class="checkmark">&checkmark;</span>
@@ -2129,32 +2044,32 @@
               <td><span class="checkmark">&checkmark;</span></td>
             </tr>
             <tr>
-              <td>Custom Contours</td>
+              <th scope="row">Custom Contours</th>
               <td class="dash">-</td>
               <td class="comparison-table__highlight dash">-</td>
               <td><span class="checkmark">&checkmark;</span></td>
               <td><span class="checkmark">&checkmark;</span></td>
             </tr>
             <tr>
-              <td>Hardscape Integration</td>
+              <th scope="row">Hardscape Integration</th>
               <td class="dash">-</td>
               <td class="comparison-table__highlight dash">-</td>
               <td class="dash">-</td>
               <td><span class="checkmark">&checkmark;</span></td>
             </tr>
             <tr>
-              <td>Fire Features</td>
+              <th scope="row">Fire Features</th>
               <td class="dash">-</td>
               <td class="comparison-table__highlight dash">-</td>
               <td class="dash">-</td>
               <td><span class="checkmark">&checkmark;</span></td>
             </tr>
             <tr>
-              <td>Warranty</td>
-              <td>15 Years</td>
-              <td class="comparison-table__highlight">15 Years</td>
-              <td>15 Years</td>
-              <td>15 Years</td>
+              <th scope="row">Warranty</th>
+              <td>Written terms</td>
+              <td class="comparison-table__highlight">Written terms</td>
+              <td>Written terms</td>
+              <td>Written terms</td>
             </tr>
           </tbody>
         </table>
@@ -2166,10 +2081,11 @@
         <div class="auto-style-33">
           <i class="auto-style-34" data-lucide="lock"></i>
         </div>
-        <h2 class="auto-style-35">Price-Lock Guarantee</h2>
+        <h2 class="auto-style-35">Clear Written Scope</h2>
         <p class="auto-style-36">
-          The price we quote is the price you pay. If we encounter unexpected
-          conditions, we absorb the cost. Not you.
+          Your proposal identifies the included work and known site assumptions.
+          If the requested scope or site conditions require a change, we discuss
+          and document it before the additional work proceeds.
         </p>
       </div>
     </section>
@@ -2203,7 +2119,7 @@
           <ul class="auto-style-41">
             <li class="auto-style-42">
               <i class="auto-style-43" data-lucide="check-circle"></i>
-              Antimicrobial Infill
+              Selected Infill as Specified
             </li>
             <li class="auto-style-42">
               <i class="auto-style-43" data-lucide="check-circle"></i>
@@ -2214,8 +2130,8 @@
               Complete Site Cleanup
             </li>
             <li class="auto-style-42">
-              <i class="auto-style-43" data-lucide="check-circle"></i> 15-Year
-              Warranty
+              <i class="auto-style-43" data-lucide="check-circle"></i>
+              Applicable Warranty Documents
             </li>
             <li class="auto-style-42">
               <i class="auto-style-43" data-lucide="check-circle"></i>
@@ -2223,59 +2139,7 @@
             </li>
           </ul>
         </div>
-        <p class="auto-style-44">"No surprise add-ons. Ever."</p>
-      </div>
-    </section>
-    <!-- Financing Section -->
-    <section class="financing-section auto-style-45">
-      <div class="container auto-style-3">
-        <div class="auto-style-46">
-          <i class="auto-style-47" data-lucide="calendar-check"></i>
-        </div>
-        <h2 class="auto-style-35">Flexible Monthly Payments</h2>
-        <p class="auto-style-48">
-          Don't want to pay it all upfront? Break your project into manageable
-          monthly payments.
-        </p>
-        <div class="auto-style-49">
-          <!-- Example 1 -->
-          <div class="auto-style-50">
-            <h3 class="auto-style-51">Small Project</h3>
-            <p class="auto-style-52">Typically under 500 sq ft</p>
-            <div class="auto-style-53">
-              $89<span class="auto-style-54">/mo</span>
-            </div>
-            <p class="auto-style-55">Based on $10,000 project value*</p>
-          </div>
-          <!-- Example 2 -->
-          <div class="auto-style-56">
-            <div class="auto-style-57">
-              <span class="auto-style-58">Most Popular</span>
-            </div>
-            <h3 class="auto-style-51">Medium Project</h3>
-            <p class="auto-style-52">Typical backyard (500-1000 sq ft)</p>
-            <div class="auto-style-53">
-              $149<span class="auto-style-54">/mo</span>
-            </div>
-            <p class="auto-style-55">Based on $16,000 project value*</p>
-          </div>
-          <!-- Example 3 -->
-          <div class="auto-style-50">
-            <h3 class="auto-style-51">Large Project</h3>
-            <p class="auto-style-52">Full property transformation</p>
-            <div class="auto-style-53">
-              $219<span class="auto-style-54">/mo</span>
-            </div>
-            <p class="auto-style-55">Based on $25,000 project value*</p>
-          </div>
-        </div>
-        <p class="auto-style-59">
-          *Estimated monthly payments. Subject to credit approval. Rates may
-          vary.
-        </p>
-        <div class="auto-style-60">
-          <a class="btn-primary" href="quote.html">Get a Quote with Financing</a>
-        </div>
+        <p class="auto-style-44">Included work and approved changes are documented.</p>
       </div>
     </section>
     <!-- Custom Projects Section -->
@@ -2414,10 +2278,6 @@
     </a>
     <a class="mobile-sticky-cta__quote" href="quote.html">Get Free Quote</a>
   </div>
-  <!-- Initialize Lucide Icons -->
-  <script>
-    cide.createIcons();
-  </script>
   <script src="assets/js/main.js" type="module"></script>
 </body>
 

@@ -3,9 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node --test test/*.test.cjs",
+    "test:browser": "playwright test",
+    "test:all": "npm test && npm run test:browser",
+    "test:dist": "node scripts/verify-dist.cjs",
+    "test:performance": "node scripts/check-performance.cjs",
+    "smoke:production": "node test/deployment-smoke.cjs",
+    "audit": "npm audit --audit-level=low",
     "dev": "vite",
     "build": "vite build",
+    "preview": "vite preview",
     "postinstall": "npm run build"
   },
   "repository": {
@@ -16,17 +23,20 @@
   "author": "",
   "license": "ISC",
   "type": "commonjs",
+  "engines": {
+    "node": ">=24.18.0 <25"
+  },
   "bugs": {
     "url": "https://github.com/andrewgacamac/YardGuard/issues"
   },
   "homepage": "https://github.com/andrewgacamac/YardGuard#readme",
   "dependencies": {
-    "vite": "^7.3.1"
+    "lucide": "1.25.0"
   },
   "devDependencies": {
-    "@types/node": "^25.3.0",
-    "pg": "^8.18.0",
-    "playwright": "^1.61.1",
-    "typescript": "^5.9.3"
+    "@types/node": "24.13.3",
+    "playwright": "1.61.1",
+    "typescript": "^5.9.3",
+    "vite": "8.1.5"
   }
 }

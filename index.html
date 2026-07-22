@@ -16,7 +16,6 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap"
     rel="stylesheet" />
   <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@0.263.1"></script>
   <!-- Custom CSS -->
   <link href="assets/css/style.css" rel="stylesheet" />
   <script type="application/ld+json">
@@ -25,9 +24,10 @@
   "@graph": [
     {
       "@type": "Organization",
+      "@id": "https://ygtoronto.com/#organization",
       "name": "Yard Guard Landscaping",
       "url": "https://ygtoronto.com",
-      "logo": "https://static.wixstatic.com/media/e83a48_77d3e37bf7c04f32af25998246892eb8~mv2.png",
+      "logo": "https://ygtoronto.com/og.png",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+1-647-216-7787",
@@ -40,8 +40,9 @@
     },
     {
       "@type": "LocalBusiness",
+      "@id": "https://ygtoronto.com/#organization",
       "name": "Yard Guard Landscaping",
-      "image": "https://ygtoronto.com/images/hero-after.jpg",
+      "image": "https://ygtoronto.com/og.png",
       "telephone": "+1-647-216-7787",
       "address": {
         "@type": "PostalAddress",
@@ -50,12 +51,7 @@
         "addressCountry": "CA"
       },
       "url": "https://ygtoronto.com",
-      "areaServed": ["Mississauga", "Toronto", "Brampton", "Vaughan", "Oakville", "Etobicoke", "Markham", "Richmond Hill"],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "127"
-      }
+      "areaServed": ["Mississauga", "Toronto", "Brampton", "Vaughan", "Oakville", "Etobicoke", "Markham", "Richmond Hill"]
     }
   ]
 }
@@ -70,7 +66,7 @@
       "name": "Will my dog like it?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes! Dogs love the soft feel of our turf. Plus, our specialized Pet Yard system drains quickly and includes antimicrobial infill to prevent odors, making it cleaner and safer than real grass."
+        "text": "Many dogs use artificial turf comfortably, but the right system depends on the exact turf, infill, drainage, cleaning needs, and product documentation. Review the proposed materials and supervise pets during hot weather."
       }
     },
     {
@@ -78,7 +74,7 @@
       "name": "Does it look fake?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Not at all. We use high-quality turf with multi-toned blades and a thatch layer that mimics the look and feel of natural grass. Most people can't tell the difference until they touch it."
+        "text": "Appearance varies by turf, pile height, blade shape, colour blend, infill, lighting, and installation. Review physical samples and completed-project photos before choosing a product."
       }
     },
     {
@@ -86,7 +82,7 @@
       "name": "Is it worth the investment?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Consider the long-term savings: no more water bills, fertilizer, aeration, re-sodding, or lawn mower maintenance. Plus, the value of your time regained is priceless. A YardGuard lawn typically pays for itself in 5-7 years."
+        "text": "Value depends on your project cost, current lawn-care and water spending, expected ownership period, ongoing turf care, and how you plan to use the space. Compare your own documented costs rather than relying on a guaranteed payback."
       }
     }
   ]
@@ -160,8 +156,8 @@
       <div class="hero__overlay">
         <p class="hero__eyebrow">Artificial turf, expertly installed across the GTA</p>
         <h1 class="hero__headline">A Beautiful Lawn.<br />Zero Mud. Zero Mowing.</h1>
-        <p class="hero__subheadline">Premium, pet-friendly turf designed for real Canadian backyards—and installed
-          by a local team with 15 years of landscaping experience.</p>
+        <p class="hero__subheadline">Artificial turf options for lawns, pet areas, and putting greens—planned around
+          the real conditions of your GTA property.</p>
         <div class="hero__cta-group">
           <a class="btn-primary btn-primary--large" href="quote.html">Get My Free Quote</a>
           <a class="btn-secondary btn-secondary--light btn-primary--large" href="products.html">Explore Turf Options</a>
@@ -172,31 +168,31 @@
           <span class="trust-item__icon">
             <i data-lucide="star" style="width: 14px; height: 14px;"></i>
           </span>
-          4.9/5 Google Rating
+          GTA Site Consultations
         </div>
         <div class="trust-item">
           <span class="trust-item__icon">
             <i data-lucide="calendar" style="width: 14px; height: 14px;"></i>
           </span>
-          15 Years Experience
+          Property Measurements
         </div>
         <div class="trust-item">
           <span class="trust-item__icon">
             <i data-lucide="check-circle" style="width: 14px; height: 14px;"></i>
           </span>
-          500+ Projects
+          Itemized Proposals
         </div>
         <div class="trust-item">
           <span class="trust-item__icon">
             <i data-lucide="shield" style="width: 14px; height: 14px;"></i>
           </span>
-          15-Year Warranty
+          Written Product Details
         </div>
         <div class="trust-item">
           <span class="trust-item__icon">
             <i data-lucide="leaf" style="width: 14px; height: 14px;"></i>
           </span>
-          PFAS-Free Guarantee
+          Site-Specific Planning
         </div>
       </div>
     </section>
@@ -313,7 +309,7 @@
               <span class="step__number">02</span>
             </div>
             <h3 class="step__title">Proposal</h3>
-            <p class="step__description">You get a detailed quote and a design visualization of your new yard.</p>
+            <p class="step__description">You get a recommended scope, selected system details, and an itemized quote.</p>
           </div>
           <div class="step">
             <div class="step__circle">
@@ -378,43 +374,6 @@
       </div>
     </section>
     <!-- ============================================
-       SOCIAL PROOF STRIP
-       ============================================ -->
-    <section class="social-proof-strip">
-      <div class="container">
-        <div class="google-reviews-summary" aria-label="Rated 4.9 out of 5 on Google">
-          <i data-lucide="star" style="fill: #FFB300; stroke: none;"></i>
-          <i data-lucide="star" style="fill: #FFB300; stroke: none;"></i>
-          <i data-lucide="star" style="fill: #FFB300; stroke: none;"></i>
-          <i data-lucide="star" style="fill: #FFB300; stroke: none;"></i>
-          <i data-lucide="star" style="fill: #FFB300; stroke: none;"></i>
-          <span>4.9 Stars on Google</span>
-        </div>
-        <p class="section-eyebrow">Homeowners say it best</p>
-        <h2>“Best Investment We’ve Ever Made”</h2>
-        <div class="testimonials-grid">
-          <div class="testimonial-card-small">
-            <div class="stars">&starf;&starf;&starf;&starf;&starf;</div>
-            <p>"The team was professional, on time, and the result is incredible. Our kids play outside every day now."
-            </p>
-            <div class="author">- Sarah M., Etobicoke</div>
-          </div>
-          <div class="testimonial-card-small">
-            <div class="stars">&starf;&starf;&starf;&starf;&starf;</div>
-            <p>"I was skeptical about artificial grass looking fake, but this looks amazing. Highly recommend
-              YardGuard."
-            </p>
-            <div class="author">- David R., Oakville</div>
-          </div>
-          <div class="testimonial-card-small">
-            <div class="stars">&starf;&starf;&starf;&starf;&starf;</div>
-            <p>"No more mowing! Best decision ever. The installation crew was fantastic and left everything clean."</p>
-            <div class="author">- Jennifer L., Mississauga</div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- ============================================
        OBJECTION HANDLING (FAQ)
        ============================================ -->
     <section class="objection-section">
@@ -429,9 +388,9 @@
             <i class="accordion-icon" data-lucide="chevron-down"></i>
           </button>
           <div class="accordion-content">
-            <p>Yes! Dogs love the soft feel of our turf. Plus, our specialized Pet Yard system drains quickly and
-              includes
-              antimicrobial infill to prevent odours, making it cleaner and safer than real grass.</p>
+            <p>Many dogs use artificial turf comfortably, but the right system depends on the exact turf, infill,
+              drainage, cleaning needs, and product documentation. Review the proposed materials and supervise pets
+              during hot weather.</p>
           </div>
         </div>
         <div class="accordion-item">
@@ -440,8 +399,8 @@
             <i class="accordion-icon" data-lucide="chevron-down"></i>
           </button>
           <div class="accordion-content">
-            <p>Not at all. We use high-quality turf with multi-toned blades and a thatch layer that mimics the look and
-              feel of natural grass. Most people can't tell the difference until they touch it.</p>
+            <p>Appearance varies by turf, pile height, blade shape, colour blend, infill, lighting, and installation.
+              Review physical samples and completed-project photos before choosing a product.</p>
           </div>
         </div>
         <div class="accordion-item">
@@ -450,9 +409,9 @@
             <i class="accordion-icon" data-lucide="chevron-down"></i>
           </button>
           <div class="accordion-content">
-            <p>Yes. A natural lawn costs $18,000&ndash;$37,500 over 15 years in water, maintenance, and supplies. A
-              YardGuard
-              lawn pays for itself in 5-7 years, then saves you money for a decade.</p>
+            <p>Value depends on your project cost, current lawn-care and water spending, expected ownership period,
+              ongoing turf care, and how you plan to use the space. Compare your own documented costs rather than
+              relying on a guaranteed payback.</p>
           </div>
         </div>
       </div>

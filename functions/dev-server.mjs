@@ -2,8 +2,9 @@
 // handler in the browser without deploying. Simulates how DO invokes the function
 // (JSON body merged into args) and serves it at http://localhost:3000/api/quote.
 //
-// Run:  node --env-file=.env dev-server.mjs
-// (Vite proxies /api -> here, so the form at :5173/quote.html works end to end.)
+// Run: node dev-server.mjs
+// This server is a dry-run by default and never contacts Resend. The main Vite
+// dev server already includes a mock /api/quote route for normal local work.
 
 import http from 'node:http';
 import { createRequire } from 'node:module';
@@ -11,6 +12,8 @@ const require = createRequire(import.meta.url);
 const { main } = require('./packages/api/quote/index.js');
 
 const PORT = process.env.PORT || 3000;
+process.env.RESEND_API_KEY ||= 'local-dry-run-key';
+process.env.LEAD_NOTIFY_EMAIL ||= 'local@example.invalid';
 
 const server = http.createServer((req, res) => {
   const url = (req.url || '').split('?')[0];
@@ -34,7 +37,14 @@ const server = http.createServer((req, res) => {
           return;
         }
       }
-      const r = await main(args);
+      const originalFetch = globalThis.fetch;
+      globalThis.fetch = async () => ({ ok: true, status: 200, text: async () => '' });
+      let r;
+      try {
+        r = await main(args);
+      } finally {
+        globalThis.fetch = originalFetch;
+      }
       res.writeHead(r.statusCode || 200, r.headers || { 'Content-Type': 'application/json' });
       res.end(typeof r.body === 'string' ? r.body : JSON.stringify(r.body || {}));
     });
@@ -46,8 +56,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`YardGuard function dev server on :${PORT} — simulates the DO Function at /api/quote`);
-  if (!process.env.RESEND_API_KEY || !process.env.LEAD_NOTIFY_EMAIL) {
-    console.warn('WARNING: RESEND_API_KEY / LEAD_NOTIFY_EMAIL not set — submissions will return a config error.');
-  }
+  console.log(`YardGuard dry-run function server on :${PORT} — no email will be sent`);
 });

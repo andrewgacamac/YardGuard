@@ -19,7 +19,6 @@
       rel="stylesheet"
     />
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@0.263.1"></script>
     <style>
       /* ========================================
        CSS RESET & BASE
@@ -391,10 +390,22 @@
 
       @media (max-width: 767px) {
         .faq-nav {
-          padding: 16px;
+          padding: 12px 0;
+        }
+
+        .faq-nav__container {
+          justify-content: flex-start;
+          flex-wrap: nowrap;
+          gap: 8px;
+          padding: 0 16px 8px;
+          overflow-x: auto;
+          overscroll-behavior-inline: contain;
+          scroll-padding-inline: 16px;
+          scrollbar-width: thin;
         }
 
         .faq-nav__link {
+          flex: 0 0 auto;
           font-size: 13px;
           padding: 8px 16px;
         }
@@ -406,6 +417,7 @@
       .faq-section {
         padding: 80px 24px;
         background: var(--white);
+        scroll-margin-top: 160px;
       }
 
       .faq-section:nth-child(even) {
@@ -905,9 +917,10 @@
         "@graph": [
           {
             "@type": "Organization",
+      "@id": "https://ygtoronto.com/#organization",
             "name": "Yard Guard Landscaping",
             "url": "https://ygtoronto.com",
-            "logo": "https://static.wixstatic.com/media/e83a48_77d3e37bf7c04f32af25998246892eb8~mv2.png",
+            "logo": "https://ygtoronto.com/logo.webp",
             "contactPoint": {
               "@type": "ContactPoint",
               "telephone": "+1-647-216-7787",
@@ -920,8 +933,9 @@
           },
           {
             "@type": "LocalBusiness",
+      "@id": "https://ygtoronto.com/#organization",
             "name": "Yard Guard Landscaping",
-            "image": "https://ygtoronto.com/images/hero-after.jpg",
+            "image": "https://ygtoronto.com/og.png",
             "telephone": "+1-647-216-7787",
             "address": {
               "@type": "PostalAddress",
@@ -954,7 +968,7 @@
             "name": "Is artificial turf safe for my dogs and other pets?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Absolutely! Our Pet Yard package is specifically designed for pet owners. It features antimicrobial fibers to prevent bacteria growth, non-toxic materials, enhanced drainage for quick drying, and Zeolite infill that naturally neutralizes odors."
+              "text": "A pet-area system should be selected around the exact turf, infill, drainage, cleaning needs, and the manufacturer's product documentation. Artificial turf is not intended for chewing or ingestion; review the proposed materials and supervise pets as appropriate."
             }
           },
           {
@@ -970,7 +984,7 @@
             "name": "Is artificial turf a safe surface for my children to play on?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes! Our turf products are lead-free, non-toxic, and free of harmful chemicals. They are softer and more cushioned than natural grass, making them safer for falls, and are free of allergens, pests, and pesticides."
+              "text": "Suitability depends on the exact product, infill, installation, intended use, surface temperature, and impact requirements. Ask for current product documentation for the proposed system and consider applicable playground or accessibility standards for dedicated play areas."
             }
           },
           {
@@ -994,7 +1008,7 @@
             "name": "Does artificial grass look and feel like a cheap fake plastic rug?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Not anymore! Today's premium artificial turf uses multiple blade shapes, colors, and textures to mimic real grass perfectly. It is virtually indistinguishable from natural grass."
+              "text": "Appearance varies by product, pile height, blade shape, colour blend, infill, lighting, and installation. Review physical samples and completed-project photos, and compare them in the conditions where the turf will be used."
             }
           },
           {
@@ -1002,7 +1016,7 @@
             "name": "Will artificial turf get too hot to walk on barefoot during the summer?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Artificial turf can get warm in direct sunlight, typically 10-15 degrees cooler than concrete. A quick spray with a hose instantly cools it down. Our 'CoolBlade' technology also helps reflect UV rays."
+              "text": "Artificial turf can become hot in direct sun. Surface temperature varies with the product, infill, colour, shade, air temperature, and wind. Check the surface before barefoot or pet use, provide shade, and follow heat-safety guidance; water may cool it only temporarily."
             }
           },
           {
@@ -1010,7 +1024,7 @@
             "name": "Is installing artificial turf actually good for the environment?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, it eliminates the need for watering (saving thousands of litres annually), gas-powered mowing, and pesticides/fertilizers. It lasts 15-25 years, making it an eco-friendly choice."
+              "text": "Artificial turf can reduce routine irrigation, mowing, and lawn-treatment use, but it is a synthetic product with manufacturing, heat, runoff, maintenance, and end-of-life impacts. Whether it fits your goals depends on the site, intended use, care plan, and available alternatives."
             }
           },
           {
@@ -1018,7 +1032,7 @@
             "name": "How much does it cost to install artificial turf in the GTA?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Our packages range from $12-28 per square foot, fully installed. Easy Lawn is $12-14/sq ft, Pet Yard is $14-17/sq ft, and Golfer's Green is $22-28/sq ft. A typical 500 sq ft backyard costs between $6,000-$8,500."
+              "text": "Installed cost is property-specific. Access, excavation, grading, drainage, edges, turf selection, waste removal, and project size all affect the price. YardGuard reviews the site details and provides an itemized proposal."
             }
           },
           {
@@ -1026,7 +1040,7 @@
             "name": "What exactly is included in your artificial turf installation quote?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Our all-inclusive pricing covers free design visualization, removal/disposal of existing lawn, ground preparation, base material, premium turf, professional installation, infill, cleanup, and a 15-year warranty."
+              "text": "The written proposal identifies the included removal, excavation, base, drainage, turf, infill, edging, installation, cleanup, assumptions, and applicable warranty documents. Review that project-specific scope before accepting it."
             }
           },
           {
@@ -1034,7 +1048,7 @@
             "name": "Is artificial turf actually worth the high upfront investment?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, it typically pays for itself in 3-5 years through savings on maintenance, water, and equipment. It also increases property value and saves you over 200 hours of labor per year."
+              "text": "Value depends on your current lawn-care spending, water use, project cost, intended ownership period, maintenance needs, and personal priorities. Compare your own documented costs rather than relying on a guaranteed payback or property-value claim."
             }
           },
           {
@@ -1090,7 +1104,7 @@
             "name": "Will my yard flood, or does artificial turf drain water properly after rain?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, our systems drain at 30+ inches per hour through perforated backing and a proper base layer, drying quickly after rain."
+              "text": "Drainage performance depends on the selected turf backing, infill, base design, soil, grading, outlets, and rainfall. The site must be assessed and the proposed drainage approach documented; artificial turf alone does not guarantee that a yard will not flood."
             }
           },
           {
@@ -1098,7 +1112,7 @@
             "name": "What are the specific city bylaws for artificial turf in Toronto?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Backyards require no permit. Front yards require 75% soft landscaping; permeable artificial turf is often considered soft landscaping if it meets drainage requirements."
+              "text": "Toronto states that artificial turf is not soft landscaping and does not count toward required soft-landscaping area. Front- and rear-yard requirements vary by lot frontage, zoning, and property. Confirm the current rules for the address with Toronto Building before work begins."
             }
           },
           {
@@ -1106,15 +1120,15 @@
             "name": "Are there any municipal restrictions for artificial turf in Mississauga and Brampton?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Mississauga permits turf in front/back yards with proper drainage. Brampton generally permits replacing grass with turf, but widening driveways may require a permit."
+              "text": "Do not assume blanket approval in either city. Mississauga requirements depend on zoning, landscaped area, grading, drainage, and site-specific provisions. Brampton's 2026 driveway standards exclude artificial turf from residential permeable landscaping. Confirm the proposed scope with the relevant City before work begins."
             }
           },
           {
             "@type": "Question",
-            "name": "Vaughan & Richmond Hill Regulations",
+            "name": "What are the artificial turf bylaws in Vaughan and Richmond Hill?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Both cities are turf-friendly. Vaughan categorizes it as a pervious surface if installed on a draining base."
+              "text": "Vaughan states that artificial turf is not soft landscaping, so required natural or horticultural area must remain. For Richmond Hill, zoning and property-specific requirements should be confirmed directly with the City rather than relying on a general approval statement."
             }
           },
           {
@@ -1122,15 +1136,15 @@
             "name": "Do I need to get a city building permit before installing artificial turf?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "For 95% of residential projects replacing grass, NO permit is required. Permits are needed for significant grade changes, large retaining walls, or driveway widening."
+              "text": "There is no reliable one-size-fits-all answer. The project may involve zoning, soft-landscaping, grading, drainage, site-alteration, retaining-wall, driveway, conservation, utility, or private-property requirements. Confirm the proposed work with the municipality and any other applicable authority."
             }
           },
           {
             "@type": "Question",
-            "name": "Do you use toxic 'crumb rubber'?",
+            "name": "Do you use toxic recycled crumb rubber infill in your residential installations?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Absolutely NOT. We use safe, natural infills like Silica Sand, ZeoFill (Zeolite), and Envirofill. We never use recycled tire rubber."
+              "text": "The infill for a project should be named in the written proposal. Ask for the exact product specification and current manufacturer documentation so you can confirm the material and decide whether it suits the intended residential use."
             }
           },
           {
@@ -1138,7 +1152,7 @@
             "name": "Are your artificial turf products guaranteed to be completely PFAS-free?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, we exclusively source PFAS-free certified turf that meets high safety standards."
+              "text": "We do not publish a blanket PFAS-free guarantee for every possible product without current documentation for the exact SKU. Ask for the latest manufacturer declaration or test documentation associated with the turf proposed for your project."
             }
           },
           {
@@ -1146,7 +1160,7 @@
             "name": "Does the artificial grass get dangerously hot for my dog's paws?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Our CoolBlade technology reflects UV rays. On very hot days, a quick spray with water cools the surface by 10-15 degrees."
+              "text": "Artificial turf can become hot enough to be uncomfortable or unsafe for paws in direct sun. Test the surface with your hand, provide shade, limit use during peak heat, and follow veterinary heat-safety guidance. Water may provide only temporary cooling."
             }
           },
           {
@@ -1154,7 +1168,7 @@
             "name": "How many years can I expect my new artificial turf installation to last?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "15-25 years with proper care. Our products come with a 15-year manufacturer warranty."
+              "text": "Service life varies with the exact product, traffic, UV exposure, installation, drainage, maintenance, and damage. Review the manufacturer's current product and warranty documentation for the SKU in your proposal rather than relying on a universal lifespan."
             }
           },
           {
@@ -1162,15 +1176,15 @@
             "name": "Will artificial turf survive the harsh freezing and thawing of Canadian winters?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, it withstands freeze-thaw cycles, drains properly, and is UV-resistant. It often looks better than natural grass in spring."
+              "text": "A GTA installation must account for freeze-thaw movement, drainage, base preparation, snow handling, and the selected product's temperature limitations. Performance is site- and system-specific, so these factors should be addressed in the proposal rather than guaranteed generally."
             }
           },
           {
             "@type": "Question",
-            "name": "What exactly does your 15-year artificial turf warranty cover?",
+            "name": "How do product and workmanship warranties work?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Our 15-year warranty covers UV degradation, fiber deterioration, backing separation, and material defects. We also stand behind our installation."
+              "text": "Manufacturer product coverage and YardGuard workmanship terms are separate. The exact duration, defects, exclusions, maintenance duties, remedies, and claims process are governed by the written documents supplied for the selected product and contracted installation."
             }
           },
           {
@@ -1193,13 +1207,13 @@
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://ygtoronto.com/index.html"
+            "item": "https://ygtoronto.com/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Artificial Turf",
-            "item": "https://ygtoronto.com/index.html"
+            "item": "https://ygtoronto.com/"
           },
           {
             "@type": "ListItem",
@@ -1229,27 +1243,13 @@
       property="og:description"
     />
     <meta
-      content="https://ygtoronto.com/images/hero-after.jpg"
+      content="https://ygtoronto.com/og.png"
       property="og:image"
     />
     <meta
       content="https://ygtoronto.com/faq.html"
       property="og:url"
     />
-    <!-- Google tag (gtag.js) stub for GA4 Event Tracking -->
-    <script
-      async=""
-      id="ga4-tracking"
-      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-XXXXXXXXXX");
-    </script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -1298,8 +1298,8 @@
         role="navigation"
       >
         <div class="faq-nav__container">
-          <a class="faq-nav__link" href="#pets">Pets &amp; Kids</a>
-          <a class="faq-nav__link active" href="#general">General</a>
+          <a aria-current="location" class="faq-nav__link active" href="#pets">Pets &amp; Kids</a>
+          <a class="faq-nav__link" href="#general">General</a>
           <a class="faq-nav__link" href="#cost">Cost &amp; Pricing</a>
           <a class="faq-nav__link" href="#installation">Installation</a>
           <a class="faq-nav__link" href="#maintenance">Maintenance</a>
@@ -1328,18 +1328,14 @@
             <div class="faq-accordion__content">
               <div class="faq-accordion__answer">
                 <p>
-                  Absolutely! Our Pet Yard package is specifically designed for
-                  pet owners:
+                  A pet-area system should be selected around the exact turf,
+                  infill, drainage, cleaning needs, and the manufacturer's
+                  current product documentation.
                 </p>
-                <ul>
-                  <li>Antimicrobial fibers prevent bacteria growth</li>
-                  <li>Non-toxic materials safe if pets chew on grass</li>
-                  <li>Enhanced drainage for quick drying after use</li>
-                  <li>Zeolite infill neutralizes odours naturally</li>
-                </ul>
                 <p>
-                  Dogs love playing on turf, and you'll love not having muddy
-                  paw prints in your house!
+                  Artificial turf is not intended for chewing or ingestion.
+                  Review the proposed materials and supervise pets as
+                  appropriate, especially during hot weather.
                 </p>
               </div>
             </div>
@@ -1386,18 +1382,12 @@
             </button>
             <div class="faq-accordion__content">
               <div class="faq-accordion__answer">
-                <p>Yes! Our turf products are:</p>
-                <ul>
-                  <li>Lead-free and non-toxic</li>
-                  <li>Free of harmful chemicals</li>
-                  <li>
-                    Softer and more cushioned than natural grass for falls
-                  </li>
-                  <li>Free of allergens, pests, and pesticides</li>
-                </ul>
                 <p>
-                  Many parents choose artificial turf specifically because it's
-                  cleaner and safer for play areas.
+                  Suitability depends on the exact turf and infill, installation,
+                  intended use, surface temperature, and any impact-attenuation
+                  requirements. Ask for current documentation for the proposed
+                  product. Dedicated play areas may also need to meet applicable
+                  playground or accessibility standards.
                 </p>
               </div>
             </div>
@@ -1475,15 +1465,12 @@
             <div class="faq-accordion__content">
               <div class="faq-accordion__answer">
                 <p>
-                  Not anymore! Today's premium artificial turf is virtually
-                  indistinguishable from natural grass. We use turf with
-                  multiple blade shapes, colours, and textures that mimic real
-                  grass perfectly.
+                  Appearance varies by product, pile height, blade shape,
+                  colour blend, infill, lighting, and installation.
                 </p>
                 <p>
-                  Most visitors won't realize it's artificial unless you tell
-                  them. Our design visualization preview lets you see exactly
-                  how realistic it will look in your yard before installation.
+                  Review physical samples and completed-project photos, and
+                  compare them in the conditions where the turf will be used.
                 </p>
               </div>
             </div>
@@ -1499,15 +1486,14 @@
             <div class="faq-accordion__content">
               <div class="faq-accordion__answer">
                 <p>
-                  Artificial turf can get warm on hot summer days, similar to a
-                  deck or driveway. However, it's typically 10-15 degrees cooler
-                  than concrete surfaces.
+                  Artificial turf can become hot in direct sun. Surface
+                  temperature varies with the product, infill, colour, shade,
+                  air temperature, and wind.
                 </p>
                 <p>
-                  A quick spray with the hose cools it down instantly. Many of
-                  our customers find that the turf cools quickly once the sun
-                  moves or in the evening, and their pets and kids still enjoy
-                  playing on it throughout the summer.
+                  Check the surface before barefoot or pet use, provide shade,
+                  and follow heat-safety guidance. Water may cool the surface
+                  only temporarily.
                 </p>
               </div>
             </div>
@@ -1522,19 +1508,12 @@
             </button>
             <div class="faq-accordion__content">
               <div class="faq-accordion__answer">
-                <p>Artificial turf offers several environmental benefits:</p>
-                <ul>
-                  <li>
-                    Eliminates the need for watering (saves thousands of litres
-                    annually)
-                  </li>
-                  <li>No gas-powered mowing or lawn equipment</li>
-                  <li>No pesticides, herbicides, or fertilizers needed</li>
-                  <li>Lasts 15-25 years before replacement</li>
-                </ul>
                 <p>
-                  While synthetic materials are used, the water savings alone
-                  make it an eco-friendly choice for many homeowners.
+                  Artificial turf can reduce routine irrigation, mowing, and
+                  lawn-treatment use, but it is a synthetic product with
+                  manufacturing, heat, runoff, maintenance, and end-of-life
+                  impacts. Whether it fits your goals depends on the site,
+                  intended use, care plan, and available alternatives.
                 </p>
               </div>
             </div>
@@ -1562,30 +1541,17 @@
             <div class="faq-accordion__content">
               <div class="faq-accordion__answer">
                 <p>
-                  Our packages range from $12-28 per square foot, fully
-                  installed:
+                  Installed cost is property-specific. Important factors include:
                 </p>
                 <ul>
-                  <li>
-                    <strong>Easy Lawn:</strong> $12-14/sq ft - Standard lawn
-                    replacement
-                  </li>
-                  <li>
-                    <strong>Pet Yard:</strong> $14-17/sq ft - Antimicrobial with
-                    enhanced drainage
-                  </li>
-                  <li>
-                    <strong>Golfer's Green:</strong> $22-28/sq ft - Professional
-                    putting surfaces
-                  </li>
-                  <li>
-                    <strong>Premium Integration:</strong> Custom pricing for
-                    full backyard makeovers
-                  </li>
+                  <li>Access and waste removal</li>
+                  <li>Excavation, grading, and drainage</li>
+                  <li>Edges, shapes, and adjoining surfaces</li>
+                  <li>Turf, infill, and other selected materials</li>
+                  <li>Project size and site conditions</li>
                 </ul>
                 <p>
-                  A typical 500 sq ft backyard would cost between $6,000-$8,500
-                  for our most popular Pet Yard package.
+                  We review the site details and provide an itemized proposal.
                 </p>
               </div>
             </div>
@@ -1600,21 +1566,18 @@
             </button>
             <div class="faq-accordion__content">
               <div class="faq-accordion__answer">
-                <p>Our all-inclusive pricing covers everything:</p>
+                <p>A project-specific proposal can identify:</p>
                 <ul>
-                  <li>Free design visualization</li>
-                  <li>Removal and disposal of existing lawn</li>
-                  <li>Ground preparation and leveling</li>
-                  <li>Base material and compaction</li>
-                  <li>Premium turf materials</li>
-                  <li>Professional installation</li>
-                  <li>Infill and finishing</li>
-                  <li>Site cleanup</li>
-                  <li>15-year warranty</li>
+                  <li>Removal, disposal, excavation, and site preparation</li>
+                  <li>Base, drainage, turf, infill, and edging materials</li>
+                  <li>Installation, finishing, and cleanup</li>
+                  <li>Known assumptions and exclusions</li>
+                  <li>Applicable product and workmanship documents</li>
                 </ul>
                 <p>
-                  No hidden fees or surprise charges. The quote you receive is
-                  the price you pay.
+                  Review the written scope before accepting it. Any requested
+                  change or newly identified condition should be discussed and
+                  documented before additional work proceeds.
                 </p>
               </div>
             </div>
@@ -1630,19 +1593,14 @@
             <div class="faq-accordion__content">
               <div class="faq-accordion__answer">
                 <p>
-                  For most homeowners, artificial turf pays for itself over time
-                  through:
+                  Value depends on your current lawn-care spending, water use,
+                  project cost, intended ownership period, ongoing turf care,
+                  and personal priorities.
                 </p>
-                <ul>
-                  <li>Eliminated lawn maintenance costs ($2,000-4,000/year)</li>
-                  <li>Water savings (thousands of litres annually)</li>
-                  <li>No fertilizer, pesticide, or equipment costs</li>
-                  <li>Time saved (200+ hours per year)</li>
-                  <li>Increased property value</li>
-                </ul>
                 <p>
-                  Most customers see a full return on investment within 3-5
-                  years, while enjoying a beautiful yard from day one.
+                  Compare your own documented costs and expected use rather
+                  than relying on a guaranteed payback period, savings amount,
+                  or property-value increase.
                 </p>
               </div>
             </div>
@@ -1855,14 +1813,14 @@
             <div class="faq-accordion__content">
               <div class="faq-accordion__answer">
                 <p>
-                  Yes! Our turf systems are engineered for excellent drainage.
-                  The backing has perforations that allow water to pass through,
-                  and we install a proper base layer that channels water away.
+                  Drainage performance depends on the selected turf backing,
+                  infill, base design, soil, grading, available outlets, and
+                  rainfall conditions.
                 </p>
                 <p>
-                  Most turf systems drain at a rate of 30+ inches per hour - far
-                  faster than any natural lawn. Your turf will dry quickly after
-                  rain.
+                  The site must be assessed and the proposed drainage approach
+                  documented. Artificial turf alone does not guarantee that a
+                  yard will not flood.
                 </p>
               </div>
             </div>
@@ -1892,28 +1850,18 @@
                 <div class="faq-accordion__content">
                   <div class="faq-accordion__answer">
                     <p>
-                      <strong>Backyards:</strong> 100% allowed. No permits
-                      required for standard landscaping replacement.
+                      Toronto states that artificial turf is
+                      <strong>not soft landscaping</strong> and does not count
+                      toward required soft-landscaping area.
                     </p>
                     <p>
-                      <strong>Front Yards:</strong> Toronto zoning explicitly
-                      requires % of "soft landscaping".
+                      Front- and rear-yard requirements vary by lot frontage,
+                      zoning, and the property. Review the City's
+                      <a href="https://www.toronto.ca/city-government/public-notices-bylaws/bylaw-enforcement/turfgrass-prohibited-plants/" rel="noopener noreferrer">artificial-turf guidance</a>
+                      and
+                      <a href="https://www.toronto.ca/zoning/bylaw_amendments/ZBL_NewProvision_Chapter10_5.htm" rel="noopener noreferrer">residential landscaping rules</a>.
                     </p>
-                    <ul>
-                      <li>
-                        <strong>The Rule:</strong> 75% of your front yard
-                        setback (excluding driveway) must be "soft landscaping".
-                      </li>
-                      <li>
-                        <strong>The Good News:</strong> As of 2024, high-quality
-                        permeable artificial turf IS considered soft landscaping
-                        in many interpretations, provided it absorbs water.
-                      </li>
-                      <li>
-                        <strong>Recommendation:</strong> We install permeable
-                        sub-bases that meet drainage requirements.
-                      </li>
-                    </ul>
+                    <p>Confirm the current requirements for the address with Toronto Building before work begins.</p>
                   </div>
                 </div>
               </div>
@@ -1928,16 +1876,19 @@
                 <div class="faq-accordion__content">
                   <div class="faq-accordion__answer">
                     <p>
-                      <strong>Mississauga:</strong> Permitted in front and back
-                      yards. Must maintain proper drainage (which our systems
-                      do).
+                      <strong>Mississauga:</strong> Do not assume blanket
+                      approval. The zone, required landscaped area, driveway,
+                      grading, drainage, and site-specific provisions can affect
+                      a project. Start with the City's
+                      <a href="https://www.mississauga.ca/services-and-programs/building-and-renovating/zoning-information/zoning-by-law/" rel="noopener noreferrer">zoning information</a>
+                      and request address-specific confirmation.
                     </p>
                     <p>
-                      <strong>Brampton:</strong> "Widening" driveways with turf
-                      is a common grey area. If you are replacing grass with
-                      turf, it is generally permitted. If you are paving over
-                      grass, you need a permit. Since turf is permeable, it
-                      usually bypasses the "paving" restriction.
+                      <strong>Brampton:</strong> The City's 2026 driveway
+                      standards exclude artificial turf from the definition of
+                      residential permeable landscaping. Read the
+                      <a href="https://www1.brampton.ca/EN/City-Hall/Documents/Public%20Notice%20-%20By-law%2032-2026%20-%20driveway%20standards.pdf" rel="noopener noreferrer">official By-law 32-2026 notice (PDF)</a>
+                      and confirm the proposed scope with the City.
                     </p>
                   </div>
                 </div>
@@ -1953,13 +1904,17 @@
                 <div class="faq-accordion__content">
                   <div class="faq-accordion__answer">
                     <p>
-                      <strong>Vaughan:</strong> Very turf-friendly. The city
-                      categorizes it as a "pervious surface" as long as it is
-                      installed on a draining base (not concrete).
+                      <strong>Vaughan:</strong> The City's Building Standards
+                      FAQ says artificial turf is not soft landscaping.
+                      Required natural or horticultural area must remain where
+                      the zoning by-law requires it. Review the
+                      <a href="https://www.vaughan.ca/about-city-vaughan/departments/building-standards/building-standards-frequently-asked-questions" rel="noopener noreferrer">official Vaughan FAQ</a>
+                      and contact a Zoning Examiner for the address.
                     </p>
                     <p>
-                      <strong>Richmond Hill:</strong> Similar to Vaughan. No
-                      specific bans on artificial turf frontages.
+                      <strong>Richmond Hill:</strong> We do not rely on a general
+                      approval statement. Confirm the current zoning and
+                      property-specific requirements directly with the City.
                     </p>
                   </div>
                 </div>
@@ -1975,21 +1930,16 @@
                 <div class="faq-accordion__content">
                   <div class="faq-accordion__answer">
                     <p>
-                      For 95% of residential projects (replacing existing
-                      grass): <strong>NO permit is required.</strong>
+                      There is no reliable one-size-fits-all answer. A project
+                      may involve zoning, soft-landscaping, grading, drainage,
+                      site-alteration, retaining-wall, driveway, conservation,
+                      utility, or private-property requirements.
                     </p>
-                    <p>You only technically need a permit if you are:</p>
-                    <ul>
-                      <li>
-                        Altering the grade/slope of your land significantly
-                      </li>
-                      <li>Building a retaining wall &gt;1 metre high</li>
-                      <li>Widening your driveway onto city property</li>
-                    </ul>
                     <p>
                       <em
-                        >Disclaimer: We check specific property zoning during
-                        our consultation.</em
+                        >This is general information, not legal advice or a
+                        municipal approval. Confirm the proposed work with the
+                        municipality and any other applicable authority.</em
                       >
                     </p>
                   </div>
@@ -2020,24 +1970,12 @@
             <div class="faq-accordion__content">
               <div class="faq-accordion__answer">
                 <p>
-                  <strong>Absolutely NOT.</strong> We never use recycled tire
-                  rubber (crumb rubber) in residential installations.
+                  The infill for a project should be named in the written
+                  proposal.
                 </p>
-                <p>We only use safe, natural infills:</p>
-                <ul>
-                  <li>
-                    <strong>Silica Sand:</strong> Clean, rounded sand for weight
-                    and blade support.
-                  </li>
-                  <li>
-                    <strong>ZeoFill (Zeolite):</strong> A natural volcanic
-                    mineral that neutralizes odours (perfect for pets).
-                  </li>
-                  <li>
-                    <strong>Envirofill:</strong> Acrylic-coated sand with
-                    Microban antimicrobial protection.
-                  </li>
-                </ul>
+                <p>Ask for the exact product specification and current
+                  manufacturer documentation so you can confirm the material
+                  and decide whether it suits the intended residential use.</p>
               </div>
             </div>
           </div>
@@ -2052,13 +1990,14 @@
             <div class="faq-accordion__content">
               <div class="faq-accordion__answer">
                 <p>
-                  <strong>Yes.</strong> We exclusively source turf from
-                  manufacturers that certify their products as PFAS-free.
+                  We do not publish a blanket PFAS-free guarantee for every
+                  possible product without current documentation for the exact
+                  SKU.
                 </p>
                 <p>
-                  We understand the concern around "forever chemicals" and
-                  ensure our supply chain meets the highest safety standards for
-                  residential use in Canada.
+                  Ask for the latest manufacturer declaration or test
+                  documentation associated with the turf proposed for your
+                  project.
                 </p>
               </div>
             </div>
@@ -2074,15 +2013,13 @@
             <div class="faq-accordion__content">
               <div class="faq-accordion__answer">
                 <p>
-                  While synthetic turf can warm up in direct sunlight, our
-                  high-quality turf features "CoolBlade" technology that
-                  reflects UV rays.
+                  Artificial turf can become hot enough to be uncomfortable or
+                  unsafe for paws in direct sun.
                 </p>
                 <p>
-                  <strong>Safety Tip:</strong> On extremely hot days
-                  (30&deg;C+), simply spray the turf with a hose for 10 seconds.
-                  Evaporative cooling instantly drops the surface temperature by
-                  10-15 degrees for hours.
+                  Test the surface with your hand, provide shade, limit use
+                  during peak heat, and follow veterinary heat-safety guidance.
+                  Water may provide only temporary cooling.
                 </p>
               </div>
             </div>
@@ -2110,8 +2047,7 @@
         <div class="faq-accordion__content">
           <div class="faq-accordion__answer">
             <p>
-              Quality artificial turf typically lasts 15-25 years with proper
-              care. The lifespan depends on:
+              Service life varies. Relevant factors include:
             </p>
             <ul>
               <li>Amount of foot traffic</li>
@@ -2120,8 +2056,9 @@
               <li>Basic maintenance</li>
             </ul>
             <p>
-              Our products are designed for Canadian climates and come with a
-              15-year manufacturer warranty.
+              Review the manufacturer's current product and warranty
+              documentation for the exact SKU in your proposal rather than
+              relying on a universal lifespan.
             </p>
           </div>
         </div>
@@ -2136,16 +2073,16 @@
         </button>
         <div class="faq-accordion__content">
           <div class="faq-accordion__answer">
-            <p>Yes! Our turf is specifically chosen for Canadian climates:</p>
+            <p>A GTA installation should account for:</p>
             <ul>
-              <li>Handles freeze-thaw cycles without damage</li>
-              <li>Snow can be shoveled or left to melt naturally</li>
-              <li>Drains properly even after ice and snow</li>
-              <li>UV-resistant to prevent fading</li>
+              <li>Freeze-thaw movement and base preparation</li>
+              <li>Grading, drainage, snow, and ice</li>
+              <li>The selected product's temperature limitations</li>
+              <li>Care methods that do not damage fibres or edges</li>
             </ul>
             <p>
-              Many customers find their turf looks better than natural grass in
-              spring because there's no brown thatch or dead spots.
+              Performance is site- and system-specific, so these factors should
+              be addressed in the proposal rather than guaranteed generally.
             </p>
           </div>
         </div>
@@ -2153,23 +2090,20 @@
       <div class="faq-accordion__item">
         <button class="faq-accordion__header">
           <span class="faq-accordion__question"
-            >What exactly does your 15-year artificial turf warranty
-            cover?</span
+            >How do product and workmanship warranties work?</span
           >
           <i class="faq-accordion__icon" data-lucide="chevron-down"></i>
         </button>
         <div class="faq-accordion__content">
           <div class="faq-accordion__answer">
-            <p>Our 15-year manufacturer warranty covers:</p>
-            <ul>
-              <li>UV degradation and fading</li>
-              <li>Fiber deterioration</li>
-              <li>Backing separation</li>
-              <li>Material defects</li>
-            </ul>
             <p>
-              We also stand behind our installation work. If there's ever an
-              issue related to how we installed your turf, we'll make it right.
+              Manufacturer product coverage and YardGuard workmanship terms are
+              separate. The exact duration, defects, exclusions, maintenance
+              duties, remedies, and claims process are governed by the written
+              documents supplied for the selected product and contracted
+              installation. See our
+              <a href="warranty.html">warranty information page</a> for the
+              documentation process.
             </p>
           </div>
         </div>
@@ -2226,11 +2160,11 @@
         <div class="faq-final-cta__content">
           <h2 class="faq-final-cta__headline">Ready to Transform Your Yard?</h2>
           <p class="faq-final-cta__description">
-            Get your free design visualization and see exactly what your yard
-            will look like before we start.
+            Start with a site consultation and receive a clear, itemized
+            proposal for your property.
           </p>
-          <a class="btn-primary faq-final-cta__button" href="quote.html"
-            >Get Your Free Design Visualization</a
+          <a class="btn-primary faq-final-cta__button" href="quote.html?source=faq"
+            >Request a Free Consultation</a
           >
           <p class="faq-final-cta__phone">
             or call <a href="tel:+16472167787">(647) 216-7787</a>
@@ -2318,19 +2252,7 @@
       </a>
       <a class="mobile-sticky-cta__quote" href="quote.html">Get Free Quote</a>
     </div>
-    <!-- Initialize Lucide Icons -->
-    <script>
-      if (window.lucide) { lucide.createIcons(); }
-      // FAQ nav active state
-      document.querySelectorAll(".faq-nav__link").forEach((link) => {
-        link.addEventListener("click", (e) => {
-          document
-            .querySelectorAll(".faq-nav__link")
-            .forEach((l) => l.classList.remove("active"));
-          link.classList.add("active");
-        });
-      });
-    </script>
+    <!-- Initialize shared interactions and icons -->
   <script src="assets/js/main.js" type="module"></script>
 </body>
 </html>

@@ -1,16 +1,39 @@
+import {
+    ArrowLeft, ArrowRight, Award, BadgeCheck, Calendar, CalendarCheck, Check, CheckCircle,
+    ChevronDown, Circle, Clock, Cuboid as Cube, DollarSign, Share2 as Facebook, FileText, Globe, Hammer, HardHat,
+    HelpCircle, Camera as Instagram, Leaf, Lightbulb, Lock, Mail, MapPin, MessageCircle, MessageSquare,
+    Palette, PawPrint, Phone, Ruler, Scale, Settings, Shield, ShieldCheck, Sparkles, Star, ThumbsUp,
+    createIcons,
+} from 'lucide';
+import '../css/accessibility.css';
+
+const siteIcons = {
+    ArrowLeft, ArrowRight, Award, BadgeCheck, Calendar, CalendarCheck, Check, CheckCircle,
+    ChevronDown, Circle, Clock, Cube, DollarSign, Facebook, FileText, Globe, Hammer, HardHat,
+    HelpCircle, Instagram, Leaf, Lightbulb, Lock, Mail, MapPin, MessageCircle, MessageSquare,
+    Palette, PawPrint, Phone, Ruler, Scale, Settings, Shield, ShieldCheck, Sparkles, Star, ThumbsUp,
+};
+
+function renderIcons(root = document) {
+    createIcons({ icons: siteIcons, root });
+}
+
+// Temporary compatibility for form states that insert new icon placeholders.
+window.lucide = { createIcons: ({ root = document } = {}) => renderIcons(root) };
+
 function initMain() {
-    if (window.lucide) {
-        try {
-            window.lucide.createIcons();
-        } catch (error) {
-            console.error('Icon rendering error:', error);
-        }
+    try {
+        renderIcons();
+    } catch (error) {
+        console.error('Icon rendering error:', error);
     }
 
     initSlider();
+    initGallerySliders();
     initAccordions();
     initMobileMenu();
-    initAnalytics();
+    initAccessibleIconLinks();
+    initFaqNavigation();
 }
 
 if (document.readyState === 'loading') {
@@ -31,11 +54,19 @@ function initSlider() {
     let percentage = 50;
     let dragging = false;
 
+    handle.setAttribute('role', 'slider');
+    handle.setAttribute('tabindex', '0');
+    handle.setAttribute('aria-label', handle.getAttribute('aria-label') || 'Before and after image comparison');
+    handle.setAttribute('aria-valuemin', '0');
+    handle.setAttribute('aria-valuemax', '100');
+    slider.style.touchAction = 'pan-y';
+
     function setPosition(nextPercentage) {
         percentage = Math.min(100, Math.max(0, nextPercentage));
         beforeImage.style.clipPath = `polygon(0 0, ${percentage}% 0, ${percentage}% 100%, 0 100%)`;
         handle.style.left = `${percentage}%`;
         handle.setAttribute('aria-valuenow', String(Math.round(percentage)));
+        handle.setAttribute('aria-valuetext', `${Math.round(percentage)}% before image`);
     }
 
     function setPositionFromPointer(clientX) {
@@ -80,6 +111,75 @@ function initSlider() {
         event.preventDefault();
         setPosition(controls[event.key]);
     });
+
+    setPosition(percentage);
+}
+
+function initGallerySliders() {
+    document.querySelectorAll('.gallery-card').forEach((card, index) => {
+        const imageContainer = card.querySelector('.gallery-card__image');
+        const beforeImage = imageContainer?.querySelector('.gallery-card__before');
+        const handle = imageContainer?.querySelector('.gallery-card__slider');
+        if (!imageContainer || !beforeImage || !handle) return;
+
+        let percentage = 50;
+        let dragging = false;
+        const title = card.querySelector('.gallery-card__title')?.textContent.trim() || `project ${index + 1}`;
+
+        handle.setAttribute('role', 'slider');
+        handle.setAttribute('tabindex', '0');
+        handle.setAttribute('aria-label', `Before and after comparison for ${title}`);
+        handle.setAttribute('aria-valuemin', '0');
+        handle.setAttribute('aria-valuemax', '100');
+        handle.style.pointerEvents = 'auto';
+        handle.style.touchAction = 'pan-y';
+        imageContainer.style.touchAction = 'pan-y';
+
+        const setPosition = (nextPercentage) => {
+            percentage = Math.min(100, Math.max(0, nextPercentage));
+            beforeImage.style.clipPath = `polygon(0 0, ${percentage}% 0, ${percentage}% 100%, 0 100%)`;
+            handle.style.left = `${percentage}%`;
+            handle.setAttribute('aria-valuenow', String(Math.round(percentage)));
+            handle.setAttribute('aria-valuetext', `${Math.round(percentage)}% before image`);
+        };
+
+        const setPositionFromPointer = (clientX) => {
+            const bounds = imageContainer.getBoundingClientRect();
+            if (!bounds.width) return;
+            setPosition(((clientX - bounds.left) / bounds.width) * 100);
+        };
+
+        handle.addEventListener('pointerdown', (event) => {
+            dragging = true;
+            handle.setPointerCapture?.(event.pointerId);
+            setPositionFromPointer(event.clientX);
+        });
+        handle.addEventListener('pointermove', (event) => {
+            if (dragging) setPositionFromPointer(event.clientX);
+        });
+        const stopDragging = () => { dragging = false; };
+        handle.addEventListener('pointerup', stopDragging);
+        handle.addEventListener('pointercancel', stopDragging);
+        imageContainer.addEventListener('click', (event) => {
+            if (!event.target.closest('a, button')) setPositionFromPointer(event.clientX);
+        });
+        handle.addEventListener('keydown', (event) => {
+            const step = event.shiftKey ? 10 : 2;
+            const controls = {
+                ArrowLeft: percentage - step,
+                ArrowDown: percentage - step,
+                ArrowRight: percentage + step,
+                ArrowUp: percentage + step,
+                Home: 0,
+                End: 100,
+            };
+            if (controls[event.key] === undefined) return;
+            event.preventDefault();
+            setPosition(controls[event.key]);
+        });
+
+        setPosition(percentage);
+    });
 }
 
 function initAccordions() {
@@ -99,22 +199,96 @@ function initAccordions() {
         header.setAttribute('aria-controls', contentId);
         const initiallyOpen = item.classList.contains('active');
         header.setAttribute('aria-expanded', String(initiallyOpen));
+        content.hidden = !initiallyOpen;
         content.style.maxHeight = initiallyOpen ? `${content.scrollHeight}px` : '0px';
 
         header.addEventListener('click', () => {
             const willOpen = !item.classList.contains('active');
             item.classList.toggle('active', willOpen);
             header.setAttribute('aria-expanded', String(willOpen));
-            content.style.maxHeight = willOpen ? `${content.scrollHeight}px` : '0px';
-
-            if (willOpen && typeof window.gtag === 'function') {
-                window.gtag('event', 'accordion_expand', {
-                    event_category: 'Engagement',
-                    event_label: header.innerText.trim(),
+            if (willOpen) {
+                content.hidden = false;
+                content.style.maxHeight = '0px';
+                requestAnimationFrame(() => {
+                    content.style.maxHeight = `${content.scrollHeight}px`;
                 });
+            } else {
+                content.style.maxHeight = '0px';
+                content.hidden = true;
             }
+
         });
     });
+}
+
+function initAccessibleIconLinks() {
+    const labels = [
+        ['facebook.com', 'YardGuard on Facebook'],
+        ['instagram.com', 'YardGuard on Instagram'],
+        ['ygtoronto.com', 'YardGuard website'],
+    ];
+
+    document.querySelectorAll('a.footer__social-link').forEach((link) => {
+        if (link.hasAttribute('aria-label') || link.textContent.trim()) return;
+        const match = labels.find(([host]) => link.href.includes(host));
+        link.setAttribute('aria-label', match?.[1] || 'YardGuard social profile');
+    });
+}
+
+function initFaqNavigation() {
+    const links = [...document.querySelectorAll('.faq-nav__link[href^="#"]')];
+    if (!links.length) return;
+
+    const sections = links
+        .map((link) => document.querySelector(link.getAttribute('href')))
+        .filter(Boolean);
+
+    const setActive = (sectionId, updateHash = false) => {
+        const activeLink = links.find((link) => link.hash === `#${sectionId}`);
+        if (!activeLink) return;
+
+        links.forEach((link) => {
+            const isActive = link === activeLink;
+            link.classList.toggle('active', isActive);
+            if (isActive) link.setAttribute('aria-current', 'location');
+            else link.removeAttribute('aria-current');
+        });
+
+        if (window.innerWidth <= 767) {
+            activeLink.scrollIntoView({
+                behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+                block: 'nearest',
+                inline: 'center',
+            });
+        }
+
+        if (updateHash && window.location.hash !== activeLink.hash) {
+            history.replaceState(null, '', activeLink.hash);
+        }
+    };
+
+    links.forEach((link) => {
+        link.addEventListener('click', () => setActive(link.hash.slice(1)));
+    });
+
+    const initialId = sections.some((section) => `#${section.id}` === window.location.hash)
+        ? window.location.hash.slice(1)
+        : sections[0]?.id;
+    if (initialId) setActive(initialId);
+
+    window.addEventListener('hashchange', () => {
+        if (window.location.hash) setActive(window.location.hash.slice(1));
+    });
+
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            const visible = entries
+                .filter((entry) => entry.isIntersecting)
+                .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+            if (visible) setActive(visible.target.id, true);
+        }, { rootMargin: '-20% 0px -65% 0px', threshold: [0, 0.1, 0.5] });
+        sections.forEach((section) => observer.observe(section));
+    }
 }
 
 function initMobileMenu() {
@@ -150,27 +324,5 @@ function initMobileMenu() {
 
     window.addEventListener('resize', () => {
         if (window.innerWidth > 1023) setOpen(false);
-    });
-}
-
-function initAnalytics() {
-    document.querySelectorAll('.problem-card').forEach((card) => {
-        card.addEventListener('click', () => {
-            if (typeof window.gtag !== 'function') return;
-            window.gtag('event', 'click_problem_card', {
-                event_category: 'Engagement',
-                event_label: card.querySelector('.problem-card__title')?.innerText || 'Unknown Problem',
-            });
-        });
-    });
-
-    document.querySelectorAll('a[href^="tel:"]').forEach((link) => {
-        link.addEventListener('click', () => {
-            if (typeof window.gtag !== 'function') return;
-            window.gtag('event', 'click_to_call', {
-                event_category: 'Leads',
-                event_label: link.href,
-            });
-        });
     });
 }

@@ -5,9 +5,9 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Get a Free Quote | Free Design Visualization | Yard Guard Mississauga</title>
+  <title>Get a Free Artificial Turf Quote | Yard Guard Mississauga</title>
   <meta
-    content="Request your free artificial turf quote and design visualization. See your backyard transformed before we start. Serving Mississauga &amp; GTA. No obligation."
+    content="Request a free artificial turf consultation and itemized quote from Yard Guard. Serving Mississauga and the GTA with no obligation."
     name="description" />
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com?display=swap" rel="preconnect" />
@@ -16,7 +16,6 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap"
     rel="stylesheet" />
   <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@0.263.1"></script>
   <style>
     /* ========================================
        CSS RESET & BASE
@@ -446,6 +445,20 @@
       margin-top: 6px;
     }
 
+    .form-status {
+      margin-bottom: 24px;
+      padding: 14px 16px;
+      color: #8b1a1a;
+      background: var(--error-light);
+      border: 2px solid var(--error);
+      border-radius: 8px;
+      font-weight: 600;
+    }
+
+    .form-status:focus-visible {
+      outline-color: var(--error);
+    }
+
     .form-input.error+.form-error,
     .form-select.error+.form-error,
     .form-textarea.error+.form-error {
@@ -510,6 +523,12 @@
 
     .package-option__input:focus+.package-option__label {
       box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+    }
+
+    .package-option__input:focus-visible+.package-option__label,
+    .project-type-option__input:focus-visible+.project-type-option__label {
+      outline: 3px solid var(--primary-green);
+      outline-offset: 3px;
     }
 
     .package-option__title {
@@ -959,6 +978,21 @@
     .skip-link:focus {
       top: 0;
     }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
   </style>
   <script type="application/ld+json">
 {
@@ -966,9 +1000,10 @@
   "@graph": [
     {
       "@type": "Organization",
+      "@id": "https://ygtoronto.com/#organization",
       "name": "Yard Guard Landscaping",
       "url": "https://ygtoronto.com",
-      "logo": "https://static.wixstatic.com/media/e83a48_77d3e37bf7c04f32af25998246892eb8~mv2.png",
+      "logo": "https://ygtoronto.com/logo.webp",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+1-647-216-7787",
@@ -981,8 +1016,9 @@
     },
     {
       "@type": "LocalBusiness",
+      "@id": "https://ygtoronto.com/#organization",
       "name": "Yard Guard Landscaping",
-      "image": "https://ygtoronto.com/images/hero-after.jpg",
+      "image": "https://ygtoronto.com/og.png",
       "telephone": "+1-647-216-7787",
       "address": {
         "@type": "PostalAddress",
@@ -1004,7 +1040,7 @@
     "@type": "ListItem",
     "position": 1,
     "name": "Home",
-    "item": "https://ygtoronto.com/index.html"
+    "item": "https://ygtoronto.com/"
   },{
     "@type": "ListItem",
     "position": 2,
@@ -1016,11 +1052,11 @@
   <meta content="index, follow" name="robots" />
   <link href="https://ygtoronto.com/quote.html" rel="canonical" />
   <link href="https://ygtoronto.com/quote.html" hreflang="en-CA" rel="alternate" />
-  <meta content="Get a Free Quote | Free Design Visualization | Yard Guard Mississauga" property="og:title" />
+  <meta content="Get a Free Artificial Turf Quote | Yard Guard Mississauga" property="og:title" />
   <meta
-    content="Request your free artificial turf quote and design visualization. See your backyard transformed before we start. Serving Mississauga &amp; GTA. No obligation."
+    content="Request a free artificial turf consultation and itemized quote from Yard Guard. Serving Mississauga and the GTA with no obligation."
     property="og:description" />
-  <meta content="https://ygtoronto.com/images/hero-after.jpg" property="og:image" />
+  <meta content="https://ygtoronto.com/og.png" property="og:image" />
   <meta content="https://ygtoronto.com/quote.html" property="og:url" />
   <meta content="#173a21" name="theme-color" />
 </head>
@@ -1062,7 +1098,7 @@
             <a href="index.html">Home</a> &gt; <a href="index.html">Artificial Turf</a> &gt; Get a Quote
           </p>
           <h1 class="quote-form__title">Get Your Free Quote</h1>
-          <p class="quote-form__subtitle">Plus a free design visualization of your transformed yard</p>
+          <p class="quote-form__subtitle">Tell us about your yard and receive a clear, itemized proposal</p>
         </div>
         <!-- Progress Bar -->
         <div aria-label="Quote form progress" class="form-progress" role="list">
@@ -1074,6 +1110,7 @@
             role="listitem"></div>
         </div>
         <form id="quoteForm">
+          <div class="form-status" id="formStatus" role="alert" tabindex="-1" hidden></div>
           <!-- Honeypot: hidden from real users; bots that fill it are rejected -->
           <div style="position:absolute;left:-9999px;top:-9999px;" aria-hidden="true">
             <label>Leave this field empty
@@ -1091,7 +1128,7 @@
                   <input class="package-option__input" id="easy-lawn" name="package" type="radio" value="easy-lawn" />
                   <label class="package-option__label" for="easy-lawn">
                     <div class="package-option__title">Easy Lawn</div>
-                    <div class="package-option__price">$12-14/sq ft</div>
+                    <div class="package-option__price">Itemized site quote</div>
                   </label>
                 </div>
                 <div class="package-option">
@@ -1099,7 +1136,7 @@
                     value="pet-yard" />
                   <label class="package-option__label" for="pet-yard">
                     <div class="package-option__title">Pet Yard</div>
-                    <div class="package-option__price">$14-17/sq ft</div>
+                    <div class="package-option__price">Itemized site quote</div>
                   </label>
                 </div>
                 <div class="package-option">
@@ -1107,7 +1144,7 @@
                     value="golfers-green" />
                   <label class="package-option__label" for="golfers-green">
                     <div class="package-option__title">Golfer's Green</div>
-                    <div class="package-option__price">$22-28/sq ft</div>
+                    <div class="package-option__price">Itemized site quote</div>
                   </label>
                 </div>
                 <div class="package-option">
@@ -1157,11 +1194,6 @@
               </select>
               <p class="form-hint">Don't worry if you're not sure - we'll measure during the consultation</p>
             </div>
-            <div class="form-group" style="display: none;">
-              <label class="form-label" for="yardImage">Upload a photo of your yard (Optional)</label>
-              <input accept="image/*" class="form-input" id="yardImage" multiple="" name="yardImage" type="file" />
-              <p class="form-hint">Upload a photo to see what your yard could look like with artificial turf!</p>
-            </div>
             <div class="form-actions">
               <div></div>
               <button class="btn-primary form-submit" onclick="nextStep(2)" type="button">
@@ -1176,24 +1208,24 @@
             <div class="form-row">
               <div class="form-group">
                 <label class="form-label" for="firstName">First name <span class="required">*</span></label>
-                <input class="form-input" id="firstName" name="firstName" required="" type="text" />
-                <p class="form-error">Please enter your first name</p>
+                <input aria-describedby="firstName-error" autocomplete="given-name" class="form-input" id="firstName" maxlength="80" name="firstName" required="" type="text" />
+                <p class="form-error" id="firstName-error">Please enter your first name</p>
               </div>
               <div class="form-group">
                 <label class="form-label" for="lastName">Last name <span class="required">*</span></label>
-                <input class="form-input" id="lastName" name="lastName" required="" type="text" />
-                <p class="form-error">Please enter your last name</p>
+                <input aria-describedby="lastName-error" autocomplete="family-name" class="form-input" id="lastName" maxlength="80" name="lastName" required="" type="text" />
+                <p class="form-error" id="lastName-error">Please enter your last name</p>
               </div>
             </div>
             <div class="form-group">
               <label class="form-label" for="email">Email address <span class="required">*</span></label>
-              <input class="form-input" id="email" name="email" required="" type="email" />
-              <p class="form-error">Please enter a valid email address</p>
+              <input aria-describedby="email-error" autocomplete="email" class="form-input" id="email" maxlength="254" name="email" required="" type="email" />
+              <p class="form-error" id="email-error">Please enter a valid email address</p>
             </div>
             <div class="form-group">
               <label class="form-label" for="phone">Phone number <span class="required">*</span></label>
-              <input class="form-input" id="phone" name="phone" placeholder="(___) ___-____" required="" type="tel" />
-              <p class="form-error">Please enter your phone number</p>
+              <input aria-describedby="phone-error" autocomplete="tel" class="form-input" id="phone" maxlength="40" name="phone" pattern="[0-9()+. -]{10,40}" placeholder="(___) ___-____" required="" type="tel" />
+              <p class="form-error" id="phone-error">Please enter a valid phone number</p>
             </div>
             <div class="form-actions">
               <button class="form-back" onclick="prevStep(1)" type="button">
@@ -1211,17 +1243,19 @@
             <h2 class="form-step__title">Almost done!</h2>
             <div class="form-group">
               <label class="form-label" for="address">Street address</label>
-              <input class="form-input" id="address" name="address" placeholder="123 Main Street" type="text" />
+              <input autocomplete="street-address" class="form-input" id="address" maxlength="200" name="address" placeholder="123 Main Street" type="text" />
               <p class="form-hint">Helps us prepare for your consultation</p>
             </div>
             <div class="form-row">
               <div class="form-group">
                 <label class="form-label" for="city">City <span class="required">*</span></label>
-                <input class="form-input" id="city" name="city" required="" type="text" value="Mississauga" />
+                <input aria-describedby="city-error" autocomplete="address-level2" class="form-input" id="city" maxlength="100" name="city" required="" type="text" value="Mississauga" />
+                <p class="form-error" id="city-error">Please enter your city</p>
               </div>
               <div class="form-group">
                 <label class="form-label" for="postalCode">Postal code</label>
-                <input class="form-input" id="postalCode" name="postalCode" placeholder="L5A 1A1" type="text" />
+                <input aria-describedby="postalCode-error" autocomplete="postal-code" class="form-input" id="postalCode" maxlength="7" name="postalCode" pattern="[A-Za-z][0-9][A-Za-z][ -]?[0-9][A-Za-z][0-9]" placeholder="L5A 1A1" type="text" />
+                <p class="form-error" id="postalCode-error">Please enter a valid Canadian postal code</p>
               </div>
             </div>
             <div class="form-group">
@@ -1248,7 +1282,7 @@
             </div>
             <div class="form-group">
               <label class="form-label" for="message">Anything else we should know?</label>
-              <textarea class="form-textarea" id="message" name="message"
+              <textarea class="form-textarea" id="message" maxlength="2000" name="message"
                 placeholder="Tell us about your yard, any specific needs, or questions you have..."></textarea>
             </div>
             <div class="form-group">
@@ -1269,7 +1303,7 @@
                 Get My Free Quote <i data-lucide="check" style="width: 18px; height: 18px;"></i>
               </button>
               <p style="margin-top: 16px; font-size: 13px; color: var(--medium-text); text-align: center; width: 100%;">
-                Within 24 hours, a real person will contact you. No robots. No call centres.</p>
+                A YardGuard team member will contact you to discuss the next step.</p>
             </div>
           </div>
         </form>
@@ -1280,7 +1314,7 @@
           </div>
           <h2 class="form-success__title">Thank You!</h2>
           <p class="form-success__message">
-            We've received your request and will be in touch within 24 hours to schedule your free consultation.
+            We've received your request. A YardGuard team member will follow up to discuss your project and consultation.
           </p>
           <div class="form-success__next">
             <h3 class="form-success__next-title">What happens next:</h3>
@@ -1295,7 +1329,7 @@
               </li>
               <li class="form-success__next-item">
                 <i class="icon" data-lucide="check" style="width: 18px; height: 18px;"></i>
-                You'll receive a design visualization and detailed quote
+                We'll confirm the recommended scope and provide an itemized quote
               </li>
             </ul>
           </div>
@@ -1322,7 +1356,7 @@
             <i data-lucide="palette" style="width: 20px; height: 20px;"></i>
           </div>
           <div class="quote-info__text">
-            <strong>Design visualization preview</strong> - See exactly how your yard will look before we start
+            <strong>Project recommendations</strong> - We'll explain the right system and next steps for your yard
           </div>
         </li>
         <li class="quote-info__item">
@@ -1330,7 +1364,7 @@
             <i data-lucide="file-text" style="width: 20px; height: 20px;"></i>
           </div>
           <div class="quote-info__text">
-            <strong>Detailed quote</strong> - Transparent pricing with no hidden fees
+            <strong>Detailed quote</strong> - Included work, assumptions, exclusions, and price documented in writing
           </div>
         </li>
         <li class="quote-info__item">
@@ -1348,7 +1382,7 @@
           style="display: flex; align-items: center; gap: 8px; color: white; text-decoration: underline; font-size: 14px;"
           target="_blank">
           <i data-lucide="file-text" style="width: 16px; height: 16px;"></i>
-          Download Comparison Sheet
+          View Project Comparison Guide
         </a>
       </div>
       <div class="quote-info__contact">
@@ -1362,15 +1396,15 @@
       <div class="quote-trust">
         <div class="quote-trust__item">
           <i data-lucide="award" style="width: 16px; height: 16px;"></i>
-          15+ years experience
+          GTA site consultation
         </div>
         <div class="quote-trust__item">
           <i data-lucide="shield" style="width: 16px; height: 16px;"></i>
-          15-year warranty
+          Written product details
         </div>
         <div class="quote-trust__item">
           <i data-lucide="lock" style="width: 16px; height: 16px;"></i>
-          Price-Lock Guarantee
+          Itemized project scope
         </div>
       </div>
     </aside>
@@ -1430,7 +1464,11 @@
   <!-- Initialize Lucide Icons -->
   <!-- Quote form endpoint: the deployed DigitalOcean Function (public URL; the
        Resend key lives inside the function, never here). Runs before the module. -->
-  <script>window.QUOTE_ENDPOINT = "https://faas-tor1-70ca848e.doserverless.co/api/v1/web/fn-aff51731-f84e-4458-a853-9d679bf3c80e/api/quote";</script>
+  <script>
+    if (location.hostname === "ygtoronto.com" || location.hostname === "www.ygtoronto.com") {
+      window.QUOTE_ENDPOINT = "https://faas-tor1-70ca848e.doserverless.co/api/v1/web/fn-aff51731-f84e-4458-a853-9d679bf3c80e/api/quote";
+    }
+  </script>
   <script src="./src/js/quote-logic.js" type="module"></script>
   <script src="assets/js/main.js" type="module"></script>
 </body>

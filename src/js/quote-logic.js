@@ -10,7 +10,7 @@ window.nextStep = function (targetStep) {
     if (targetStep > currentStep && currentStepEl && !validateStep(currentStepEl)) {
         const firstInvalid = currentStepEl.querySelector(':invalid');
         firstInvalid?.focus();
-        firstInvalid?.reportValidity();
+        showFormStatus('Please correct the highlighted field before continuing.');
         return;
     }
 
@@ -48,7 +48,10 @@ window.nextStep = function (targetStep) {
 
     // Scroll to top
     const formContainer = document.querySelector('.quote-form-container');
-    if (formContainer) formContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (formContainer) {
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        formContainer.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+    }
 }
 
 window.prevStep = function (step) {
@@ -66,16 +69,24 @@ function validateStep(stepEl) {
             input.setAttribute('aria-invalid', 'true');
             // Ensure error message is visible
             const errorMsg = input.parentNode.querySelector('.form-error');
-            if (errorMsg) errorMsg.style.display = 'block';
+            if (errorMsg) errorMsg.hidden = false;
         } else {
             input.classList.remove('error');
             input.removeAttribute('aria-invalid');
             const errorMsg = input.parentNode.querySelector('.form-error');
-            if (errorMsg) errorMsg.style.display = 'none';
+            if (errorMsg) errorMsg.hidden = true;
         }
     });
 
     return isValid;
+}
+
+function showFormStatus(message) {
+    const status = document.getElementById('formStatus');
+    if (!status) return;
+    status.textContent = message;
+    status.hidden = !message;
+    if (message) status.focus();
 }
 
 // Initialize on load
@@ -97,13 +108,18 @@ document.addEventListener('DOMContentLoaded', () => {
         form.addEventListener('submit', handleFormSubmit);
     }
 
+    document.querySelectorAll('.form-error').forEach(errorMsg => {
+        errorMsg.hidden = true;
+    });
+
     // input listener to remove error class on type
     document.querySelectorAll('.form-input, .form-select, .form-textarea').forEach(input => {
         input.addEventListener('input', () => {
             input.classList.remove('error');
             input.removeAttribute('aria-invalid');
             const errorMsg = input.parentNode.querySelector('.form-error');
-            if (errorMsg) errorMsg.style.display = 'none';
+            if (errorMsg) errorMsg.hidden = true;
+            showFormStatus('');
         });
     });
 });
@@ -116,20 +132,37 @@ const QUOTE_ENDPOINT =
     import.meta.env.VITE_QUOTE_ENDPOINT ||
     '/api/quote';
 
+// Keep one key for the lifetime of this form submission. If a network response
+// is lost after the function sent the notification, retrying with the same key
+// lets the server replay the original lead instead of emailing a duplicate.
+let submissionIdempotencyKey = '';
+
+function getSubmissionIdempotencyKey() {
+    if (submissionIdempotencyKey) return submissionIdempotencyKey;
+    if (window.crypto?.randomUUID) submissionIdempotencyKey = window.crypto.randomUUID();
+    else submissionIdempotencyKey = `quote-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+    return submissionIdempotencyKey;
+}
+
 async function handleFormSubmit(e) {
     e.preventDefault();
     const form = e.target;
     const btn = form.querySelector('button[type="submit"]');
     const originalText = btn.innerHTML;
 
-    if (!validateStep(document.querySelector('.form-step.active'))) return;
+    if (!validateStep(document.querySelector('.form-step.active'))) {
+        showFormStatus('Please correct the highlighted field before submitting.');
+        return;
+    }
 
     try {
         btn.innerHTML = 'Sending...';
         btn.disabled = true;
+        showFormStatus('');
 
         // Collect the form fields into a JSON payload for the function.
         const fd = new FormData(form);
+        const submissionParams = new URLSearchParams(window.location.search);
         const payload = {
             firstName: fd.get('firstName') || '',
             lastName: fd.get('lastName') || '',
@@ -144,6 +177,9 @@ async function handleFormSubmit(e) {
             timeline: fd.get('timeline') || '',
             howHeard: fd.get('howHeard') || '',
             message: fd.get('message') || '',
+            lead_source: (submissionParams.get('source') || 'website-quote').slice(0, 80),
+            offer: (submissionParams.get('offer') || '').slice(0, 80),
+            idempotencyKey: getSubmissionIdempotencyKey(),
             'casl-optin': fd.get('casl-optin') ? true : false,
             _gotcha: fd.get('_gotcha') || '', // honeypot
         };
@@ -163,15 +199,6 @@ async function handleFormSubmit(e) {
             throw new Error(message);
         }
 
-        // GA4 Macro-conversion: Lead Generation
-        if (typeof window.gtag === 'function') {
-            gtag('event', 'generate_lead', {
-                'event_category': 'Leads',
-                'event_label': 'Quote Form Submitted',
-                'value': 1
-            });
-        }
-
         // Success State
         form.style.display = 'none';
         document.querySelector('.form-progress').style.display = 'none';
@@ -182,7 +209,7 @@ async function handleFormSubmit(e) {
 
     } catch (error) {
         console.error('Submission Error:', error);
-        alert('Error: ' + error.message);
+        showFormStatus(error.message);
         btn.innerHTML = originalText;
         btn.disabled = false;
     }

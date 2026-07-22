@@ -10,12 +10,12 @@ and **what to update whenever you change something**. Keep this file current.
 | Piece | What it is | Where |
 |---|---|---|
 | **Website** | Vite multi-page **static site** (one `.html` per page) | this repo, built with `npm run build` → `dist/` |
-| **Hosting** | **DigitalOcean App Platform** (static site), fronted by **Cloudflare** | auto-deploys from GitHub `main` |
+| **Hosting** | Sites production project, with the canonical `ygtoronto.com` domain | releases come from the reviewed GitHub `main` SHA; `.openai/hosting.json` stores the project ID |
 | **Quote-form backend** | A **DigitalOcean serverless Function** that emails each lead | `functions/` — deployed separately with `doctl` |
 | **Email delivery** | **Resend** (transactional email API) | key lives in `functions/.env` (never committed) |
 
 **Two separate deploy paths — this is the #1 thing to remember:**
-- **Site content/CSS/JS** → `git push` → App Platform auto-rebuilds ygtoronto.com.
+- **Site content/CSS/JS** → run `./deploy.sh` from a clean, reviewed `main` checkout → CI validates the SHA and the Sites release uses the resulting `dist/` artifact.
 - **The email function** → `cd functions && doctl serverless deploy .` (a git push does **NOT** deploy it).
 
 **Repos:**
@@ -45,15 +45,17 @@ and **what to update whenever you change something**. Keep this file current.
 
 ### ▸ Editing page content, text, styles, or images
 1. Edit the `.html` / `assets/css/style.css` / `assets/js/main.js`.
-2. `npm run build` (optional local check) → **commit & push to `main`**.
-3. App Platform auto-deploys. **Hard-refresh** to see it (Cloudflare caches HTML).
+2. Run `npm test`, `npm run build`, and `npm run test:dist` locally.
+3. Commit and merge through the normal review process, then run `./deploy.sh` from `main`.
+4. The build publishes `dist/deployment.json`, which identifies the source SHA used for the release.
 
 ### ▸ Adding a NEW page
 When you add `newpage.html`, also update:
-- [ ] **`public/sitemap.xml`** — add a `<url>` entry.
-- [ ] **`public/llms.txt`** — add it under the right section with a one-line description.
-- [ ] **Nav + footer links** on the other pages (they're copied per-page).
-- [ ] `vite.config.js` picks up new `.html` files automatically (no change needed).
+- [ ] `config/public-pages.json` — add the reviewed page to the explicit build/test allowlist.
+- [ ] `public/sitemap.xml` — add a `<url>` entry.
+- [ ] `public/llms.txt` — add it under the right section with a one-line description.
+- [ ] Nav + footer links on the other pages (they're copied per-page).
+- [ ] Build and run `npm run test:dist`; do not rely on Vite's automatic root-file discovery.
 
 ### ▸ Changing contact info (phone / email / address)
 Contact details appear on **every page's footer** and in **JSON-LD schema**. Update:
@@ -91,8 +93,7 @@ These control the actual lead emails and live in the **function**, not the site:
 
 **Deploy the site (content/CSS/JS):**
 ```bash
-git add -A && git commit -m "..." && git push origin main
-# optional: also push to test repo →  git push ygtest main
+./deploy.sh
 ```
 
 **Deploy the email function (after editing anything in functions/):**

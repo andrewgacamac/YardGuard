@@ -14,7 +14,6 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
 <!-- Lucide Icons -->
-<script src="https://unpkg.com/lucide@0.263.1"></script>
 <style>
       /* ========================================
        CSS RESET & BASE
@@ -529,8 +528,9 @@
         /* Always visible */
         transition: none;
         /* Remove transition for instant drag response */
-        pointer-events: none;
-        /* Let clicks pass through */
+        pointer-events: auto;
+        cursor: ew-resize;
+        touch-action: pan-y;
       }
 
       /* REMOVED HOVER OPACITY
@@ -550,6 +550,11 @@
         background: white;
         border-radius: 50%;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      .gallery-card__slider:focus-visible::before {
+        outline: 3px solid var(--primary-green);
+        outline-offset: 3px;
       }
 
       .gallery-card__content {
@@ -1086,9 +1091,10 @@
         "@graph": [
           {
             "@type": "Organization",
+      "@id": "https://ygtoronto.com/#organization",
             "name": "Yard Guard Landscaping",
             "url": "https://ygtoronto.com",
-            "logo": "https://static.wixstatic.com/media/e83a48_77d3e37bf7c04f32af25998246892eb8~mv2.png",
+            "logo": "https://ygtoronto.com/logo.webp",
             "contactPoint": {
               "@type": "ContactPoint",
               "telephone": "+1-647-216-7787",
@@ -1101,8 +1107,9 @@
           },
           {
             "@type": "LocalBusiness",
+      "@id": "https://ygtoronto.com/#organization",
             "name": "Yard Guard Landscaping",
-            "image": "https://ygtoronto.com/images/hero-after.jpg",
+            "image": "https://ygtoronto.com/og.png",
             "telephone": "+1-647-216-7787",
             "address": {
               "@type": "PostalAddress",
@@ -1134,7 +1141,7 @@
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://ygtoronto.com/index.html"
+            "item": "https://ygtoronto.com/"
           },
           {
             "@type": "ListItem",
@@ -1150,17 +1157,9 @@
 <link href="https://ygtoronto.com/gallery.html" hreflang="en-CA" rel="alternate"/>
 <meta content="Artificial Turf Gallery | Before &amp; After Photos | Yard Guard Mississauga" property="og:title"/>
 <meta content="Browse our portfolio of artificial turf installations in Mississauga &amp; GTA. See real before/after transformations of pet yards, putting greens, and lawn replacements." property="og:description"/>
-<meta content="https://ygtoronto.com/images/hero-after.jpg" property="og:image"/>
+<meta content="https://ygtoronto.com/og.png" property="og:image"/>
 <meta content="https://ygtoronto.com/gallery.html" property="og:url"/>
 
-<!-- Google tag (gtag.js) stub for GA4 Event Tracking -->
-<script async="" id="ga4-tracking" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-</script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -1278,7 +1277,6 @@
 </div>
 <div class="featured-project__cta">
 <a class="btn-primary" href="quote.html">Get Similar Quote</a>
-<button class="btn-secondary">View Full Story</button>
 </div>
 </div>
 </div>
@@ -1366,8 +1364,8 @@
                   grass and dragging mud indoors.
                 </p>
 <p style="color: #2e7d32">
-<strong>Solution:</strong> Pet Yard package with antimicrobial
-                  infill and rapid drainage.
+<strong>Solution:</strong> Pet-area system planned around the
+                  site's drainage and cleaning needs.
                 </p>
 </div>
 <div class="gallery-card__meta">
@@ -1430,30 +1428,6 @@
                   5 days
                 </span>
 </div>
-</div>
-</div>
-<!-- Testimonial -->
-<div class="gallery-testimonial">
-<div class="gallery-testimonial__photo">
-<i data-lucide="user"></i>
-</div>
-<div class="gallery-testimonial__content">
-<div class="gallery-testimonial__stars">
-<span class="gallery-testimonial__star">&starf;</span>
-<span class="gallery-testimonial__star">&starf;</span>
-<span class="gallery-testimonial__star">&starf;</span>
-<span class="gallery-testimonial__star">&starf;</span>
-<span class="gallery-testimonial__star">&starf;</span>
-</div>
-<p class="gallery-testimonial__quote">
-                "The design visualization was so accurate! When they finished,
-                it looked exactly like what we approved. Our kids are out there
-                every day now."
-              </p>
-<p class="gallery-testimonial__author">Jennifer &amp; Mark T.</p>
-<p class="gallery-testimonial__location">
-                Streetsville, Mississauga
-              </p>
 </div>
 </div>
 <!-- Gallery Card 4 -->
@@ -1540,8 +1514,8 @@
                   grass and dragging mud indoors.
                 </p>
 <p style="color: #2e7d32">
-<strong>Solution:</strong> Pet Yard package with antimicrobial
-                  infill and rapid drainage.
+<strong>Solution:</strong> Pet-area system planned around the
+                  site's drainage and cleaning needs.
                 </p>
 </div>
 <div class="gallery-card__meta">
@@ -1710,18 +1684,17 @@
 </section>
 <!-- Load More -->
 <section class="gallery-load-more">
-<p class="gallery-load-more__text">Showing 10 of 50+ projects</p>
-<button class="btn-secondary">Load More Projects</button>
+<p class="gallery-load-more__text">Showing the currently published project selection.</p>
 </section>
 <!-- CTA Section -->
 <section class="gallery-cta">
 <div class="gallery-cta__content">
 <h2 class="gallery-cta__headline">Ready to See Your Yard Here?</h2>
 <p class="gallery-cta__description">
-            Get a free design visualization and see exactly how your backyard
-            will look before we break ground.
+            Start with a property consultation and an itemized proposal for
+            your yard.
           </p>
-<a class="btn-primary gallery-cta__button" href="quote.html">Get Your Free Design Visualization</a>
+<a class="btn-primary gallery-cta__button" href="quote.html?source=gallery">Request a Free Consultation</a>
 </div>
 </section>
 <!-- Footer -->
@@ -1787,62 +1760,7 @@
       </a>
 <a class="mobile-sticky-cta__quote" href="quote.html">Get Free Quote</a>
 </div>
-<!-- Initialize Lucide Icons -->
-<script>
-      if (window.lucide) { lucide.createIcons(); }
-      // Interactive Gallery Cards Slider
-      function initGallerySliders() {
-        const cards = document.querySelectorAll(".gallery-card");
-
-        cards.forEach((card) => {
-          const imageContainer = card.querySelector(".gallery-card__image");
-          if (!imageContainer) return;
-
-          const beforeImage = imageContainer.querySelector(
-            ".gallery-card__before",
-          );
-          const slider = imageContainer.querySelector(".gallery-card__slider");
-          if (!beforeImage || !slider) return;
-
-          // Force initial state (50%)
-          beforeImage.style.clipPath = "polygon(0 0, 50% 0, 50% 100%, 0 100%)";
-          slider.style.opacity = "1";
-          slider.style.left = "50%";
-
-          function updateSlider(x) {
-            const rect = imageContainer.getBoundingClientRect();
-            let offsetX = x - rect.left;
-
-            if (offsetX < 0) offsetX = 0;
-            if (offsetX > rect.width) offsetX = rect.width;
-
-            const percentage = (offsetX / rect.width) * 100;
-
-            beforeImage.style.clipPath = `polygon(0 0, ${percentage}% 0, ${percentage}% 100%, 0 100%)`;
-            slider.style.left = `${percentage}%`;
-          }
-
-          imageContainer.addEventListener("mousemove", (e) => {
-            updateSlider(e.clientX);
-          });
-
-          imageContainer.addEventListener("touchmove", (e) => {
-            updateSlider(e.touches[0].clientX);
-            e.preventDefault();
-          });
-
-          imageContainer.addEventListener("click", (e) => {
-            updateSlider(e.clientX);
-          });
-        });
-      }
-
-      if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", initGallerySliders);
-      } else {
-        initGallerySliders();
-      }
-    </script>
+<!-- Initialize shared interactions and icons -->
 <script>
       document.addEventListener("DOMContentLoaded", () => {
         const filterBtns = document.querySelectorAll(".filter-btn");
@@ -1851,14 +1769,6 @@
         filterBtns.forEach((btn) => {
           btn.addEventListener("click", () => {
             const filterValue = btn.getAttribute("data-filter");
-
-            // Analytics tracking for micro-conversion
-            if (typeof window.gtag === "function") {
-              window.gtag("event", "gallery_filter", {
-                event_category: "Engagement",
-                event_label: filterValue,
-              });
-            }
 
             // UI Active State
             filterBtns.forEach((b) => b.classList.remove("active"));

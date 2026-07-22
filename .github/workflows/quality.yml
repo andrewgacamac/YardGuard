@@ -1,0 +1,46 @@
+name: Website quality
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: '0 13 1 * *'
+  workflow_dispatch:
+
+concurrency:
+  group: yardguard-quality-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: npm
+      - run: npm ci
+      - run: npm run audit
+      - name: Build the exact workflow SHA
+        run: npm run build
+        env:
+          YARDGUARD_COMMIT_SHA: ${{ github.sha }}
+      - run: npm run test:dist
+      - run: npm run test:performance
+        env:
+          YARDGUARD_EXPECTED_COMMIT_SHA: ${{ github.sha }}
+      - run: npm test
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:browser
+      - name: Upload validated build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: yardguard-dist-${{ github.sha }}
+          path: dist/
+          if-no-files-found: error
+          retention-days: 14

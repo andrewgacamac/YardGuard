@@ -25,13 +25,24 @@ tmp/
 .agent/
 .env
 .env.local
+.env.*
+!**/.env.example
 security/
 
 # Build
 dist/
+test-results/
+playwright-report/
 
-# Local Debug Scripts
+# Local Debug / Database Administration Scripts
+debug_*.js
 debug_*.mjs
+debug_*.html
+fix_db*.js
+fix_quote.js
+get_columns.js
+openapi.json
+supabase/.temp/
 fix_supabase_*.sql
 FRONTEND_PROMPT.md
 NewArch/

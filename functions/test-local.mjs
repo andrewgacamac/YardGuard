@@ -1,10 +1,13 @@
 // Local test harness for the DO Function handler (no doctl needed).
-// Run:  node --env-file=.env test-local.mjs
+// Run: node functions/test-local.mjs
 // It invokes main() the same way DigitalOcean would (fields merged into args).
 
 import { createRequire } from 'node:module';
 const require = createRequire(import.meta.url);
 const { main } = require('./packages/api/quote/index.js');
+process.env.RESEND_API_KEY = 'local-test-key';
+process.env.LEAD_NOTIFY_EMAIL = 'local@example.invalid';
+globalThis.fetch = async () => ({ ok: true, status: 200, text: async () => '' });
 
 const cases = [
   {
@@ -16,7 +19,7 @@ const cases = [
     args: { __ow_method: 'post', firstName: 'Test', lastName: 'User', email: 't@e.com' },
   },
   {
-    name: 'valid lead -> sends real email',
+    name: 'valid lead -> mocked email only',
     args: {
       __ow_method: 'post',
       firstName: 'Jane', lastName: 'Homeowner', email: 'jane@example.com', phone: '6475551234',

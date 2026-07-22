@@ -10,7 +10,7 @@ packages:
     functions:
       - name: quote
         binary: false
-        runtime: 'nodejs:18'
+        runtime: 'nodejs:24'
         web: true
         webSecure: false
         parameters: {}
@@ -19,6 +19,8 @@ packages:
           LEAD_NOTIFY_EMAIL: "${LEAD_NOTIFY_EMAIL}"
           FROM_EMAIL: "${FROM_EMAIL}"
           ALLOWED_ORIGIN: "${ALLOWED_ORIGIN}"
+          QUOTE_RATE_LIMIT_MAX: "${QUOTE_RATE_LIMIT_MAX}"
+          QUOTE_RATE_LIMIT_WINDOW_MS: "${QUOTE_RATE_LIMIT_WINDOW_MS}"
           # BCC = blind copy (hidden from other recipients); set in .env.
           LEAD_BCC_EMAIL: "${LEAD_BCC_EMAIL}"
           # CC = visible copy. Empty by default (doctl can't substitute an empty
