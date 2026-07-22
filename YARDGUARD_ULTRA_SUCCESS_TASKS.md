@@ -284,7 +284,7 @@ This document converts the July 2026 read-only website audit into an actionable 
 - [x] Pinned the project, `.nvmrc`, type definitions, and lockfile to Node.js 22.22.2 LTS, the newest Node 22 security release listed in that exact buildpack inventory.
 - [x] Regenerated the dependency lockfile with Node.js 22.22.2 and its bundled npm 10.9.7 so a clean `npm ci` succeeds in the deployment runtime.
 - [x] Reproduced the install, post-install build, 19 integrity/unit tests, 41-page production build, distribution verification, and performance budgets using the exact deployment runtime.
-- [ ] Push the buildpack-compatible runtime correction to GitHub `main` and confirm the replacement DigitalOcean deployment succeeds.
+- [x] Pushed the buildpack-compatible runtime correction to GitHub `main`; the GitHub quality workflow passed, DigitalOcean served the new 41-page build, and the production smoke test passed.
 
 ## P0 — Immediate Security, Legal, and Lead Protection
 
