@@ -100,9 +100,9 @@ This document converts the July 2026 read-only website audit into an actionable 
 - Upgraded the build system from Vite 7.3.1 to exact Vite 8.1.5, replacing the vulnerable Rollup/esbuild chain with the current Rolldown-based toolchain and patched Picomatch and PostCSS releases.
 - Removed the unused PostgreSQL client dependency left behind by the retired Supabase integration.
 - Moved the DigitalOcean function runtime from Node.js 18 to Node.js 24 and added compatibility for both current DigitalOcean HTTP events and legacy OpenWhisk request fields.
-- Pinned the deployable Node.js 22.23.1 LTS release through `.nvmrc` and `package.json`, and aligned the Node type definitions.
+- Pinned the deployable Node.js 22.22.2 LTS release through `.nvmrc` and `package.json`, and aligned the Node type definitions.
 - Verified the official Node.js and DigitalOcean runtime support documentation on July 21, 2026.
-- Verified zero dependency vulnerabilities, six mocked quote API tests, the full production build, and diff formatting; the release checks also pass specifically under Node.js 22.23.1 LTS.
+- Verified zero dependency vulnerabilities, six mocked quote API tests, the full production build, and diff formatting; the release checks also pass specifically under Node.js 22.22.2 LTS.
 
 ### Batch 11 — Lead-Path Accessibility and FAQ Navigation (July 21, 2026)
 
@@ -280,10 +280,11 @@ This document converts the July 2026 read-only website audit into an actionable 
 ### Batch 24 — DigitalOcean Build Recovery (July 22, 2026)
 
 - [x] Confirmed from the failed build log that DigitalOcean could not resolve the unpublished Node.js requirement `>=24.18.0 <25` and stopped before dependency installation.
-- [x] Pinned the project, `.nvmrc`, type definitions, and lockfile to the published Node.js 22.23.1 LTS runtime supported by the platform buildpack.
-- [x] Regenerated the dependency lockfile with Node.js 22.23.1 and npm 10.9.8 so a clean `npm ci` succeeds in the deployment runtime.
+- [x] Confirmed the follow-up failure occurred because DigitalOcean's `heroku/nodejs` v342 buildpack inventory predates Node.js 22.23.1, even though that release is published upstream.
+- [x] Pinned the project, `.nvmrc`, type definitions, and lockfile to Node.js 22.22.2 LTS, the newest Node 22 security release listed in that exact buildpack inventory.
+- [x] Regenerated the dependency lockfile with Node.js 22.22.2 and its bundled npm 10.9.7 so a clean `npm ci` succeeds in the deployment runtime.
 - [x] Reproduced the install, post-install build, 19 integrity/unit tests, 41-page production build, distribution verification, and performance budgets using the exact deployment runtime.
-- [ ] Push the runtime correction to GitHub `main` and confirm the replacement DigitalOcean deployment succeeds.
+- [ ] Push the buildpack-compatible runtime correction to GitHub `main` and confirm the replacement DigitalOcean deployment succeeds.
 
 ## P0 — Immediate Security, Legal, and Lead Protection
 
