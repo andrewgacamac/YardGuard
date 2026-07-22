@@ -51,6 +51,8 @@ function initSlider() {
     const handle = slider.querySelector('.hero__slider-handle');
     if (!beforeImage || !handle) return;
 
+    const surface = slider.closest('.hero') || slider;
+
     let percentage = 50;
     let dragging = false;
 
@@ -59,7 +61,11 @@ function initSlider() {
     handle.setAttribute('aria-label', handle.getAttribute('aria-label') || 'Before and after image comparison');
     handle.setAttribute('aria-valuemin', '0');
     handle.setAttribute('aria-valuemax', '100');
+    handle.setAttribute('aria-orientation', 'horizontal');
     slider.style.touchAction = 'pan-y';
+    slider.querySelectorAll('.hero__image').forEach((image) => {
+        image.draggable = false;
+    });
 
     function setPosition(nextPercentage) {
         percentage = Math.min(100, Math.max(0, nextPercentage));
@@ -75,15 +81,17 @@ function initSlider() {
         setPosition(((clientX - bounds.left) / bounds.width) * 100);
     }
 
-    slider.addEventListener('pointerdown', (event) => {
-        if (event.target.closest('a, button')) return;
+    surface.addEventListener('pointerdown', (event) => {
+        if (!(event.target instanceof Element)) return;
+        if (event.target.closest('a, button, input, select, textarea, summary, [contenteditable="true"], .trust-bar')) return;
+        if (event.pointerType === 'mouse') event.preventDefault();
         dragging = true;
-        slider.setPointerCapture?.(event.pointerId);
+        surface.setPointerCapture?.(event.pointerId);
         slider.classList.add('active');
         setPositionFromPointer(event.clientX);
     });
 
-    slider.addEventListener('pointermove', (event) => {
+    surface.addEventListener('pointermove', (event) => {
         if (!dragging) return;
         setPositionFromPointer(event.clientX);
     });
@@ -93,8 +101,9 @@ function initSlider() {
         slider.classList.remove('active');
     };
 
-    slider.addEventListener('pointerup', stopDragging);
-    slider.addEventListener('pointercancel', stopDragging);
+    surface.addEventListener('pointerup', stopDragging);
+    surface.addEventListener('pointercancel', stopDragging);
+    surface.addEventListener('lostpointercapture', stopDragging);
 
     handle.addEventListener('keydown', (event) => {
         const step = event.shiftKey ? 10 : 2;
@@ -131,9 +140,13 @@ function initGallerySliders() {
         handle.setAttribute('aria-label', `Before and after comparison for ${title}`);
         handle.setAttribute('aria-valuemin', '0');
         handle.setAttribute('aria-valuemax', '100');
+        handle.setAttribute('aria-orientation', 'horizontal');
         handle.style.pointerEvents = 'auto';
         handle.style.touchAction = 'pan-y';
         imageContainer.style.touchAction = 'pan-y';
+        imageContainer.querySelectorAll('img').forEach((image) => {
+            image.draggable = false;
+        });
 
         const setPosition = (nextPercentage) => {
             percentage = Math.min(100, Math.max(0, nextPercentage));
@@ -149,17 +162,21 @@ function initGallerySliders() {
             setPosition(((clientX - bounds.left) / bounds.width) * 100);
         };
 
-        handle.addEventListener('pointerdown', (event) => {
+        imageContainer.addEventListener('pointerdown', (event) => {
+            if (!(event.target instanceof Element)) return;
+            if (event.target.closest('a, button, input, select, textarea, summary, [contenteditable="true"]')) return;
+            if (event.pointerType === 'mouse') event.preventDefault();
             dragging = true;
-            handle.setPointerCapture?.(event.pointerId);
+            imageContainer.setPointerCapture?.(event.pointerId);
             setPositionFromPointer(event.clientX);
         });
-        handle.addEventListener('pointermove', (event) => {
+        imageContainer.addEventListener('pointermove', (event) => {
             if (dragging) setPositionFromPointer(event.clientX);
         });
         const stopDragging = () => { dragging = false; };
-        handle.addEventListener('pointerup', stopDragging);
-        handle.addEventListener('pointercancel', stopDragging);
+        imageContainer.addEventListener('pointerup', stopDragging);
+        imageContainer.addEventListener('pointercancel', stopDragging);
+        imageContainer.addEventListener('lostpointercapture', stopDragging);
         imageContainer.addEventListener('click', (event) => {
             if (!event.target.closest('a, button')) setPositionFromPointer(event.clientX);
         });

@@ -21,6 +21,30 @@ function localTarget(fromPage, reference) {
   return path.resolve(path.dirname(path.join(root, fromPage)), decoded);
 }
 
+function faqText(source) {
+  const decode = (value) => value
+    .replace(/&amp;/g, '&')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;|&apos;/g, "'")
+    .replace(/&rsquo;/g, '’')
+    .replace(/&ldquo;/g, '“')
+    .replace(/&rdquo;/g, '”')
+    .replace(/&ndash;/g, '–')
+    .replace(/&mdash;/g, '—')
+    .replace(/&nbsp;/g, ' ');
+  const strip = (value) => decode(value.replace(/<[^>]*>/g, ' '))
+    .replace(/\s+/g, ' ')
+    .replace(/\s+([.,;:!?])/g, '$1')
+    .trim();
+  const withLists = source.replace(/<li\b[^>]*>([\s\S]*?)<\/li>/gi, (_, item) => {
+    const itemText = strip(item).replace(/[.;]+$/g, '');
+    return ` • ${itemText}; `;
+  });
+  return strip(withLists.replace(/<\/(?:p|ul|ol)>/gi, ' ').replace(/<br\s*\/?>/gi, ' '))
+    .replace(/;\s*$/g, '')
+    .trim();
+}
+
 test('public page allowlist is unique and every page has one main landmark', () => {
   assert.equal(new Set(publicPages).size, publicPages.length, 'public page allowlist contains duplicates');
   for (const page of publicPages) {
@@ -100,6 +124,22 @@ test('structured data uses the expected schema shapes', () => {
   }
 });
 
+test('full FAQ visible questions and answers match FAQPage structured data', () => {
+  const html = fs.readFileSync(path.join(root, 'faq.html'), 'utf8');
+  const visible = [...html.matchAll(/<span class="faq-accordion__question"[^>]*>([\s\S]*?)<\/span[\s\S]*?<div class="faq-accordion__answer">([\s\S]*?)<\/div>\s*<\/div>\s*<\/div>/g)]
+    .map(([, question, answer]) => ({ name: faqText(question), text: faqText(answer) }));
+  const faqPage = [...html.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)]
+    .map(([, json]) => JSON.parse(json))
+    .find((block) => block['@type'] === 'FAQPage');
+  const structured = faqPage.mainEntity.map((entry) => ({
+    name: entry.name,
+    text: entry.acceptedAnswer.text,
+  }));
+
+  assert.equal(visible.length, 29, 'faq.html should expose all 29 visible questions');
+  assert.deepEqual(structured, visible, 'FAQPage schema must mirror visible FAQ copy');
+});
+
 test('public pages keep basic non-visual semantics intact', () => {
   for (const page of publicPages) {
     const html = fs.readFileSync(path.join(root, page), 'utf8');
@@ -117,6 +157,12 @@ test('public pages keep basic non-visual semantics intact', () => {
     const ids = [...html.matchAll(/\bid\s*=\s*["']([^"']+)["']/gi)].map((match) => match[1]);
     const duplicates = ids.filter((id, index) => ids.indexOf(id) !== index);
     assert.deepEqual([...new Set(duplicates)], [], `${page} contains duplicate IDs`);
+
+    for (const tag of ['table', 'thead', 'tbody']) {
+      const openings = (html.match(new RegExp(`<${tag}\\b`, 'gi')) || []).length;
+      const closings = (html.match(new RegExp(`</${tag}>`, 'gi')) || []).length;
+      assert.equal(openings, closings, `${page} contains unbalanced <${tag}> markup`);
+    }
   }
 });
 

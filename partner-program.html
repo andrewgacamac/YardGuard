@@ -359,6 +359,9 @@
       position: relative;
       width: 100%;
       height: 100%;
+      cursor: ew-resize;
+      user-select: none;
+      -webkit-user-select: none;
     }
 
     .hero__image {
@@ -368,6 +371,8 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      user-select: none;
+      -webkit-user-drag: none;
     }
 
     .hero__image--before {
@@ -454,6 +459,12 @@
           rgba(0, 0, 0, 0.4) 50%,
           rgba(0, 0, 0, 0.6) 100%);
       z-index: 20;
+      pointer-events: none;
+    }
+
+    .hero__cta,
+    .trust-bar {
+      pointer-events: auto;
     }
 
     .hero__headline {
@@ -1547,7 +1558,7 @@
         <line x1="4" x2="20" y1="18" y2="18"></line>
     </svg>
 </button><nav aria-label="Main navigation" class="header__nav" role="navigation">
-<a class="nav-link active" href="index.html">Home</a><a class="nav-link" href="how-it-works.html">How It Works</a><a class="nav-link" href="gallery.html">Gallery</a><a class="nav-link" href="faq.html">FAQ</a><a class="nav-link" href="products.html">Products</a></nav>
+<a class="nav-link active" href="index.html">Home</a><a class="nav-link" href="how-it-works.html">How It Works</a><a class="nav-link" href="gallery.html">Gallery</a><a class="nav-link" href="faq.html">FAQ</a><a class="nav-link" href="products.html">Products</a><a class="nav-link" href="learn.html">Learn</a></nav>
 <a class="btn-primary header__cta" href="quote.html">Get a Quote</a>
 </div>
 </header>
@@ -1557,13 +1568,13 @@
        ============================================ -->
 <section class="hero">
 <div class="hero__background">
-<div class="hero__slider">
+<div class="hero__slider" id="heroSlider">
 <!-- Simulated before/after images with gradients -->
 <div class="hero__image hero__image--after" style="background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 50%, #1B5E20 100%);"></div>
 <div class="hero__image hero__image--before" style="background: linear-gradient(135deg, #8D6E63 0%, #6D4C41 50%, #4E342E 100%);"></div>
 <span class="hero__label hero__label--before">BEFORE</span>
 <span class="hero__label hero__label--after">AFTER</span>
-<div class="hero__slider-handle"></div>
+<div aria-label="Compare the project before and after" aria-orientation="horizontal" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="hero__slider-handle" role="slider" tabindex="0"></div>
 </div>
 </div>
 <div class="hero__overlay">
@@ -1692,11 +1703,10 @@
 <span class="step__number">3</span>
 </div>
 <h4 class="step__title">Transform</h4>
-<p class="step__description">Our professional crew brings your approved design to life, typically in just
-              2-5
-              days.</p>
+<p class="step__description">The crew completes the documented scope according to the project-specific
+              schedule in the proposal.</p>
 <div class="step__meta">
-<span class="step__meta-item">⏱ 2-5 days</span>
+<span class="step__meta-item">⏱ Project schedule</span>
 <span class="step__meta-item">💲 Per quote</span>
 </div>
 </div>
@@ -1855,7 +1865,7 @@
 </div>
 <div class="footer__column">
 <h4 class="footer__column-title">Services</h4>
-<a class="footer__link" href="products.html">Easy Lawn</a>
+<a class="footer__link" href="products.html">Easy Lawn</a><a class="footer__link" href="learn.html">Learning Centre</a>
 <a class="footer__link" href="products.html">Pet Yard</a>
 <a class="footer__link" href="products.html">Golfer's Green</a>
 <a class="footer__link" href="quote.html">Get a Quote</a>

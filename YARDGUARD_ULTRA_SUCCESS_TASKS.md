@@ -204,6 +204,79 @@ This document converts the July 2026 read-only website audit into an actionable 
   gates, and the
   production build.
 
+### Batch 17 — Learning Centre Sample (July 21, 2026)
+
+- Added a clean Learning Centre hub at `learn.html` without changing the
+  existing homepage layout or primary conversion flow.
+- Added three sample long-form guides covering artificial turf fundamentals,
+  base and drainage, and transparent cost planning.
+- Added a reusable article/card design system in `assets/css/learn.css`, with
+  breadcrumbs, reading metadata, tables, related guides, source-aware notes,
+  and consultation CTAs.
+- Added the four pages to the reviewed public-page allowlist, sitemap, and
+  `public/llms.txt`, plus a low-visibility homepage footer link.
+- Added a compact “Learn before you choose” bridge to `products.html` so the
+  learning library is discoverable at the decision point without expanding the
+  package cards or changing the page’s visual hierarchy.
+- Verified 22 public pages in the build, 27 browser tests, integrity checks,
+  distribution checks, and performance budgets.
+
+### Batch 18 — GTA Homeowner Learning Library (July 21, 2026)
+
+- [x] Added nine focused guides for the questions most Mississauga and GTA homeowners ask before committing: municipal planning/drainage, pets and children, maintenance and repairs, heat, installation, backyard design, winter, alternatives, and contractor/warranty due diligence.
+- [x] Added a dedicated GTA homeowner library section to `learn.html` with direct links and reading-time labels.
+- [x] Re-pointed the topic map to the dedicated articles so visitors can browse by question instead of jumping into one long page.
+- [x] Added the new guides to the public-page allowlist, sitemap, and `llms.txt` resource index.
+- [x] Grounded local planning content in current City of Mississauga and Peel Region drainage/property guidance and linked the official sources in the guide.
+- [x] Kept health, product, warranty, municipal, and lifespan claims scoped with source links, limitations, and exact-SKU/documentation prompts.
+- [x] Verified 31 public pages in the build, 36 browser tests, content integrity, distribution checks, and performance budgets.
+
+### Batch 19 — Learning Centre Sitewide Navigation (July 21, 2026)
+
+- [x] Added a visible `Learn` link to the primary navigation on every public page, including the legal pages.
+- [x] Added `Learning Centre` footer links where the page has a standard footer.
+- [x] Verified the complete 31-page build and all 36 browser tests after the navigation update.
+
+### Batch 20 — Authoritative Technical Learning Library (July 21, 2026)
+
+- [x] Added ten expert-level resources covering turf manufacturing, product specifications, infill systems, testing and standards, health and safety evidence, environmental lifecycle, installation quality control, product comparison, a searchable 70+ term glossary, and public editorial standards.
+- [x] Expanded the base and drainage guide with surface, vertical, lateral, and overflow flow paths; site infiltration versus outlets; subgrade, aggregate, geotextile, freeze-thaw, commissioning, and failure diagnosis.
+- [x] Expanded the GTA planning guide with an official-source municipality matrix for Mississauga, Brampton, Toronto, Oakville, Burlington, Milton, Caledon, Vaughan, Richmond Hill, and Markham, plus conservation-authority checks.
+- [x] Added source-scoped evidence boxes, technical system diagrams, comparison tables, decision checklists, and a printable product-and-quote worksheet while preserving the existing clean visual system.
+- [x] Added client-side search to the Learning Centre and glossary, including live result announcements and keyboard-accessible native controls.
+- [x] Corrected reading-time labels to match actual article length instead of overstating the depth of shorter guides.
+- [x] Added all new resources to the reviewed page registry, XML sitemap, and `llms.txt` content index.
+- [x] Verified 41 public pages, 18 integrity/unit tests, 49 browser tests, the production build, distribution checks, and performance budgets.
+
+### Batch 21 — Local FAQ Runtime Recovery (July 21, 2026)
+
+- [x] Diagnosed FAQ clicks failing locally as a stale pre-upgrade Vite browser client, not an accordion markup or content defect.
+- [x] Restarted the validated YardGuard development server on `127.0.0.1:5173`; the replacement client loads without unresolved build placeholders.
+- [x] Confirmed all 29 FAQ questions open in a fresh preview and documented the required restart after Vite or dependency updates in `LOCAL_DEVELOPMENT.md`.
+
+### Batch 22 — FAQ Accuracy and Claims Review (July 21, 2026)
+
+- [x] Audited all 29 visible FAQ answers against current primary health, environmental, consumer-protection, utility-locate, drainage, and municipal sources.
+- [x] Replaced unsupported or overly broad claims about pet odour, digging resistance, child safety, installation duration and excavation depth, stain solvents, maintenance, drainage, and seamless repairs with evidence-informed, project-specific guidance.
+- [x] Added the practical limitations homeowners need before deciding: fall-protection design for play equipment, hot-surface precautions, PFAS documentation limits, product-specific infill review, lifecycle trade-offs, drainage design, Ontario One Call, written contracts, estimate changes, and exact warranty terms.
+- [x] Corrected GTA planning guidance for Toronto, Mississauga, Brampton, Vaughan, and Richmond Hill, including the conflict between Vaughan's published FAQ and zoning-by-law text and Richmond Hill's appealed comprehensive zoning by-law.
+- [x] Removed unsupported universal installation-day claims from the Mississauga, Products, and Partner Program pages and aligned the commercial claims register with project-specific scheduling.
+- [x] Synchronized every visible FAQ question and answer with the `FAQPage` structured data and added an automated regression test that requires exact content parity.
+- [x] Expanded browser coverage to exercise every FAQ accordion, not only a sample, and retained clear source and address-specific verification prompts where no honest universal answer exists.
+- [x] Verified 19 integrity/unit tests, all 49 browser tests, the 41-page production build, and the live local FAQ response after the review.
+
+### Batch 23 — Desktop Before/After Slider Recovery (July 21, 2026)
+
+- [x] Diagnosed the Mac desktop failure as pointer-active hero text sitting above the comparison slider in a separate stacking layer, while the mobile layout moved the knob clear of that content.
+- [x] Routed hero dragging through the common hero surface while preserving links, buttons, form controls, and the trust bar as normal interactive content.
+- [x] Disabled native photo dragging and text selection that can interrupt comparison movement in desktop browsers.
+- [x] Removed unnecessary pointer interception from hero headlines and descriptions on the homepage, Mississauga, and Partner Program pages.
+- [x] Connected the previously static-looking Partner Program comparison to the shared accessible slider behavior.
+- [x] Made Gallery comparisons draggable from the complete image surface instead of relying on a three-pixel divider and retained pointer capture when the cursor leaves the handle.
+- [x] Added desktop mouse hit-testing and drag regression coverage for the homepage, Mississauga, Partner Program, and Gallery before/after controls, while retaining keyboard support and ARIA state.
+- [x] Verified 19 integrity/unit tests, the 41-page production build, clean diffs, test syntax, and a healthy local homepage response.
+- [ ] Confirm the new real-pointer regression in an available Mac browser session; the integrated visual browser was unavailable during this batch.
+
 ## P0 — Immediate Security, Legal, and Lead Protection
 
 ### P0.1 Contain the exposed database credential

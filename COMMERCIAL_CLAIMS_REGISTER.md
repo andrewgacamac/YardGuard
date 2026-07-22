@@ -53,7 +53,7 @@ when an approved source changes.
 | CR-019 | Free / no-obligation consultation. Current pages invite a free, no-obligation consultation. | Evidence requested | Approved offer policy confirming no consultation fee, eligibility/service-area limits, what is included, expiry, and when a paid survey/design may begin. | Marketing + operations: document offer terms and keep quote-flow copy synchronized. |
 | CR-020 | Product/package descriptors: “premium polyethylene,” “high-performance turf,” “enhanced drainage,” “odour-control infill,” “easy-rinse design,” and “Most Popular.” | Evidence requested | SKU-level specification and purchase availability for every live option; define subjective terms or replace them with measurable attributes. “Most Popular” requires a dated sales denominator and reporting period. | Purchasing/marketing: map package cards to current SKU sheet; approve or replace each descriptor. |
 | CR-021 | “What’s included” package and installation items: professional ground/base preparation, weed barrier, edging, cleanup, selected infill, warranty documents, and post-install follow-up. | Evidence requested | Current scope-of-work template and estimator checklist showing which items are standard, optional, site-dependent, or excluded; supplier/SKU mapping where a product is named; capacity and handoff record for follow-up. | Operations: align package cards with proposal templates; marketing removes any item that is not consistently included. |
-| CR-022 | Installation timing. FAQ currently gives indicative ranges (most residential work 2–5 days, with smaller and larger ranges). | Qualified / evidence requested | Dated job-duration log by project size and complexity, definition of working day, weather/access assumptions, crew capacity, and exception wording. Keep as an indicative estimate, never a completion guarantee. | Operations: collect a representative sample and approve the narrowest range; estimator records project-specific schedule. |
+| CR-022 | Installation timing. Public pages now use a project-specific schedule or estimate with documented assumptions; no universal number of days is published for installation. | Qualified / public | A dated job-duration log by project size and complexity, definition of working day, weather/access assumptions, crew capacity, and exception wording is required before any numeric range is reintroduced. | Operations: record a project-specific schedule in each proposal and collect a representative duration sample before proposing public numeric wording. |
 
 ## Approved interim public wording
 
@@ -106,7 +106,7 @@ claims-cleanup batches. The main remaining P0.5 blocker is evidence, not copy:
 the repository does not contain current review exports, job-count records,
 insurance/WSIB/membership proof, SKU-level laboratory or supplier reports, or
 the actual manufacturer and YardGuard warranty documents. The Products package
-inclusions and the FAQ's indicative installation-time ranges also need an
-operational source record. Until those are provided and logged, the affected
-claims remain held and must not be restored from backup HTML or strategy
-documents.
+inclusions still need an operational source record. Numeric installation-time
+ranges also remain held until a dated job-duration log is approved. Until those
+records are provided and logged, the affected claims must not be restored from
+backup HTML or strategy documents.

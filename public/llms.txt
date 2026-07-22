@@ -25,6 +25,32 @@ Key facts:
 - [Gallery](https://ygtoronto.com/gallery.html): Before/after photos of completed projects.
 - [FAQ](https://ygtoronto.com/faq.html): Common questions about artificial turf, cost, durability, and pets.
 
+## Learning Centre
+- [Artificial Turf Learning Centre](https://ygtoronto.com/learn.html): A growing library of practical, source-aware guides for GTA homeowners.
+- [Complete Residential Artificial Turf Guide](https://ygtoronto.com/learn-residential-artificial-turf.html): Comprehensive reference covering system components, site review, installation, drainage, heat, children, pets, care, environmental tradeoffs, cost, GTA planning, warranties, and buying questions.
+- [Artificial Turf 101](https://ygtoronto.com/learn-artificial-turf-basics.html): Understand turf, infill, base, drainage, edging, installation, and care as one system.
+- [Base and Drainage Guide](https://ygtoronto.com/learn-base-drainage.html): Questions to ask about excavation, aggregate, grading, soil, outlets, and site boundaries.
+- [Artificial Turf Cost Guide](https://ygtoronto.com/learn-turf-costs.html): Compare complete project scope and disclosed cost assumptions without a universal payback promise.
+- [Mississauga Rules, Grading and Drainage](https://ygtoronto.com/learn-gta-rules-drainage.html): Address-specific planning checks for stormwater, downspouts, soft landscaping, utilities, trees, easements, and written approvals.
+- [Pets, Children and Families](https://ygtoronto.com/learn-pets-children-artificial-turf.html): Heat, hygiene, pet waste, infill, play, supervision, cleaning, and use-zone planning.
+- [Maintenance, Cleaning and Repairs](https://ygtoronto.com/learn-maintenance-cleaning.html): Four-season care, debris, stains, infill, weeds, furniture, pet areas, snow, inspections, and repairs.
+- [Heat and Summer Safety](https://ygtoronto.com/learn-artificial-turf-heat.html): Shade, water, surface checks, hot-weather timing, children, pets, and heat-source precautions.
+- [Installation Process](https://ygtoronto.com/learn-installation-process.html): Site review, scope, excavation, base, drainage, seams, edges, handoff, and records.
+- [Backyard Design](https://ygtoronto.com/learn-backyard-design-artificial-turf.html): Use zones, planting, trees, shade, circulation, accessibility, furniture, and mixed surfaces.
+- [Winter, Snow and Freeze-Thaw](https://ygtoronto.com/learn-winter-snow-artificial-turf.html): GTA winter planning, snow removal, ice, salt, spring inspection, and meltwater.
+- [Alternatives and Mixed Surfaces](https://ygtoronto.com/learn-artificial-turf-alternatives.html): Compare natural lawn, planting, mulch, pavers, decking, turf, and hybrid plans.
+- [Contractors, Proposals and Warranties](https://ygtoronto.com/learn-hiring-contractor-warranty.html): Compare scope, evidence, product documents, workmanship terms, change orders, and project records.
+- [How Artificial Grass Is Made](https://ygtoronto.com/learn-how-artificial-grass-is-made.html): Resin, masterbatch, yarn extrusion, blade geometry, tufting, backing, curing, inspection, traceability, and manufacturing change control.
+- [Artificial Turf Specifications](https://ygtoronto.com/learn-artificial-turf-specifications.html): Pile height, gauge, stitch rate, face weight, dtex, polymers, backing, tuft retention, permeability, UV evidence, tolerances, and exact-SKU comparison.
+- [Infill Options](https://ygtoronto.com/learn-infill-options.html): Infill materials, particle grading, ballast, pile support, heat, migration, pet claims, maintenance, and evidence scope.
+- [Testing, Standards and Certifications](https://ygtoronto.com/learn-testing-standards.html): Test methods, specifications, ASTM standards, FIFA programmes, lab accreditation, product reports, playground claims, PFAS methods, and evidence auditing.
+- [Health and Safety Evidence](https://ygtoronto.com/learn-health-environment-evidence.html): Current evidence and limitations for heat, crumb rubber, PFAS, lead, PAHs, metals, VOCs, children, pets, and residential versus sports-field exposure.
+- [Environmental Impact and Lifecycle](https://ygtoronto.com/learn-environment-lifecycle.html): Water, runoff, microplastics, heat, soil, trees, biodiversity, production, maintenance, replacement, recycling, and disposal.
+- [Installation Quality Control](https://ygtoronto.com/learn-installation-quality-control.html): Construction hold points and diagnosis for ponding, settlement, wrinkles, seams, edges, odour, heat damage, and fibre loss.
+- [Product and Quote Comparison Worksheet](https://ygtoronto.com/learn-product-comparison-checklist.html): Printable site, product, evidence, installation, maintenance, warranty, and end-of-life checklist.
+- [Artificial Turf Glossary](https://ygtoronto.com/learn-glossary.html): Searchable definitions for more than 70 manufacturing, specification, installation, testing, health, and environmental terms.
+- [Editorial Standards](https://ygtoronto.com/learn-editorial-standards.html): Source hierarchy, claim taxonomy, sports-versus-residential scope, review dates, limitations, and corrections practice.
+
 ## Company
 - [About](https://ygtoronto.com/about.html): YardGuard's property review, proposal, installation, documentation, and contractor due-diligence approach.
 - [Warranty Information](https://ygtoronto.com/warranty.html): How product and workmanship warranty documents are presented for a proposed system.
