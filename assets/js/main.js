@@ -47,11 +47,14 @@ function initGolfNavigation() {
             golfLink.className = 'nav-link nav-link--golf';
             golfLink.href = 'golf.html';
             golfLink.textContent = 'Golf';
-
-            const homeLink = nav.querySelector('a[href="index.html"]');
-            if (homeLink) homeLink.insertAdjacentElement('afterend', golfLink);
-            else nav.prepend(golfLink);
         }
+
+        const learnLink = nav.querySelector('a[href="learn.html"]');
+        const contactLink = nav.querySelector('a[href^="quote.html"]');
+        if (learnLink) learnLink.insertAdjacentElement('afterend', golfLink);
+        else if (contactLink) contactLink.insertAdjacentElement('beforebegin', golfLink);
+        else nav.append(golfLink);
+        if (contactLink) golfLink.insertAdjacentElement('afterend', contactLink);
 
         if (window.location.pathname.endsWith('/golf.html')) {
             nav.querySelectorAll('.nav-link.active').forEach((link) => {
