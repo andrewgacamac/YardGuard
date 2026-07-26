@@ -1,0 +1,1372 @@
+:root {
+  --golf-ink: #0b1711;
+  --golf-pine: #10281b;
+  --golf-green: #1b5b39;
+  --golf-moss: #75886f;
+  --golf-paper: #f3f0e8;
+  --golf-stone: #ded8ca;
+  --golf-bronze: #b28a57;
+  --golf-white: #fbfcf8;
+}
+
+.golf-page {
+  background: var(--golf-paper);
+  color: var(--golf-ink);
+  font-family: "Manrope", sans-serif;
+  overflow-x: hidden;
+}
+
+.golf-page h1,
+.golf-page h2,
+.golf-page h3,
+.golf-page h4 {
+  font-family: "Manrope", sans-serif;
+}
+
+.golf-page h1 em,
+.golf-page h2 em {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+}
+
+.golf-shell {
+  width: min(100% - 48px, 1320px);
+  margin-inline: auto;
+}
+
+.golf-header .header__container {
+  max-width: 1440px;
+}
+
+.golf-header .header__nav {
+  gap: 0;
+}
+
+.golf-header .nav-link {
+  padding-inline: 11px;
+}
+
+.golf-header .nav-link--golf {
+  color: var(--golf-green);
+}
+
+.golf-header__cta {
+  background: var(--golf-ink);
+  box-shadow: none;
+  white-space: nowrap;
+}
+
+.golf-header__cta:hover {
+  background: var(--golf-green);
+}
+
+.golf-kicker {
+  color: var(--golf-green);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  margin-bottom: 28px;
+  text-transform: uppercase;
+}
+
+.golf-kicker--light {
+  color: #d9e2d8;
+}
+
+.golf-kicker--bronze {
+  color: #cda772;
+}
+
+.golf-button {
+  align-items: center;
+  border: 1px solid var(--golf-ink);
+  border-radius: 999px;
+  display: inline-flex;
+  font-size: 0.76rem;
+  font-weight: 700;
+  justify-content: center;
+  letter-spacing: 0.1em;
+  min-height: 58px;
+  padding: 0 28px;
+  text-transform: uppercase;
+  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.golf-button:hover {
+  background: var(--golf-ink);
+  color: var(--golf-white);
+  transform: translateY(-2px);
+}
+
+.golf-button--light {
+  background: var(--golf-white);
+  border-color: var(--golf-white);
+  color: var(--golf-ink);
+}
+
+.golf-button--light:hover {
+  background: transparent;
+  color: var(--golf-white);
+}
+
+.golf-text-link {
+  align-items: center;
+  display: inline-flex;
+  font-size: 0.82rem;
+  font-weight: 700;
+  gap: 12px;
+  letter-spacing: 0.06em;
+  padding: 16px 0;
+  text-transform: uppercase;
+}
+
+.golf-text-link span {
+  font-size: 1.15em;
+  transition: transform 180ms ease;
+}
+
+.golf-text-link:hover span {
+  transform: translate(3px, 2px);
+}
+
+.golf-text-link--light {
+  color: var(--golf-white);
+}
+
+.golf-hero {
+  align-items: center;
+  color: var(--golf-white);
+  display: flex;
+  min-height: min(900px, calc(100svh - 80px));
+  overflow: hidden;
+  position: relative;
+}
+
+.golf-hero__image,
+.golf-hero__veil {
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.golf-hero__image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.golf-hero__veil {
+  background:
+    linear-gradient(90deg, rgba(4, 12, 8, 0.9) 0%, rgba(5, 13, 9, 0.62) 35%, rgba(5, 13, 9, 0.12) 70%),
+    linear-gradient(0deg, rgba(4, 12, 8, 0.62) 0%, transparent 36%);
+}
+
+.golf-hero__content {
+  padding-bottom: 152px;
+  padding-top: 120px;
+  position: relative;
+  z-index: 2;
+}
+
+.golf-hero h1 {
+  color: var(--golf-white);
+  font-size: clamp(3.7rem, 6.8vw, 7.4rem);
+  font-weight: 500;
+  letter-spacing: -0.065em;
+  line-height: 0.86;
+  max-width: 910px;
+}
+
+.golf-hero h1 em {
+  color: #d8e2d8;
+  display: inline-block;
+  font-size: 0.82em;
+  letter-spacing: -0.045em;
+  margin-top: 0.08em;
+}
+
+.golf-hero__lead {
+  color: #e7ebe6;
+  font-size: clamp(1rem, 1.5vw, 1.22rem);
+  line-height: 1.65;
+  margin-top: 34px;
+  max-width: 640px;
+}
+
+.golf-hero__actions,
+.golf-cta__actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 26px;
+  margin-top: 38px;
+}
+
+.golf-hero__facts {
+  backdrop-filter: blur(18px);
+  background: rgba(7, 18, 12, 0.78);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: 3;
+}
+
+.golf-hero__fact {
+  min-height: 126px;
+  padding: 28px max(28px, calc((100vw - 1320px) / 2));
+}
+
+.golf-hero__fact + .golf-hero__fact {
+  border-left: 1px solid rgba(255, 255, 255, 0.14);
+  padding-left: 48px;
+}
+
+.golf-hero__fact:first-child {
+  padding-right: 48px;
+}
+
+.golf-hero__fact span,
+.golf-hero__fact strong {
+  display: block;
+}
+
+.golf-hero__fact span {
+  color: #9ea9a0;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  margin-bottom: 7px;
+  text-transform: uppercase;
+}
+
+.golf-hero__fact strong {
+  color: var(--golf-white);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.35rem, 2vw, 2rem);
+  font-weight: 500;
+}
+
+.golf-hero__fact small {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.44em;
+  letter-spacing: 0.08em;
+}
+
+.golf-intro,
+.golf-investment,
+.golf-process,
+.golf-faq {
+  padding: 150px 0;
+}
+
+.golf-intro__statement {
+  align-items: end;
+  display: grid;
+  grid-template-columns: minmax(180px, 0.55fr) 1.45fr;
+}
+
+.golf-intro__statement .golf-kicker {
+  padding-bottom: 16px;
+}
+
+.golf-intro h2,
+.golf-investment h2,
+.golf-process h2,
+.golf-faq h2,
+.golf-fit h2,
+.golf-cta h2,
+.golf-technology h2 {
+  font-size: clamp(2.9rem, 5vw, 5.8rem);
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  line-height: 0.92;
+}
+
+.golf-intro h2 em,
+.golf-investment h2 em,
+.golf-process h2 em,
+.golf-faq h2 em,
+.golf-fit h2 em,
+.golf-cta h2 em,
+.golf-technology h2 em {
+  color: var(--golf-green);
+}
+
+.golf-intro__copy {
+  display: grid;
+  gap: 54px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: 38%;
+  margin-top: 58px;
+}
+
+.golf-intro__copy p {
+  color: #445149;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.golf-program {
+  border-bottom: 1px solid #c9c5ba;
+  margin-top: 110px;
+}
+
+.golf-program__card {
+  align-items: start;
+  border-top: 1px solid #c9c5ba;
+  display: grid;
+  gap: 54px;
+  grid-template-columns: 90px 1fr;
+  padding: 36px 0;
+  transition: padding 180ms ease;
+}
+
+.golf-program__card:hover {
+  padding-inline: 18px;
+}
+
+.golf-program__number {
+  color: var(--golf-bronze);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.15rem;
+  font-style: italic;
+}
+
+.golf-program__card div {
+  align-items: start;
+  display: grid;
+  gap: 42px;
+  grid-template-columns: 0.8fr 1.2fr;
+}
+
+.golf-program__card h3 {
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.golf-program__card p {
+  color: #566159;
+  line-height: 1.75;
+  max-width: 600px;
+}
+
+.golf-technology {
+  background: var(--golf-ink);
+  color: var(--golf-white);
+  overflow: hidden;
+  padding: 150px 0;
+}
+
+.golf-technology__grid {
+  align-items: center;
+  display: grid;
+  gap: clamp(70px, 8vw, 130px);
+  grid-template-columns: minmax(0, 1.05fr) minmax(420px, 0.95fr);
+}
+
+.golf-technology h2 em {
+  color: #bcc9bb;
+}
+
+.golf-technology__lead {
+  color: #aeb8b1;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-top: 36px;
+  max-width: 650px;
+}
+
+.golf-tech-list {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: 58px;
+}
+
+.golf-tech-list article {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  display: grid;
+  gap: 28px;
+  grid-template-columns: 44px 1fr;
+  padding: 25px 0;
+}
+
+.golf-tech-list article > span {
+  color: var(--golf-bronze);
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+}
+
+.golf-tech-list h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.golf-tech-list p {
+  color: #99a59d;
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+.golf-performance {
+  background:
+    radial-gradient(circle at 50% 35%, rgba(54, 125, 79, 0.32), transparent 42%),
+    #101f17;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 60px 100px rgba(0, 0, 0, 0.3);
+  min-height: 650px;
+  padding: 30px;
+  position: relative;
+}
+
+.golf-performance::before {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  content: "";
+  inset: 10px;
+  pointer-events: none;
+  position: absolute;
+}
+
+.golf-performance__topline,
+.golf-performance__primary,
+.golf-performance__metrics {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+.golf-performance__topline {
+  color: #89958d;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.golf-performance__live {
+  align-items: center;
+  color: #bdcabf;
+  display: flex;
+  gap: 8px;
+}
+
+.golf-performance__live i {
+  background: #7cdc8e;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px rgba(124, 220, 142, 0.1);
+  height: 7px;
+  width: 7px;
+}
+
+.golf-performance__shot {
+  align-items: end;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  display: flex;
+  height: 270px;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 0 20px 24px;
+  position: relative;
+}
+
+.golf-performance__shot::before {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+  content: "";
+  inset: 30px 0 0;
+  position: absolute;
+}
+
+.golf-performance__arc {
+  border-left: 1px solid rgba(205, 167, 114, 0.5);
+  border-radius: 62% 80% 0 0;
+  border-top: 2px solid #d4aa70;
+  bottom: 28px;
+  height: 185px;
+  left: 20%;
+  position: absolute;
+  transform: rotate(5deg);
+  width: 62%;
+}
+
+.golf-performance__arc::after,
+.golf-performance__arc i {
+  background: #e5bf87;
+  border-radius: 50%;
+  content: "";
+  height: 7px;
+  position: absolute;
+  width: 7px;
+}
+
+.golf-performance__arc::after {
+  right: -3px;
+  top: -3px;
+}
+
+.golf-performance__arc i {
+  box-shadow: 0 0 18px #e5bf87;
+  left: 48%;
+  top: -4px;
+}
+
+.golf-performance__club {
+  position: relative;
+  z-index: 1;
+}
+
+.golf-performance__club span,
+.golf-performance__primary span,
+.golf-performance__metrics span {
+  color: #7f8b83;
+  display: block;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.golf-performance__club strong {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.golf-performance__primary {
+  gap: 20px;
+  padding: 36px 0 28px;
+}
+
+.golf-performance__primary > div {
+  flex: 1;
+}
+
+.golf-performance__primary strong {
+  color: var(--golf-white);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.3rem, 4vw, 4.2rem);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.golf-performance__primary small {
+  color: #97a29a;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.27em;
+  font-weight: 600;
+}
+
+.golf-performance__metrics {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.golf-performance__metrics div {
+  padding: 22px 10px;
+}
+
+.golf-performance__metrics div + div {
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.golf-performance__metrics strong {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.golf-performance__note {
+  color: #67736b;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  margin-top: 22px;
+  text-transform: uppercase;
+}
+
+.golf-investment {
+  background: #f8f6f0;
+}
+
+.golf-investment__heading {
+  display: grid;
+  gap: 70px;
+  grid-template-columns: 1.15fr 0.85fr;
+}
+
+.golf-investment__heading .golf-kicker {
+  grid-column: 1 / -1;
+  margin-bottom: -30px;
+}
+
+.golf-investment__heading > p:last-child {
+  color: #4d5951;
+  font-size: 1.08rem;
+  line-height: 1.85;
+  padding-top: 12px;
+}
+
+.golf-investment__heading > p strong {
+  color: var(--golf-ink);
+}
+
+.golf-investment__panel {
+  background: var(--golf-ink);
+  color: var(--golf-white);
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  margin-top: 80px;
+  min-height: 500px;
+}
+
+.golf-investment__price,
+.golf-investment__scope {
+  padding: clamp(38px, 6vw, 76px);
+}
+
+.golf-investment__price {
+  align-items: start;
+  background: #153725;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.golf-investment__price > span,
+.golf-investment__label {
+  color: #a8b5aa;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.golf-investment__price > strong {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(4.5rem, 8vw, 8rem);
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  line-height: 0.9;
+  margin: 30px 0;
+}
+
+.golf-investment__price sup {
+  color: #bdc8be;
+  font-size: 0.3em;
+  margin-right: 3px;
+  vertical-align: top;
+}
+
+.golf-investment__price small {
+  color: #bdc8be;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.16em;
+  letter-spacing: 0.06em;
+}
+
+.golf-investment__price p {
+  color: #b4bdb6;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  max-width: 330px;
+}
+
+.golf-investment__scope {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.golf-investment__scope ul {
+  list-style: none;
+  margin-top: 26px;
+}
+
+.golf-investment__scope li {
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  display: flex;
+  gap: 26px;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.golf-investment__scope li span {
+  color: #9eaaa1;
+  font-size: 0.78rem;
+}
+
+.golf-investment__scope li strong {
+  font-size: 0.84rem;
+  font-weight: 500;
+  text-align: right;
+}
+
+.golf-investment__disclaimer {
+  color: #777f79;
+  font-size: 0.72rem;
+  line-height: 1.65;
+  margin: 22px 0 0 auto;
+  max-width: 680px;
+}
+
+.golf-process {
+  background: var(--golf-paper);
+}
+
+.golf-process__heading {
+  align-items: end;
+  display: grid;
+  gap: 60px;
+  grid-template-columns: 1.2fr 0.8fr;
+}
+
+.golf-process__heading .golf-kicker {
+  grid-column: 1 / -1;
+  margin-bottom: -28px;
+}
+
+.golf-process__heading > p:last-child {
+  color: #5a645d;
+  font-size: 1.05rem;
+  padding-bottom: 10px;
+}
+
+.golf-process__steps {
+  counter-reset: step;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  list-style: none;
+  margin-top: 90px;
+}
+
+.golf-process__steps li {
+  border-left: 1px solid #c9c5ba;
+  min-height: 290px;
+  padding: 0 26px;
+}
+
+.golf-process__steps li:last-child {
+  border-right: 1px solid #c9c5ba;
+}
+
+.golf-process__steps span {
+  color: var(--golf-bronze);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.golf-process__steps h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  margin: 108px 0 16px;
+}
+
+.golf-process__steps p {
+  color: #667068;
+  font-size: 0.84rem;
+  line-height: 1.7;
+}
+
+.golf-fit {
+  background: var(--golf-green);
+  color: var(--golf-white);
+  padding: 120px 0;
+}
+
+.golf-fit__grid {
+  align-items: start;
+  display: grid;
+  gap: 100px;
+  grid-template-columns: 0.9fr 1.1fr;
+}
+
+.golf-fit h2 em {
+  color: #dbe6dc;
+}
+
+.golf-fit__list {
+  border-top: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.golf-fit__list p {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+  color: #e5ebe6;
+  display: grid;
+  font-size: 0.98rem;
+  gap: 24px;
+  grid-template-columns: 36px 1fr;
+  line-height: 1.7;
+  padding: 24px 0;
+}
+
+.golf-fit__list span {
+  color: #c2a475;
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+}
+
+.golf-faq {
+  background: #f8f6f0;
+}
+
+.golf-faq__grid {
+  align-items: start;
+  display: grid;
+  gap: 100px;
+  grid-template-columns: 0.85fr 1.15fr;
+}
+
+.golf-faq__intro {
+  position: sticky;
+  top: 130px;
+}
+
+.golf-faq__items {
+  border-top: 1px solid #c8c4b9;
+}
+
+.golf-faq details {
+  border-bottom: 1px solid #c8c4b9;
+}
+
+.golf-faq summary {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 600;
+  gap: 30px;
+  justify-content: space-between;
+  list-style: none;
+  padding: 28px 0;
+}
+
+.golf-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.golf-faq summary span {
+  color: var(--golf-green);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+  transition: transform 180ms ease;
+}
+
+.golf-faq details[open] summary span {
+  transform: rotate(45deg);
+}
+
+.golf-faq details p {
+  color: #59645c;
+  font-size: 0.92rem;
+  line-height: 1.8;
+  max-width: 720px;
+  padding: 0 50px 30px 0;
+}
+
+.golf-cta {
+  color: var(--golf-white);
+  min-height: 720px;
+  overflow: hidden;
+  position: relative;
+}
+
+.golf-cta__image,
+.golf-cta__veil {
+  inset: 0;
+  position: absolute;
+}
+
+.golf-cta__image {
+  background: url("../../images/golf-private-estate.webp") center 45% / cover;
+  transform: scale(1.03);
+}
+
+.golf-cta__veil {
+  background: linear-gradient(90deg, rgba(4, 13, 8, 0.94) 0%, rgba(4, 13, 8, 0.7) 48%, rgba(4, 13, 8, 0.26) 100%);
+}
+
+.golf-cta__content {
+  padding: 145px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.golf-cta h2 {
+  max-width: 880px;
+}
+
+.golf-cta h2 em {
+  color: #dce5dc;
+}
+
+.golf-cta__content > p:not(.golf-kicker) {
+  color: #d7ddd7;
+  line-height: 1.75;
+  margin-top: 34px;
+  max-width: 600px;
+}
+
+.golf-footer {
+  background: #07100b;
+  color: #d9ded9;
+  padding: 78px 0 30px;
+}
+
+.golf-footer__main {
+  display: grid;
+  gap: 80px;
+  grid-template-columns: 1.2fr 0.7fr 1.1fr;
+}
+
+.golf-footer__brand img {
+  background: #fff;
+  height: 58px;
+  object-fit: contain;
+  padding: 4px;
+  width: 92px;
+}
+
+.golf-footer__brand p {
+  color: #879188;
+  font-size: 0.88rem;
+  margin-top: 22px;
+}
+
+.golf-footer__main h2 {
+  color: #778279;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+
+.golf-footer__main a,
+.golf-footer__main span {
+  color: #cbd1cc;
+  display: block;
+  font-size: 0.85rem;
+  margin: 10px 0;
+}
+
+.golf-footer__main a:hover {
+  color: #fff;
+}
+
+.golf-footer__bottom {
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #69736b;
+  display: flex;
+  font-size: 0.7rem;
+  justify-content: space-between;
+  margin-top: 58px;
+  padding-top: 26px;
+}
+
+.golf-footer__bottom div {
+  display: flex;
+  gap: 26px;
+}
+
+.golf-footer__bottom a:hover {
+  color: #dce2dd;
+}
+
+@media (max-width: 1180px) {
+  .golf-header .header__logo img {
+    height: 42px;
+  }
+
+  .golf-header .nav-link {
+    font-size: 12px;
+    padding-inline: 8px;
+  }
+
+  .golf-header__cta {
+    font-size: 12px;
+    padding-inline: 16px;
+  }
+
+  .golf-process__steps {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 48px;
+  }
+
+  .golf-process__steps li:nth-child(4) {
+    border-left: 1px solid #c9c5ba;
+  }
+}
+
+@media (max-width: 1023px) {
+  .golf-shell {
+    width: min(100% - 40px, 760px);
+  }
+
+  .golf-header .header__nav {
+    gap: 0;
+  }
+
+  .golf-header .nav-link {
+    font-size: 13px;
+    padding: 12px 16px;
+  }
+
+  .golf-hero {
+    min-height: 860px;
+  }
+
+  .golf-hero__content {
+    padding-bottom: 230px;
+  }
+
+  .golf-hero__facts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .golf-hero__fact,
+  .golf-hero__fact:first-child,
+  .golf-hero__fact + .golf-hero__fact {
+    min-height: 118px;
+    padding: 26px 20px;
+  }
+
+  .golf-intro,
+  .golf-investment,
+  .golf-process,
+  .golf-faq,
+  .golf-technology {
+    padding: 110px 0;
+  }
+
+  .golf-intro__statement,
+  .golf-investment__heading,
+  .golf-process__heading,
+  .golf-faq__grid,
+  .golf-fit__grid,
+  .golf-technology__grid {
+    display: block;
+  }
+
+  .golf-intro__copy {
+    margin-left: 0;
+  }
+
+  .golf-program {
+    margin-top: 78px;
+  }
+
+  .golf-technology__content {
+    margin-bottom: 70px;
+  }
+
+  .golf-performance {
+    margin-inline: auto;
+    max-width: 620px;
+  }
+
+  .golf-investment__heading > p:last-child,
+  .golf-process__heading > p:last-child {
+    margin-top: 40px;
+    max-width: 620px;
+  }
+
+  .golf-investment__panel {
+    grid-template-columns: 1fr;
+  }
+
+  .golf-process__steps {
+    margin-top: 70px;
+  }
+
+  .golf-fit__list {
+    margin-top: 60px;
+  }
+
+  .golf-faq__intro {
+    margin-bottom: 60px;
+    position: static;
+  }
+}
+
+@media (max-width: 767px) {
+  .golf-page {
+    padding-bottom: 0;
+  }
+
+  .golf-shell {
+    width: min(100% - 32px, 620px);
+  }
+
+  .golf-kicker {
+    margin-bottom: 20px;
+  }
+
+  .golf-button {
+    font-size: 0.68rem;
+    min-height: 54px;
+    padding-inline: 21px;
+  }
+
+  .golf-hero {
+    align-items: flex-start;
+    min-height: 840px;
+  }
+
+  .golf-hero__image {
+    object-position: 58% center;
+  }
+
+  .golf-hero__veil {
+    background:
+      linear-gradient(90deg, rgba(4, 12, 8, 0.87), rgba(4, 12, 8, 0.25)),
+      linear-gradient(0deg, rgba(4, 12, 8, 0.9) 0%, transparent 54%);
+  }
+
+  .golf-hero__content {
+    padding-bottom: 228px;
+    padding-top: 72px;
+  }
+
+  .golf-hero h1 {
+    font-size: clamp(3.15rem, 15vw, 4.7rem);
+    letter-spacing: -0.07em;
+    line-height: 0.88;
+  }
+
+  .golf-hero__lead {
+    font-size: 0.94rem;
+    line-height: 1.7;
+    margin-top: 28px;
+    max-width: 450px;
+  }
+
+  .golf-hero__actions,
+  .golf-cta__actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 28px;
+  }
+
+  .golf-hero__facts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .golf-hero__fact,
+  .golf-hero__fact:first-child,
+  .golf-hero__fact + .golf-hero__fact {
+    border-left: 0;
+    min-height: 94px;
+    padding: 18px 16px;
+  }
+
+  .golf-hero__fact:first-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.14);
+  }
+
+  .golf-hero__fact:last-child {
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    grid-column: 1 / -1;
+  }
+
+  .golf-hero__fact span {
+    font-size: 0.55rem;
+  }
+
+  .golf-hero__fact strong {
+    font-size: 1.28rem;
+  }
+
+  .golf-intro,
+  .golf-investment,
+  .golf-process,
+  .golf-faq,
+  .golf-technology {
+    padding: 82px 0;
+  }
+
+  .golf-intro h2,
+  .golf-investment h2,
+  .golf-process h2,
+  .golf-faq h2,
+  .golf-fit h2,
+  .golf-cta h2,
+  .golf-technology h2 {
+    font-size: clamp(2.65rem, 13vw, 4rem);
+  }
+
+  .golf-intro__copy {
+    gap: 24px;
+    grid-template-columns: 1fr;
+    margin-top: 42px;
+  }
+
+  .golf-intro__copy p {
+    font-size: 0.95rem;
+  }
+
+  .golf-program__card {
+    gap: 12px;
+    grid-template-columns: 44px 1fr;
+    padding: 27px 0;
+  }
+
+  .golf-program__card:hover {
+    padding-inline: 0;
+  }
+
+  .golf-program__card div {
+    display: block;
+  }
+
+  .golf-program__card h3 {
+    font-size: 1.15rem;
+  }
+
+  .golf-program__card p {
+    font-size: 0.86rem;
+    margin-top: 12px;
+  }
+
+  .golf-performance {
+    min-height: auto;
+    padding: 22px;
+  }
+
+  .golf-performance__shot {
+    height: 220px;
+    padding-inline: 0;
+  }
+
+  .golf-performance__arc {
+    height: 145px;
+  }
+
+  .golf-performance__primary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .golf-performance__primary strong {
+    font-size: 2.55rem;
+  }
+
+  .golf-performance__metrics {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .golf-performance__metrics div:nth-child(3) {
+    border-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .golf-performance__metrics div:nth-child(4) {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .golf-investment__panel {
+    margin-top: 54px;
+  }
+
+  .golf-investment__price,
+  .golf-investment__scope {
+    padding: 38px 24px;
+  }
+
+  .golf-investment__price > strong {
+    font-size: 5.2rem;
+  }
+
+  .golf-investment__scope li {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .golf-investment__scope li strong {
+    text-align: left;
+  }
+
+  .golf-process__steps {
+    display: block;
+  }
+
+  .golf-process__steps li,
+  .golf-process__steps li:last-child {
+    border-bottom: 1px solid #c9c5ba;
+    border-left: 0;
+    border-right: 0;
+    min-height: auto;
+    padding: 28px 0;
+  }
+
+  .golf-process__steps h3 {
+    margin: 25px 0 10px;
+  }
+
+  .golf-fit {
+    padding: 82px 0;
+  }
+
+  .golf-fit__list p {
+    font-size: 0.9rem;
+  }
+
+  .golf-faq summary {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    padding: 22px 0;
+  }
+
+  .golf-faq details p {
+    font-size: 0.86rem;
+    padding-right: 0;
+  }
+
+  .golf-cta {
+    min-height: 680px;
+  }
+
+  .golf-cta__image {
+    background-position: 63% center;
+  }
+
+  .golf-cta__content {
+    padding: 92px 0;
+  }
+
+  .golf-footer__main {
+    gap: 34px;
+    grid-template-columns: 1fr;
+  }
+
+  .golf-footer__bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .golf-page *,
+  .golf-page *::before,
+  .golf-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

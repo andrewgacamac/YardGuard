@@ -22,6 +22,8 @@ function renderIcons(root = document) {
 window.lucide = { createIcons: ({ root = document } = {}) => renderIcons(root) };
 
 function initMain() {
+    initGolfNavigation();
+
     try {
         renderIcons();
     } catch (error) {
@@ -34,6 +36,31 @@ function initMain() {
     initMobileMenu();
     initAccessibleIconLinks();
     initFaqNavigation();
+}
+
+// Keep the premium Golf destination visible across legacy and current page headers.
+function initGolfNavigation() {
+    document.querySelectorAll('nav.header__nav').forEach((nav) => {
+        let golfLink = nav.querySelector('a[href="golf.html"]');
+        if (!golfLink) {
+            golfLink = document.createElement('a');
+            golfLink.className = 'nav-link nav-link--golf';
+            golfLink.href = 'golf.html';
+            golfLink.textContent = 'Golf';
+
+            const homeLink = nav.querySelector('a[href="index.html"]');
+            if (homeLink) homeLink.insertAdjacentElement('afterend', golfLink);
+            else nav.prepend(golfLink);
+        }
+
+        if (window.location.pathname.endsWith('/golf.html')) {
+            nav.querySelectorAll('.nav-link.active').forEach((link) => {
+                if (link !== golfLink) link.classList.remove('active');
+            });
+            golfLink.classList.add('active');
+            golfLink.setAttribute('aria-current', 'page');
+        }
+    });
 }
 
 if (document.readyState === 'loading') {

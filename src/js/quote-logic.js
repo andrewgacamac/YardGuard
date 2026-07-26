@@ -95,12 +95,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Check for package parameter in URL
     const urlParams = new URLSearchParams(window.location.search);
+    const isPrivateGolf = urlParams.get('source') === 'private-golf';
     const packageParam = urlParams.get('package');
     if (packageParam) {
         const packageInput = document.getElementById(packageParam);
         if (packageInput) {
             packageInput.checked = true;
         }
+    }
+
+    if (isPrivateGolf) {
+        const title = document.querySelector('.quote-form__title');
+        const subtitle = document.querySelector('.quote-form__subtitle');
+        const stepTitle = document.querySelector('.form-step[data-step="1"] .form-step__title');
+        const packageLegend = document.querySelector('.package-options')?.closest('fieldset')?.querySelector('legend');
+        const golfTitle = document.querySelector('label[for="golfers-green"] .package-option__title');
+        const golfPrice = document.querySelector('label[for="golfers-green"] .package-option__price');
+        const sizeHint = document.querySelector('label[for="size"] + select + .form-hint');
+
+        if (title) title.textContent = 'Request a Private Golf Consultation';
+        if (subtitle) subtitle.textContent = 'Tell us about your property, your game and the private environment you have in mind.';
+        if (stepTitle) stepTitle.textContent = 'Tell us about your property';
+        if (packageLegend) packageLegend.textContent = 'Commission type';
+        if (golfTitle) golfTitle.textContent = 'YardGuard Private Golf';
+        if (golfPrice) golfPrice.textContent = 'Commissions from $499K CAD';
+        if (sizeHint) sizeHint.textContent = 'A survey is not required yet—our first review will establish feasibility.';
+        document.body.classList.add('private-golf-inquiry');
     }
 
     const form = document.getElementById('quoteForm');
